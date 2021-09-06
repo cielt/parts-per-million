@@ -1,0 +1,21 @@
+// =====================================
+//
+//   350Brooklyn :: Parts per Million
+//   -> global defaults
+//
+// =====================================
+
+// -------------------------------------
+//   Base
+// -------------------------------------
+
+html,
+body {
+	font-family: $b-fontFamily;
+	background-color: $blueGrey1;
+	color: $grey6;
+}
+
+.content-wrapper {
+	padding: $b-space-2;
+}
