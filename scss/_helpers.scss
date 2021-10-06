@@ -1,0 +1,24 @@
+// =====================================
+//
+//   Helpers
+//   -> mixins, functions, extends, animations
+//
+// =====================================
+
+// -------------------------------------
+//   Functions
+// -------------------------------------
+
+// ----- Em ----- //
+// -> Converts pixel value to its em equivalent in the given context
+//
+// $target - target pixel size
+// $context - context font-size (defaults to HTML font-size: 16px)
+
+@function em($target, $context: $b-fontSize) {
+	@if ($target == 0) {
+		@return 0;
+	} @else {
+		@return ($target / $context) * 1em;
+	}
+}

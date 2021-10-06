@@ -13,9 +13,19 @@
 //   Colors
 // -------------------------------------
 
-$blue0: #4a90e2;
-$blueGrey0: #91a1b3;
-$blueGrey1: #e5eaf0;
+// 350.org brand colors
+
+$blue350: #0f81e8;
+$orange350: #ffa902;
+$red350: #ff6112;
+$teal350: #40d7d4;
+$white: #fff;
+$lightGrey350: #e6f0fa;
+$darkGrey350: #17292e;
+
+// states
+$blue350Darker: darken($blue350, 10%);
+$orange350Darker: darken($orange350, 10%);
 
 $grey0: #fafafa;
 $grey1: #f4f4f4;
@@ -24,20 +34,13 @@ $grey3: #ccc;
 $grey4: #bebebe;
 $grey5: #808080;
 $grey6: #333;
-
-$navy0: #585c6b;
-
-$red0: #ce4a4a;
-$yellow0: #dcc711;
-
 $black: #000;
-$white: #fff;
 $clear: transparent;
 
 // ----- Context Names ----- //
 
 $c-background: $white;
-$c-text: $black;
+$c-text: $darkGrey350;
 
 // -------------------------------------
 //   Base
@@ -45,10 +48,10 @@ $c-text: $black;
 
 // ----- Typography ----- //
 
-$b-fontFamily: 'Libre Baskerville', serif;
-$b-heading-fontFamily: $b-fontFamily;
-$b-sans-fontFamily: 'Helvetica Neue', sans-serif;
-$b-serif-fontFamily: $b-fontFamily;
+$b-serif-fontFamily: Georgia, serif;
+$b-heading-fontFamily: $b-serif-fontFamily;
+$b-sans-fontFamily: 'San Francisco', Helvetica, Arial, sans-serif;
+$b-fontFamily: $b-sans-fontFamily;
 $b-fontSize: 16px; // HTML
 $b-fontSize-xs: em(12px);
 $b-fontSize-s: em(14px);
@@ -56,7 +59,7 @@ $b-fontSize-l: em(18px);
 $b-fontSize-xl: em(24px);
 $b-fontSize-xxl: em(30px);
 $b-fontSize-h1: em(40px);
-$b-fontSize-xxxl: em(56px);
+$b-fontSize-xxxl: em(72px);
 $b-fontSize-h2: $b-fontSize-xl;
 $b-fontSize-h3: $b-fontSize-l;
 $b-fontSize-h4: em(17px);

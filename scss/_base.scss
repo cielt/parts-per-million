@@ -9,13 +9,88 @@
 //   Base
 // -------------------------------------
 
-html,
-body {
+html {
+	width: 100%;
+	height: 100%;
+	max-height: 100%;
+	font-size: $b-fontSize;
 	font-family: $b-fontFamily;
-	background-color: $blueGrey1;
-	color: $grey6;
+	background-color: $white;
+	color: $c-text;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
-.content-wrapper {
-	padding: $b-space-2;
+body,
+.outer-scaffold,
+.inner-scaffold {
+	height: 100%;
+	font-size: 100%;
+	letter-spacing: 0.01em;
+	font-feature-settings: 'kern' 1;
+}
+
+::-moz-selection {
+	background: $blue350;
+	color: $white;
+}
+
+::selection {
+	background: $blue350;
+	color: $white;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+// -------------------------------------
+//   Typography
+// -------------------------------------
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+	font-weight: inherit;
+	line-height: $b-lineHeight-header;
+	margin-top: 0; // use tool class for other spacing attributes
+
+	& > a {
+		border-bottom: none;
+		text-decoration: none;
+	}
+}
+
+p,
+address,
+ul,
+ol {
+	margin: 0 auto $b-space-4;
+	line-height: $b-lineHeight;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+.list-bullet {
+	padding-left: em(24px);
+	list-style: disc outside;
+
+	li {
+		margin-bottom: $b-space-2;
+	}
+}
+
+a {
+	color: $blue350;
+	text-decoration: underline;
 }
