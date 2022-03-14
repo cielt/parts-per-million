@@ -1,1 +1,19 @@
-<svg height="64" viewBox="0 0 64 64" width="64" xmlns="http://www.w3.org/2000/svg"><g fill="#ff6112" fill-rule="evenodd"><circle cx="16" cy="16" r="16"/><path d="m32 16v48c-21.3333333 0-32 0-32 0 21.2242187-14.0624674 28.4444444-32 32-48z" transform="matrix(-1 0 0 1 32 0)"/><g fill-opacity=".5" transform="translate(32)"><circle cx="16" cy="16" r="16"/><path d="m32 16v48c-21.3333333 0-32 0-32 0 21.2242187-14.0624674 28.4444444-32 32-48z" transform="matrix(-1 0 0 1 32 0)"/></g></g></svg>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="64px" height="64px" viewBox="0 0 64 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>favicon</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="favicon">
+            <rect id="Rectangle" fill-opacity="0" fill="#17292E" x="0" y="0" width="64" height="64"></rect>
+            <g transform="translate(4.693333, 4.693333)" id="350_red-copy">
+                <g id="l" fill="#FF6112">
+                    <circle id="Oval-Copy-7" cx="13.6533333" cy="13.6533333" r="13.6533333"></circle>
+                    <path d="M27.3066667,13.6533333 C27.3066667,18.7570494 27.3066667,32.4103827 27.3066667,54.6133333 C9.10222222,54.6133333 0,54.6133333 0,54.6133333 C18.1113333,42.6133611 24.2725926,27.3066667 27.3066667,13.6533333 Z" id="Rectangle-Copy-17" transform="translate(13.653333, 34.133333) scale(-1, 1) translate(-13.653333, -34.133333) "></path>
+                </g>
+                <g id="r" transform="translate(27.306667, 0.000000)" fill="#FFB088">
+                    <circle id="Oval-Copy-7" cx="13.6533333" cy="13.6533333" r="13.6533333"></circle>
+                    <path d="M27.3066667,13.6533333 C27.3066667,18.7570494 27.3066667,32.4103827 27.3066667,54.6133333 C9.10222222,54.6133333 0,54.6133333 0,54.6133333 C18.1113333,42.6133611 24.2725926,27.3066667 27.3066667,13.6533333 Z" id="Rectangle-Copy-17" transform="translate(13.653333, 34.133333) scale(-1, 1) translate(-13.653333, -34.133333) "></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
