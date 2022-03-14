@@ -11,22 +11,21 @@
 
 ?>
 
-	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'parts-per-million' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'parts-per-million' ), 'WordPress' );
-				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'parts-per-million' ), 'parts-per-million', '<a href="http://underscores.me/">Underscores.me</a>' );
-				?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
-</div><!-- #page -->
+<div class="footer">
+  <div class="footer-content w-max max-gl">
+    <h4 class="h4">About This Site</h4>
+    <div class="mb-5">
+      <p class="info">
+        <em>Parts Per Million</em> vitae semper quis lectus nulla at volutpat. Id consectetur purus ut faucibus pulvinar elementum integer enim neque. Amet nisl purus in mollis nunc sed id semper.
+      </p>
+    </div>
+    <div class="copyright"><p class="ts-xs">&copy; <?php echo date("Y"); ?> <?php bloginfo( 'name' ); ?>, a project by <a href="https://350brooklyn.org/">350Brooklyn</a></p></div>
+  </div>
+</div><!-- /.footer -->
+</div><!-- /.main -->
+</div><!-- /.scaffold-inner -->
+
+</div><!-- /.scaffold-outer -->
 
 <?php wp_footer(); ?>
 

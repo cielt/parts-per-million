@@ -14,20 +14,23 @@
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 	</header><!-- .entry-header -->
 
-	<?php parts_per_million_post_thumbnail(); ?>
+	<div class="page-content">
+		<div class="image-frame featured-image-frame">
+		<?php if (get_the_post_thumbnail(null, 'thumbnail', '')) : ?><div class=""><?php echo the_post_thumbnail('full', ['class' => 'fit', 'title' => 'Featured image']) ?></div><?php endif;?>
+		</div>
+		<div class="entry-content">
+			<?php
+			the_content();
 
-	<div class="entry-content">
-		<?php
-		the_content();
-
-		wp_link_pages(
-			array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'parts-per-million' ),
-				'after'  => '</div>',
-			)
-		);
-		?>
-	</div><!-- .entry-content -->
+			wp_link_pages(
+				array(
+					'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'parts-per-million' ),
+					'after'  => '</div>',
+				)
+			);
+			?>
+		</div><!-- .entry-content -->
+	</div>
 
 	<?php if ( get_edit_post_link() ) : ?>
 		<footer class="entry-footer">

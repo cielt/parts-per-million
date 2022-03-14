@@ -29,8 +29,16 @@
 		<?php endif; ?>
 	</header><!-- .entry-header -->
 
-	<?php parts_per_million_post_thumbnail(); ?>
+	<div class="page-content">
+		<div class="image-frame featured-image-frame">
+			<?php if (get_the_post_thumbnail(null, 'thumbnail', '')) : ?>
+				<div class="">
+					<?php echo the_post_thumbnail('full', ['class' => 'fit', 'title' => 'Featured image']) ?>
+				</div>
+			<?php endif;?>
+		</div>
 
+		<div id="home-intro" class="section w-max max-gm mx-auto pt-6 pb-6">
 	<div class="entry-content">
 		<?php
 		the_content(
@@ -55,9 +63,14 @@
 			)
 		);
 		?>
-	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
 		<?php parts_per_million_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
+	</div><!-- .entry-content -->
+</div>
+	</div>
+	</div><!-- /.page-content -->
+
+
 </article><!-- #post-<?php the_ID(); ?> -->

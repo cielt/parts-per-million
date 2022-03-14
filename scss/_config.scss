@@ -27,6 +27,9 @@ $darkGrey350: #17292e;
 $blue350Darker: darken($blue350, 10%);
 $orange350Darker: darken($orange350, 10%);
 
+$blue350Transparent: rgba(15, 129, 232, 0.12);
+$red350Transparent: rgba(255, 97, 18, 0.48);
+
 $grey0: #fafafa;
 $grey1: #f4f4f4;
 $grey2: #e0e0e0;
@@ -48,10 +51,10 @@ $c-text: $darkGrey350;
 
 // ----- Typography ----- //
 
-$b-serif-fontFamily: Georgia, serif;
-$b-heading-fontFamily: $b-serif-fontFamily;
-$b-sans-fontFamily: 'San Francisco', Helvetica, Arial, sans-serif;
-$b-fontFamily: $b-sans-fontFamily;
+$b-serif-fontFamily: 'Libre Baskerville', serif;
+$b-sans-fontFamily: sans-serif;
+$b-fontFamily: $b-serif-fontFamily;
+$b-mono-fontFamily: 'Courier New', monospace;
 $b-fontSize: 16px; // HTML
 $b-fontSize-xs: em(12px);
 $b-fontSize-s: em(14px);
@@ -60,8 +63,8 @@ $b-fontSize-xl: em(24px);
 $b-fontSize-xxl: em(30px);
 $b-fontSize-h1: em(40px);
 $b-fontSize-xxxl: em(72px);
-$b-fontSize-h2: $b-fontSize-xl;
-$b-fontSize-h3: $b-fontSize-l;
+$b-fontSize-h2: $b-fontSize-xxl;
+$b-fontSize-h3: $b-fontSize-xl;
 $b-fontSize-h4: em(17px);
 $b-lineHeight: 1.5;
 $b-lineHeight-header: 1.25;

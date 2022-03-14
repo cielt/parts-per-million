@@ -1,0 +1,253 @@
+// =====================================
+//
+//   350Brooklyn :: Parts per Million
+//   -> theme styles
+//
+// =====================================
+
+// -------------------------------------
+//   Variables
+// -------------------------------------
+
+$logoIcoHeight: em(28px);
+$logoIcoWidth: em(28px);
+$marqueeMaxHeight: em(512px);
+
+// -------------------------------------
+//   Global
+// -------------------------------------
+
+// relative parent for header content
+
+.header-bar-context {
+	position: relative;
+	padding: $b-space-2;
+}
+
+// ----- Ico ~ PPM ----- //
+
+.ico-ppm {
+	display: block;
+	width: $logoIcoWidth;
+	height: $logoIcoHeight;
+	background: url('images/logo-ppm-square-350red.svg') $clear no-repeat top
+		center;
+	background-size: contain;
+	opacity: 0.88;
+}
+
+.header-bar {
+	color: $lightGrey350;
+	position: fixed;
+	z-index: 3;
+	width: 100%;
+	top: 0;
+	left: 0;
+
+	.overlay {
+		position: absolute;
+		z-index: 1;
+		background: $lightGrey350;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		opacity: 0;
+		transition: opacity 600ms ease 300ms;
+	}
+
+	.bar-content {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		position: relative;
+		z-index: 2;
+	}
+
+	.logo.home-link,
+	.header-bar-block {
+		height: $logoIcoHeight;
+		line-height: $logoIcoHeight;
+	}
+
+	// home link
+	.home-link {
+		display: flex;
+		color: $darkGrey350;
+		align-items: center;
+		transition: all 0.3s ease;
+		text-decoration: none;
+		font-family: $b-mono-fontFamily;
+
+		// branding
+		.ico-ppm {
+			margin-right: $b-space-1;
+		}
+
+		.home-label {
+			font-size: $b-fontSize-s;
+		}
+	}
+
+	// menu button
+	.menu-btn {
+		padding: 0 $b-space-2;
+		display: inline-block;
+		font-size: $b-fontSize-s;
+		font-family: $b-fontFamily;
+		font-weight: 300;
+		line-height: em(28px, 14px);
+		vertical-align: middle;
+		color: $darkGrey350;
+		text-transform: uppercase;
+		text-decoration: none;
+		border-radius: $b-borderRad-1;
+		border: 1px solid $clear;
+		transition: all 0.3s ease;
+
+		&:focus,
+		&:hover {
+			border-color: $darkGrey350;
+		}
+	}
+}
+
+.header-spacing {
+	height: 0;
+}
+
+// -------------------------------------
+//   Global Navigation
+// -------------------------------------
+
+.site-nav-block {
+	color: $white;
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 1;
+	width: em(240px);
+	background: $darkGrey350;
+	transition: transform 0.3s ease, opacity 0s ease 0s;
+	padding: $b-space-4;
+}
+
+.site-nav-wrapper {
+	position: relative;
+}
+
+.global-nav > ul {
+	@extend .list-reset;
+	font-size: $b-fontSize-s;
+
+	li {
+		margin-bottom: $b-space-4;
+	}
+
+	li > a {
+		color: $lightGrey350;
+		text-decoration: none;
+		border: none;
+
+		&:hover,
+		&:focus {
+			color: $teal350;
+		}
+	}
+}
+
+.close-menu {
+	display: block;
+	position: absolute;
+	top: 0;
+	right: 0;
+	color: $lightGrey350 !important;
+	font-size: $b-fontSize;
+	height: em(20px, 14px);
+	line-height: em(16px, 14px);
+	width: em(20px, 14px);
+	text-align: center;
+	border: none;
+
+	&:hover,
+	&:focus {
+		color: $teal350;
+	}
+}
+
+// ----- Layers ----- //
+
+.scaffold-inner {
+	position: relative;
+	z-index: 2;
+	min-height: 100%;
+	background: $white;
+	transition: transform 0.3s ease;
+}
+
+// overlay - for when nav drawer is open
+
+.menu-overlay {
+	display: none;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	z-index: 1;
+}
+
+// ----- Global Nav ----- //
+
+.nav-open {
+	overflow: hidden;
+
+	.site-nav-block {
+		overflow: auto;
+		transform: translate3D(0, 0, 0);
+	}
+
+	.scaffold-inner {
+		height: 100%;
+		overflow: hidden;
+		transform: translate3D(em(-240px), 0, 0);
+	}
+
+	.menu-overlay {
+		display: block;
+		z-index: 9;
+	}
+}
+
+// -------------------------------------
+//   Base
+// -------------------------------------
+
+// -------------------------------------
+//  Footer
+// -------------------------------------
+
+.footer {
+	position: relative;
+	z-index: 2;
+	background: $darkGrey350;
+}
+
+.footer-content {
+	color: $lightGrey350;
+	padding: $b-space-5 $b-space-5 $b-space-6;
+
+	a {
+		color: $teal350;
+	}
+
+	.info {
+		margin: 0;
+		max-width: 40em;
+	}
+}
+
+// -------------------------------------
+//   Scaffolding - Nav - Container
+// -------------------------------------

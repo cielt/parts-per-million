@@ -1,0 +1,155 @@
+// =====================================
+//
+//   Tools
+//   -> Single responsibility utility classes
+//
+// =====================================
+
+.p-rel {
+	position: relative;
+}
+
+// -------------------------------------
+//   Spacing
+// -------------------------------------
+
+.mb-5 {
+	margin-bottom: $b-space-5;
+}
+
+.mb-6 {
+	margin-bottom: $b-space-6;
+}
+
+.px-5 {
+	padding-left: $b-space-5;
+	padding-right: $b-space-5;
+}
+
+.pb-6 {
+	padding-bottom: $b-space-6;
+}
+
+.pt-6 {
+	padding-top: $b-space-6;
+}
+
+// visually hidden
+
+.vis-hidden {
+	position: absolute !important;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+	clip: rect(1px, 1px, 1px, 1px);
+}
+
+// nesting / contain - <img>
+
+.fit {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+.fit-h {
+	display: block;
+	height: 100%;
+	width: auto;
+}
+
+// -------------------------------------
+//   Sizing
+// -------------------------------------
+
+// TODO: rein in number of magic numbers
+
+.w-max {
+	width: 100%;
+	max-width: $b-maxWidth;
+	margin: 0 auto;
+
+	&.max-gl {
+		max-width: $g-l;
+	}
+
+	&.max-gm {
+		max-width: $g-m;
+	}
+}
+
+// -------------------------------------
+//   Type Modifiers
+// -------------------------------------
+
+// -----  Font Size ----- //
+
+.ts-xs {
+	font-size: $b-fontSize-xs;
+}
+
+.ts-s {
+	font-size: $b-fontSize-s;
+}
+
+.ts-base {
+	font-size: em($b-fontSize);
+}
+
+.ts-l {
+	font-size: $b-fontSize-l;
+}
+
+.ts-xl {
+	font-size: $b-fontSize-xl;
+}
+
+.ts-xxl {
+	font-size: $b-fontSize-xxl;
+}
+
+.ts-xxxl {
+	font-size: $b-fontSize-xxxl;
+}
+
+.h1 {
+	font-size: $b-fontSize-xxl;
+
+	@media (min-width: $g-m) {
+		font-size: $b-fontSize-h1;
+	}
+}
+
+.h2 {
+	font-size: $b-fontSize-h2;
+
+	@media (min-width: $g-m) {
+		font-size: $b-fontSize-xxl;
+	}
+}
+
+.h3 {
+	font-size: $b-fontSize-h3;
+
+	@media (min-width: $g-m) {
+		font-size: em(20px);
+	}
+}
+
+.m--ts-xl {
+	@media (min-width: $g-m) {
+		font-size: $b-fontSize-xl;
+	}
+}
+
+.m--ts-xxxl {
+	@media (min-width: $g-m) {
+		font-size: $b-fontSize-xxxl;
+	}
+}
+
+.xs--ts-l {
+	@media (min-width: $g-xs) {
+		font-size: $b-fontSize-l;
+	}
+}

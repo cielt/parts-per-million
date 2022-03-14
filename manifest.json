@@ -1,0 +1,15 @@
+{
+  "name": "350Brooklyn: Parts Per Million",
+	"short_name": "350BK: PPM",
+	"start_url": "/?utm_source=homescreen",
+	"description": "Change is in the Air",
+	"display": "browser",
+	"orientation": "portrait-primary",
+	"background_color": "#ff6112",
+	"theme_color": "#ff6112",
+	"icons": [
+    { "src": "./images/icon_128x128.png", "type": "image/png", "sizes": "128x128" },
+    { "src": "./images/icon_256x256.png", "type": "image/png", "sizes": "256x256" },
+		{ "src": "./images/icon_512x512.png", "type": "image/png", "sizes": "512x512" }
+  ]
+}

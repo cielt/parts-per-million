@@ -139,11 +139,29 @@ add_action( 'widgets_init', 'parts_per_million_widgets_init' );
 /**
  * Enqueue scripts and styles.
  */
-function parts_per_million_scripts() {
+function gfonts_prefetch() {
+	echo '<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>';
+	echo '<link rel="preconnect" href="https://fonts.googleapis.com/" crossorigin>';
+}
+add_action('wp_head', 'gfonts_prefetch');
+
+function ppm_styles() {
+	wp_enqueue_style( 'parts-per-million-google-fonts', 'https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap', false );
 	wp_enqueue_style( 'parts-per-million-style', get_stylesheet_uri(), array(), _S_VERSION );
 	wp_style_add_data( 'parts-per-million-style', 'rtl', 'replace' );
+}
+add_action( 'wp_enqueue_scripts', 'ppm_styles' );
 
-	wp_enqueue_script( 'parts-per-million-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
+function parts_per_million_scripts() {
+	// wp_enqueue_script( 'parts-per-million-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
+	wp_enqueue_script( 'jquery-waypoints', get_template_directory_uri() . '/js/lib/jquery.waypoints.min.js', array('jquery'), '2018', false );
+	wp_enqueue_script( 'ppm-utilities', get_template_directory_uri() . '/js/util.js', array('jquery'), '2021', false );
+	wp_enqueue_script( 'ppm-navigation', get_template_directory_uri() . '/js/ppm.js', array('jquery', 'jquery-waypoints', 'ppm-utilities'), '2021', false );
+
+
+	// FontAwesome - SVG solid
+	wp_enqueue_script('font-awesome-solid', 'https://use.fontawesome.com/releases/v5.5.0/js/solid.js', [], '2018', false);
+	wp_enqueue_script('font-awesome', 'https://use.fontawesome.com/releases/v5.5.0/js/fontawesome.js', [], '2018', false);
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -178,3 +196,31 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+/**
+ * Filter excerpt length: 20 words
+ *
+ * @param int $length Excerpt length
+ * @return int (maybe) modified excerpt length
+ */
+function wpdocs_custom_excerpt_length($length) {
+	return 20;
+}
+add_filter('excerpt_length', 'wpdocs_custom_excerpt_length', 999);
+
+/**
+ * Filter the "read more" excerpt string link to the post.
+ *
+ * @param string $more "Read more" excerpt string.
+ * @return string (Maybe) modified "read more" excerpt string.
+ */
+function wpdocs_excerpt_more( $more ) {
+	if ( ! is_single() ) {
+			$more = sprintf( '&nbsp;<a class="read-more-link" href="%1$s">%2$s</a>',
+					get_permalink( get_the_ID() ),
+					__( 'continue', 'textdomain' )
+			);
+	}
+
+	return $more;
+}
+add_filter( 'excerpt_more', 'wpdocs_excerpt_more' );

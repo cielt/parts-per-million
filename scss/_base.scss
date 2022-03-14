@@ -14,7 +14,7 @@ html {
 	height: 100%;
 	max-height: 100%;
 	font-size: $b-fontSize;
-	font-family: $b-fontFamily;
+	font-family: $b-serif-fontFamily;
 	background-color: $white;
 	color: $c-text;
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -30,13 +30,13 @@ body,
 }
 
 ::-moz-selection {
-	background: $blue350;
-	color: $white;
+	background: $teal350;
+	color: $darkGrey350;
 }
 
 ::selection {
-	background: $blue350;
-	color: $white;
+	background: $teal350;
+	color: $darkGrey350;
 }
 
 * {
@@ -62,6 +62,7 @@ h6,
 	font-weight: inherit;
 	line-height: $b-lineHeight-header;
 	margin-top: 0; // use tool class for other spacing attributes
+	font-family: $b-mono-fontFamily;
 
 	& > a {
 		border-bottom: none;
@@ -75,10 +76,17 @@ ul,
 ol {
 	margin: 0 auto $b-space-4;
 	line-height: $b-lineHeight;
+	font-family: $b-fontFamily;
 
 	&:last-child {
 		margin-bottom: 0;
 	}
+}
+
+.list-reset {
+	list-style: none;
+	margin: 0;
+	padding: 0;
 }
 
 .list-bullet {
@@ -91,6 +99,6 @@ ol {
 }
 
 a {
-	color: $blue350;
+	color: $red350;
 	text-decoration: underline;
 }
