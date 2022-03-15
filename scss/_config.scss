@@ -29,6 +29,7 @@ $orange350Darker: darken($orange350, 10%);
 
 $blue350Transparent: rgba(15, 129, 232, 0.12);
 $red350Transparent: rgba(255, 97, 18, 0.48);
+$blackTransparent: rgba(0, 0, 0, 0.64);
 
 $grey0: #fafafa;
 $grey1: #f4f4f4;
@@ -51,10 +52,10 @@ $c-text: $darkGrey350;
 
 // ----- Typography ----- //
 
-$b-serif-fontFamily: 'Libre Baskerville', serif;
+$b-serif-fontFamily: "Libre Baskerville", serif;
 $b-sans-fontFamily: sans-serif;
 $b-fontFamily: $b-serif-fontFamily;
-$b-mono-fontFamily: 'Courier New', monospace;
+$b-mono-fontFamily: "Courier New", monospace;
 $b-fontSize: 1.6rem; // HTML
 $b-fontSize-xs: 1.2rem;
 $b-fontSize-s: 1.4rem;
@@ -62,7 +63,7 @@ $b-fontSize-l: 1.8rem;
 $b-fontSize-xl: 2.4rem;
 $b-fontSize-xxl: 3rem;
 $b-fontSize-h1: 4.8rem;
-$b-fontSize-xxxl: 7.2rem;
+$b-fontSize-xxxl: 12rem;
 $b-fontSize-h2: $b-fontSize-xxl;
 $b-fontSize-h3: $b-fontSize-xl;
 $b-fontSize-h4: 1.7rem;
