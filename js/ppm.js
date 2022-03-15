@@ -1,7 +1,7 @@
 (function ($) {
 	'use strict';
 
-	var TakingCare = {};
+	var PPM = {};
 
 	$(function () {
 		var $body = $('body'),
@@ -48,7 +48,7 @@
 			headerWaypoint = new Waypoint({
 				element: $heroEl,
 				handler: function (direction) {
-					if (direction === 'up') {
+					if (direction && direction === 'up') {
 						$body.removeClass('scroll-down');
 					} else {
 						$body.addClass('scroll-down');

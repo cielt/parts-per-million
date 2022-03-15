@@ -6,16 +6,16 @@
 	.header-bar {
 		// home link
 		.home-link {
-			color: $blue350;
+			color: $darkGrey350;
 		}
 
 		// menu button
 		.menu-btn {
-			color: $blue350;
+			color: $darkGrey350;
 
 			&:focus,
 			&:hover {
-				border-color: $blue350;
+				border-color: $red350;
 			}
 		}
 	}

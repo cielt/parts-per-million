@@ -55,18 +55,18 @@ $b-serif-fontFamily: 'Libre Baskerville', serif;
 $b-sans-fontFamily: sans-serif;
 $b-fontFamily: $b-serif-fontFamily;
 $b-mono-fontFamily: 'Courier New', monospace;
-$b-fontSize: 16px; // HTML
-$b-fontSize-xs: em(12px);
-$b-fontSize-s: em(14px);
-$b-fontSize-l: em(18px);
-$b-fontSize-xl: em(24px);
-$b-fontSize-xxl: em(30px);
-$b-fontSize-h1: em(40px);
-$b-fontSize-xxxl: em(72px);
+$b-fontSize: 1.6rem; // HTML
+$b-fontSize-xs: 1.2rem;
+$b-fontSize-s: 1.4rem;
+$b-fontSize-l: 1.8rem;
+$b-fontSize-xl: 2.4rem;
+$b-fontSize-xxl: 3rem;
+$b-fontSize-h1: 4.8rem;
+$b-fontSize-xxxl: 7.2rem;
 $b-fontSize-h2: $b-fontSize-xxl;
 $b-fontSize-h3: $b-fontSize-xl;
-$b-fontSize-h4: em(17px);
-$b-lineHeight: 1.5;
+$b-fontSize-h4: 1.7rem;
+$b-lineHeight: 1.8;
 $b-lineHeight-header: 1.25;
 
 // ----- Border Radius ----- //

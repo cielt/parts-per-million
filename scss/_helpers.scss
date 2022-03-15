@@ -15,7 +15,7 @@
 // $target - target pixel size
 // $context - context font-size (defaults to HTML font-size: 16px)
 
-@function em($target, $context: $b-fontSize) {
+@function em($target, $context: 16px) {
 	@if ($target == 0) {
 		@return 0;
 	} @else {

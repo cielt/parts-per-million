@@ -154,9 +154,9 @@ add_action( 'wp_enqueue_scripts', 'ppm_styles' );
 
 function parts_per_million_scripts() {
 	// wp_enqueue_script( 'parts-per-million-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
-	wp_enqueue_script( 'jquery-waypoints', get_template_directory_uri() . '/js/lib/jquery.waypoints.min.js', array('jquery'), '2018', false );
-	wp_enqueue_script( 'ppm-utilities', get_template_directory_uri() . '/js/util.js', array('jquery'), '2021', false );
-	wp_enqueue_script( 'ppm-navigation', get_template_directory_uri() . '/js/ppm.js', array('jquery', 'jquery-waypoints', 'ppm-utilities'), '2021', false );
+	wp_enqueue_script( 'jquery-waypoints', get_template_directory_uri() . '/js/lib/jquery.waypoints.min.js', array('jquery-core'), '2018', false );
+	wp_enqueue_script( 'ppm-utilities', get_template_directory_uri() . '/js/util.js', array('jquery-core'), '2021', false );
+	wp_enqueue_script( 'ppm-navigation', get_template_directory_uri() . '/js/ppm.js', array('jquery-core', 'jquery-waypoints', 'ppm-utilities'), '2021', false );
 
 
 	// FontAwesome - SVG solid

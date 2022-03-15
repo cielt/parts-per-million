@@ -47,7 +47,7 @@ $marqueeMaxHeight: em(512px);
 	.overlay {
 		position: absolute;
 		z-index: 1;
-		background: $lightGrey350;
+		background: $red350Transparent;
 		top: 0;
 		left: 0;
 		width: 100%;
@@ -73,11 +73,12 @@ $marqueeMaxHeight: em(512px);
 	// home link
 	.home-link {
 		display: flex;
-		color: $darkGrey350;
+		color: $red350;
 		align-items: center;
 		transition: all 0.3s ease;
 		text-decoration: none;
-		font-family: $b-mono-fontFamily;
+		font-family: $b-sans-fontFamily;
+		font-weight: 300;
 
 		// branding
 		.ico-ppm {
@@ -85,7 +86,7 @@ $marqueeMaxHeight: em(512px);
 		}
 
 		.home-label {
-			font-size: $b-fontSize-s;
+			font-size: $b-fontSize;
 		}
 	}
 
@@ -94,7 +95,7 @@ $marqueeMaxHeight: em(512px);
 		padding: 0 $b-space-2;
 		display: inline-block;
 		font-size: $b-fontSize-s;
-		font-family: $b-fontFamily;
+		font-family: $b-sans-fontFamily;
 		font-weight: 300;
 		line-height: em(28px, 14px);
 		vertical-align: middle;
