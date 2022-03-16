@@ -1,0 +1,81 @@
+// =====================================
+//
+//   350BK :: Parts Per Million - FEED
+//
+// =====================================
+
+// -------------------------------------
+//   Variables
+// -------------------------------------
+
+// -------------------------------------
+//  Stories Feed
+// -------------------------------------
+
+.home-feed-item {
+  display: flex;
+  padding-bottom: $b-space-5;
+  margin-bottom: $b-space-5;
+  border-bottom: 1px dotted $grey1;
+
+  .story-info {
+    font-family: $b-fontFamily;
+    margin-right: $b-space-4;
+
+    .feed-story-title {
+      font-size: $b-fontSize-h3;
+      margin-bottom: $b-space-1;
+    }
+
+    .contributor-info {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      margin: 0 $b-space-4 $b-space-4 0;
+      font-family: $b-mono-fontFamily;
+
+      .contributor-thumbnail {
+        flex: 0 0 36px;
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        overflow: hidden;
+        margin-right: $b-space-2;
+        background-color: $grey1;
+
+        img {
+          object-fit: cover;
+        }
+      }
+    }
+  }
+
+  .story-thumbnail {
+    flex: 0 0 90px;
+
+    img {
+      object-fit: cover;
+    }
+  }
+
+  @media (min-width: $g-xs) {
+    .story-thumbnail {
+      flex: 0 0 120px;
+    }
+  }
+
+  @media (min-width: $g-m) {
+    padding-bottom: $b-space-6;
+    margin-bottom: $b-space-6;
+
+    .story-info {
+      .feed-story-title {
+        font-size: $b-fontSize-h2;
+      }
+    }
+
+    .story-thumbnail {
+      flex-basis: 240px;
+    }
+  }
+}

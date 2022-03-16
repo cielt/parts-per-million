@@ -4,21 +4,26 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package Parts_per_Million
+ * @package Parts_Per_Million
  */
-
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
-		<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
+		<?php the_title(
+    sprintf(
+      '<h2 class="entry-title"><a href="%s" rel="bookmark">',
+      esc_url(get_permalink())
+    ),
+    "</a></h2>"
+  ); ?>
 
-		<?php if ( 'post' === get_post_type() ) : ?>
+		<?php if ("post" === get_post_type()): ?>
 		<div class="entry-meta">
 			<?php
-			parts_per_million_posted_on();
-			parts_per_million_posted_by();
-			?>
+   parts_per_million_posted_on();
+   parts_per_million_posted_by();
+   ?>
 		</div><!-- .entry-meta -->
 		<?php endif; ?>
 	</header><!-- .entry-header -->

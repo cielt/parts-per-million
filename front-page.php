@@ -3,7 +3,7 @@
  *
  * Template Name: PPM Home Page
  *
- * @package Parts_per_Million
+ * @package Parts_Per_Million
  */
 
 get_header(); ?>
@@ -21,59 +21,11 @@ get_header(); ?>
   </a>
 </div>
 <!-- Intro -->
-<div id="home-intro" class="page-content section">
+<div id="home-intro" class="page-content-area">
 	<div class="w-max max-gl pt-6 pb-6 px-5">
-<?php
-$paged = get_query_var("paged") ? get_query_var("paged") : 1;
-$args = [
-  "orderby" => "date",
-  "order" => "DESC",
-  "post_type" => "post",
-  "posts_per_page" => -1,
-  "paged" => $paged,
-];
-
-$posts_query = new WP_Query($args);
-if (have_posts()): ?>
-  <?php
-  while ($posts_query->have_posts()):
-    $posts_query->the_post(); ?>
-    <div class="home-feed-item">
-			<div class="story-info">
-        <h3 class="feed-story-title">
-					<a href="<?php the_permalink(); ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a>
-				</h3>
-        <!-- intro -->
-				<div class="contributor-info">
-        <?php if (
-          get_field("contributor_image")
-        ): ?><div class="contributor-thumbnail"><img src="<?php echo get_field(
-  "contributor_image"
-); ?>" class="contributor-thumbnail-img fit" /></div><?php endif; ?>
-					<?php if (
-       get_field("contributor")
-     ): ?><span class="post-meta author"><?php echo get_field(
-  "contributor"
-); ?></span><?php endif; ?>
-					</div>
-					<div class="feed-item-summary">
-						<?php the_excerpt(); ?>
-					</div><!-- .feed-item-summary -->
-					</div>
-					<?php if (
-       get_the_post_thumbnail(null, "thumbnail", "")
-     ): ?><div class="story-thumbnail"><?php echo the_post_thumbnail(
-  [320, 240],
-  ["class" => "fit", "title" => "Post thumbnail image"]
-); ?></div><?php endif; ?>
-    </div>
-  <?php
-  endwhile;
-  wp_reset_postdata();
-  ?>
-	<?php endif;
-?>
-</div>
+		<!-- LATEST POSTS FEED -->
+		<?php get_template_part("template-parts/feed/content", "posts-feed"); ?>
+	</div>
 </div>
 <!-- ############################################# TOPICS ############################################# -->
 

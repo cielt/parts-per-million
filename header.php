@@ -6,7 +6,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package Parts_per_Million
+ * @package Parts_Per_Million
  */
 ?>
 <!doctype html>
@@ -69,4 +69,4 @@
 						</div>
 					</div>
 				</div>
-				<div class="main z2">
+				<div class="main">

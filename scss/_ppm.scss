@@ -41,15 +41,38 @@ $marqueeMaxHeight: em(512px);
 .main {
   position: relative;
   background: $darkGrey350;
+  z-index: 2;
 
   .marquee-main {
-    z-index: 1;
+    position: relative;
+    z-index: 2;
   }
 
-  .page-content {
+  .page-content-area {
     position: relative;
     z-index: 3;
     background-color: $white;
+  }
+
+  .word-cloud {
+    background: $clear;
+    color: $clear;
+    text-shadow: 0 0 2px $blue350;
+    font-size: $b-fontSize-xl;
+    font-family: $b-mono-fontFamily;
+    padding: $b-space-4;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    line-height: $b-lineHeight;
+    overflow: hidden;
+    z-index: 1;
+
+    @media (max-width: $g-m) {
+      font-size: $b-fontSize-l;
+    }
   }
 }
 
@@ -131,71 +154,6 @@ $marqueeMaxHeight: em(512px);
   height: 0;
 }
 
-// -------------------------------------
-//   Global Navigation
-// -------------------------------------
-
-.site-nav-block {
-  color: $white;
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 1;
-  width: em(240px);
-  background: $black;
-  transition: transform 0.3s ease, opacity 0s ease 0s;
-  padding: $b-space-4;
-}
-
-.site-nav-wrapper {
-  position: relative;
-}
-
-.global-nav > ul {
-  @extend .list-reset;
-  font-size: $b-fontSize;
-  padding: $b-space-5 0;
-  font-family: $b-sans-fontFamily;
-
-  li {
-    margin-bottom: $b-space-4;
-  }
-
-  li > a {
-    color: $grey3;
-    text-decoration: none;
-    border: none;
-
-    &:hover,
-    &:focus {
-      color: $teal350;
-    }
-
-    &[aria-current="page"] {
-      color: $red350;
-    }
-  }
-}
-
-.close-menu {
-  display: block;
-  position: absolute;
-  top: 0;
-  right: 0;
-  margin-top: -$b-space-1;
-  margin-right: -$b-space-1;
-  color: $grey3;
-  font-size: $b-fontSize-l;
-  text-align: center;
-  border: none;
-
-  &:hover,
-  &:focus {
-    color: $red350;
-  }
-}
-
 // ----- Layers ----- //
 
 .scaffold-inner {
@@ -271,3 +229,68 @@ $marqueeMaxHeight: em(512px);
 // -------------------------------------
 //   Scaffolding - Nav - Container
 // -------------------------------------
+
+// -------------------------------------
+//   Global Navigation
+// -------------------------------------
+
+.site-nav-block {
+  color: $white;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  width: em(240px);
+  background: $black;
+  transition: transform 0.3s ease, opacity 0s ease 0s;
+  padding: $b-space-4;
+}
+
+.site-nav-wrapper {
+  position: relative;
+}
+
+.global-nav > ul {
+  @extend .list-reset;
+  font-size: $b-fontSize;
+  padding: $b-space-5 0;
+  font-family: $b-sans-fontFamily;
+
+  li {
+    margin-bottom: $b-space-4;
+  }
+
+  li > a {
+    color: $grey3;
+    text-decoration: none;
+    border: none;
+
+    &:hover,
+    &:focus {
+      color: $teal350;
+    }
+
+    &[aria-current="page"] {
+      color: $red350;
+    }
+  }
+}
+
+.close-menu {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-top: -$b-space-1;
+  margin-right: -$b-space-1;
+  color: $grey3;
+  font-size: $b-fontSize-l;
+  text-align: center;
+  border: none;
+
+  &:hover,
+  &:focus {
+    color: $red350;
+  }
+}
