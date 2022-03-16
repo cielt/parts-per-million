@@ -44,7 +44,7 @@
 			<?php endif; ?>
 		</div>
 
-		<div id="home-intro" class="section w-max max-gm mx-auto pt-6 pb-6">
+
 	<div class="entry-content">
 		<?php
   the_content(
@@ -76,6 +76,4 @@
 		<?php parts_per_million_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
 	</div><!-- .entry-content -->
-</div>
-	</div>
 </article><!-- #post-<?php the_ID(); ?> -->
