@@ -10,6 +10,7 @@ $args = [
 
 $posts_query = new WP_Query($args);
 if (have_posts()): ?>
+	<ul class="posts-feed">
   <?php
   while ($posts_query->have_posts()):
     $posts_query->the_post(); ?>
@@ -19,5 +20,5 @@ if (have_posts()): ?>
   endwhile;
   wp_reset_postdata();
   ?>
-	<?php endif;
-?>
+	</ul>
+<?php endif; ?>

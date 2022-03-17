@@ -9,6 +9,31 @@
 //   Variables
 // -------------------------------------
 
+// -------------------------------------
+//   Layout
+// -------------------------------------
+
+.col-flex-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $b-space-6;
+
+  .main-col,
+  .side-col {
+    flex: 1 0 100%;
+  }
+
+  @media (min-width: $g-s) {
+    .main-col {
+      flex: 1;
+    }
+
+    .side-col {
+      flex: 0 0 360px;
+    }
+  }
+}
+
 .graph-block {
   background-color: $blackTransparent;
 }

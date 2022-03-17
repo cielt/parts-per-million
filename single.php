@@ -16,28 +16,24 @@ get_header(); ?>
 
     get_template_part("template-parts/content", get_post_type());
 
+    printf(
+      '<div class="post-footer-nav prev-next-links"><div class="w-max max-gl">'
+    );
     the_post_navigation([
       "prev_text" =>
         '<span class="nav-subtitle">' .
         esc_html__("Previous:", "parts-per-million") .
-        '</span> <span class="nav-title">%title</span>',
+        '</span><span class="nav-title">%title</span>',
       "next_text" =>
         '<span class="nav-subtitle">' .
         esc_html__("Next:", "parts-per-million") .
-        '</span> <span class="nav-title">%title</span>',
+        '</span><span class="nav-title">%title</span>',
     ]);
-
-    // If comments are open or we have at least one comment, load up the comment template.
-    if (comments_open() || get_comments_number()):
-      comments_template();
-    endif;
+    printf("</div></div>");
   endwhile;
 // End of the loop.
 ?>
 	</div><!-- /.page-content-area -->
 </main><!-- #main -->
 
-<?php
-get_sidebar();
-get_footer();
- ?>
+<?php get_footer(); ?>

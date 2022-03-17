@@ -42,9 +42,12 @@
       case "ppm-home":
         $heroEl = $(".marquee-main");
         break;
+      case "ppm-single":
+        $heroEl = $(".featured-image-frame");
+        break;
       case "ppm-page":
       default:
-        $heroEl = $(".featured-image-frame");
+        $heroEl = $(".entry-header");
         break;
     }
 

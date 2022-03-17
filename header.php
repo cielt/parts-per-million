@@ -25,6 +25,8 @@
 <body <?php body_class("nav-closed header-waypoint"); ?>
   data-layout="<?php if (is_page_template("front-page.php")) {
     echo "ppm-home";
+  } elseif (is_single()) {
+    echo "ppm-single";
   } else {
     echo "ppm-page";
   } ?>">
@@ -55,7 +57,7 @@
 				<div class="header-bar">
 					<div class="header-bar-context">
 						<div class="overlay"></div>
-						<div class="bar-content">
+						<div class="bar-content w-max">
 							<a class="logo home-link" href="<?php echo esc_url(
          home_url("/")
        ); ?>" rel="home">
@@ -70,3 +72,6 @@
 					</div>
 				</div>
 				<div class="main">
+					<?php if (!is_page_template("front-page.php")): ?>
+						<div class="header-spacing"></div>
+					<?php endif; ?>

@@ -39,7 +39,4 @@ get_header(); ?>
 </div><!-- /.page-content-area -->
 	</main><!-- #main -->
 
-<?php
-get_sidebar();
-get_footer();
- ?>
+<?php get_footer(); ?>

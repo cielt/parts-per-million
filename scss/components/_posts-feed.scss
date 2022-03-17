@@ -12,27 +12,68 @@
 //  Stories Feed
 // -------------------------------------
 
+.posts-feed {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.post-medium {
+  display: block;
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  background: $darkGrey350;
+  color: $white;
+  font-family: $b-mono-fontFamily;
+  line-height: $b-lineHeight;
+  padding: 0 $b-space-1;
+  font-size: $b-fontSize-xs;
+  letter-spacing: 1px;
+  transition: all 300ms ease;
+}
+
 .home-feed-item {
+  position: relative;
+
+  &:hover {
+    .post-medium {
+      background: $red350;
+    }
+  }
+}
+
+.feed-item-content {
+  position: relative;
+  z-index: 1;
   display: flex;
-  padding-bottom: $b-space-5;
-  margin-bottom: $b-space-5;
-  border-bottom: 1px dotted $grey1;
+  align-items: flex-start;
+  gap: $b-space-5 $b-space-4;
+  padding: $b-space-5 0;
 
   .story-info {
     font-family: $b-fontFamily;
-    margin-right: $b-space-4;
+    flex: 1 1 auto;
 
     .feed-story-title {
+      font-weight: 700;
       font-size: $b-fontSize-h3;
       margin-bottom: $b-space-1;
+
+      a {
+        transition: all 300ms ease;
+        color: $darkGrey350;
+      }
     }
 
     .contributor-info {
       display: flex;
       align-items: center;
       justify-content: flex-start;
-      margin: 0 $b-space-4 $b-space-4 0;
+      gap: $b-space-4;
       font-family: $b-mono-fontFamily;
+      margin-bottom: $b-space-4;
 
       .contributor-thumbnail {
         flex: 0 0 36px;
@@ -40,7 +81,6 @@
         height: 36px;
         border-radius: 50%;
         overflow: hidden;
-        margin-right: $b-space-2;
         background-color: $grey1;
 
         img {
@@ -51,22 +91,29 @@
   }
 
   .story-thumbnail {
-    flex: 0 0 90px;
+    border: 3px solid $darkGrey350;
+    flex: 0 0 120px;
+    transition: all 300ms ease;
 
-    img {
+    .fit {
       object-fit: cover;
     }
   }
 
-  @media (min-width: $g-xs) {
+  &:hover,
+  &:focus {
+    .story-info .feed-story-title a {
+      color: $red350;
+    }
+
     .story-thumbnail {
-      flex: 0 0 120px;
+      border-color: $red350;
     }
   }
 
   @media (min-width: $g-m) {
     padding-bottom: $b-space-6;
-    margin-bottom: $b-space-6;
+    row-gap: $b-space-6;
 
     .story-info {
       .feed-story-title {

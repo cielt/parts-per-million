@@ -33,9 +33,13 @@
   ?>
 	</header><!-- .entry-header -->
 
-		<div class="image-frame featured-image-frame">
+	<div class="<?php if (is_singular()) {
+   echo "featured-image-frame single-post-image";
+ } else {
+   echo "post-feed-image";
+ } ?>">
 			<?php if (get_the_post_thumbnail(null, "thumbnail", "")): ?>
-				<div class="">
+				<div>
 					<?php echo the_post_thumbnail("full", [
        "class" => "fit",
        "title" => "Featured image",
@@ -44,8 +48,9 @@
 			<?php endif; ?>
 		</div>
 
-
 	<div class="entry-content">
+		<div class="entry-content-pa">
+		<div class="w-max max-gl">
 		<?php
   the_content(
     sprintf(
@@ -75,5 +80,7 @@
 	<footer class="entry-footer">
 		<?php parts_per_million_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
+</div><!-- /.max-gl -->
+</div><!-- /.entry-content-pa -->
 	</div><!-- .entry-content -->
 </article><!-- #post-<?php the_ID(); ?> -->

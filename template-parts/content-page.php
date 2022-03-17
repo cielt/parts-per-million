@@ -23,6 +23,8 @@
 ]); ?></div><?php endif; ?>
 		</div>
 		<div class="entry-content">
+			<div class="entry-content-pa">
+				<div class="w-max max-gl">
 			<?php
    the_content();
 
@@ -32,6 +34,9 @@
      "after" => "</div>",
    ]);
    ?>
+	 </div><!-- /.max-gl -->
+
+	</div><!-- /.entry-content-pa -->
 		</div><!-- .entry-content -->
 	</div>
 

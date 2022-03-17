@@ -17,13 +17,6 @@ $marqueeMaxHeight: em(512px);
 //   Global
 // -------------------------------------
 
-// relative parent for header content
-
-.header-bar-context {
-  position: relative;
-  padding: $b-space-2;
-}
-
 // ----- Ico ~ PPM ----- //
 
 .ico-ppm {
@@ -40,8 +33,12 @@ $marqueeMaxHeight: em(512px);
 
 .main {
   position: relative;
-  background: $darkGrey350;
+  background-color: $white;
   z-index: 2;
+
+  .page-template-front-page & {
+    background: $darkGrey350;
+  }
 
   .marquee-main {
     position: relative;
@@ -52,6 +49,7 @@ $marqueeMaxHeight: em(512px);
     position: relative;
     z-index: 3;
     background-color: $white;
+    padding: 0 0 $b-space-6;
   }
 
   .word-cloud {
@@ -83,6 +81,13 @@ $marqueeMaxHeight: em(512px);
   width: 100%;
   top: 0;
   left: 0;
+
+  // relative parent for header content
+
+  .header-bar-context {
+    position: relative;
+    padding: $b-space-2;
+  }
 
   .overlay {
     position: absolute;
@@ -150,8 +155,11 @@ $marqueeMaxHeight: em(512px);
   }
 }
 
+// ----- Only on pages without front-page hero area ----- //
 .header-spacing {
-  height: 0;
+  width: 100%;
+  position: relative;
+  height: 48px;
 }
 
 // ----- Layers ----- //
@@ -210,11 +218,12 @@ $marqueeMaxHeight: em(512px);
   position: relative;
   z-index: 2;
   background: $darkGrey350;
+  padding: $b-space-6 0;
 }
 
 .footer-content {
   color: $lightGrey350;
-  padding: $b-space-5 $b-space-5 $b-space-6;
+  padding: $b-space-5;
 
   a {
     color: $teal350;

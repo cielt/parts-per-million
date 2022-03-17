@@ -9,7 +9,6 @@
 get_header(); ?>
 
 <div id="bk-word-cloud" class="word-cloud bk-env"></div>
-<div class="header-spacing"></div>
 <div class="marquee-main graph-block">
   <div class="title-block p-abs z3">
     <h1 class="h1 site-title"><?php bloginfo("name"); ?></h1>
@@ -22,9 +21,19 @@ get_header(); ?>
 </div>
 <!-- Intro -->
 <div id="home-intro" class="page-content-area">
-	<div class="w-max max-gl pt-6 pb-6 px-5">
-		<!-- LATEST POSTS FEED -->
-		<?php get_template_part("template-parts/feed/content", "posts-feed"); ?>
+	<div class="px-5 pt-6 pb-6">
+		<div class="col-flex-row w-max max-gl">
+			<div class="main-col col-feed">
+				<h2 class="section-title mb-5">Stories</h2>
+			<!-- LATEST POSTS FEED -->
+			<?php get_template_part("template-parts/feed/content", "posts-feed"); ?>
+			</div>
+			<div class="side-col col-topics">
+				<h2 class="section-title mb-5">Topics</h2>
+				<!-- CATEGORIES FEED -->
+			<?php get_template_part("template-parts/feed/categories", "feed"); ?>
+			</div>
+		</div>
 	</div>
 </div>
 <!-- ############################################# TOPICS ############################################# -->

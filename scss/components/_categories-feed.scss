@@ -1,0 +1,80 @@
+// =====================================
+//
+//   350BK :: Parts Per Million - CATEGORIES
+//
+// =====================================
+
+// -------------------------------------
+//   Variables
+// -------------------------------------
+
+// -------------------------------------
+//  Categories Feed
+// -------------------------------------
+
+.categories-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-family: $b-mono-fontFamily;
+
+  .category-list-item {
+    display: inline-block;
+    margin: 0 $b-space-2 $b-space-2 0;
+
+    .category-link {
+      display: block;
+      line-height: $b-lineHeight;
+      text-decoration: none;
+      background-color: $grey1;
+      color: $darkGrey350;
+      transition: all 300ms ease;
+
+      .cat-name,
+      .cat-count {
+        display: inline-block;
+        padding: 0 $b-space-2;
+      }
+
+      .cat-count {
+        background-color: $blue350;
+        color: $lightGrey350;
+      }
+
+      &:hover,
+      &:focus {
+        color: $grey1;
+        background-color: $darkGrey350;
+
+        .cat-count {
+          background-color: $red350;
+          color: $darkGrey350;
+        }
+      }
+    }
+  }
+}
+
+// <div class="categories-list-block">
+// 	<ul class="categories-list">
+// <?php
+// $categories = get_categories([
+//   "orderby" => "count",
+//   "order" => "DESC",
+// ]);
+
+// foreach ($categories as $category) {
+//   $category_link = sprintf(
+//     '<a href="%1$s" alt="%2$s">%3$s</a>',
+//     esc_url(get_category_link($category->term_id)),
+//     esc_attr(
+//       sprintf(__("View all posts in %s", "textdomain"), $category->name)
+//     ),
+//     esc_html($category->name . " (" . $category->count . ")")
+//   );
+
+//   echo "<li class='category-list-item'>" . sprintf($category_link) . "</li> ";
+// }
+// ?>
+// </ul>
+// </div>

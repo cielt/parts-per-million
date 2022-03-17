@@ -16,9 +16,11 @@
 @import "config";
 @import "base";
 @import "ppm";
+@import "single";
 @import "waypoints";
 @import "components/button";
 @import "components/posts-feed";
+@import "components/categories-feed";
 
 @import "home";
 @import "tools";

@@ -1,0 +1,31 @@
+// =====================================
+//
+//   350Brooklyn :: Parts per Million
+//   -> Single Page / Post styles
+//
+// =====================================
+
+// -------------------------------------
+//   Variables
+// -------------------------------------
+
+// -------------------------------------
+//   Modules
+// -------------------------------------
+
+// ----- MAIN CONTENT AREA -----
+
+.entry-content-pa {
+  padding: $b-space-5;
+}
+
+// ----- POST NAVIGATION AREA -----
+
+.post-footer-nav {
+  padding: $b-space-5;
+}
+
+// <nav class="navigation post-navigation" aria-label="Posts">
+// 		<h2 class="screen-reader-text">Post navigation</h2>
+// 		<div class="nav-links"><div class="nav-previous"><a href="http://localhost:8888/ppm/2021/10/17/the-internets-climate-impact-and-what-to-do-about-it/" rel="prev"><span class="nav-subtitle">Previous:</span> <span class="nav-title">The Internet’s Climate Impact… and What to Do About It</span></a></div><div class="nav-next"><a href="http://localhost:8888/ppm/2022/03/15/does-recycling-help-the-environment/" rel="next"><span class="nav-subtitle">Next:</span> <span class="nav-title">Does Recycling Help the Environment?</span></a></div></div>
+// 	</nav>
