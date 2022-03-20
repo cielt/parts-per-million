@@ -23,7 +23,7 @@
 ]); ?></div><?php endif; ?>
 		</div>
 		<div class="entry-content">
-			<div class="entry-content-pa">
+			<div class="entry-content-pa px-4 pt-6 pb-6">
 				<div class="w-max max-gl">
 			<?php
    the_content();

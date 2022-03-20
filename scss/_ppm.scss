@@ -86,7 +86,7 @@ $marqueeMaxHeight: em(512px);
 
   .header-bar-context {
     position: relative;
-    padding: $b-space-2;
+    padding: $b-space-2 $b-space-4;
   }
 
   .overlay {
@@ -141,7 +141,7 @@ $marqueeMaxHeight: em(512px);
     font-weight: 300;
     line-height: em(28px, 14px);
     vertical-align: middle;
-    color: $teal350;
+    color: $white;
     text-transform: uppercase;
     text-decoration: none;
     border-radius: $b-borderRad-1;
@@ -150,7 +150,7 @@ $marqueeMaxHeight: em(512px);
 
     &:focus,
     &:hover {
-      border-color: $teal350;
+      border-color: $white;
     }
   }
 }

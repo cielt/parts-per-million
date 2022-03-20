@@ -3,7 +3,7 @@ $paged = get_query_var("paged") ? get_query_var("paged") : 1;
 $args = [
   "orderby" => "date",
   "order" => "DESC",
-  "post_type" => "post",
+  "post_type" => "story",
   "posts_per_page" => 10,
   "paged" => $paged,
 ];

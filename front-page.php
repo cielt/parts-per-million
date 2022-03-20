@@ -24,12 +24,12 @@ get_header(); ?>
 	<div class="px-5 pt-6 pb-6">
 		<div class="col-flex-row w-max max-gl">
 			<div class="main-col col-feed">
-				<h2 class="section-title mb-5">Stories</h2>
+				<h2 class="section-title mb-5">PPM Stories</h2>
 			<!-- LATEST POSTS FEED -->
-			<?php get_template_part("template-parts/feed/content", "posts-feed"); ?>
+			<?php get_template_part("template-parts/feed/content", "stories-feed"); ?>
 			</div>
 			<div class="side-col col-topics">
-				<h2 class="section-title mb-5">Topics</h2>
+				<h2 class="section-title mb-5">Explore Topics</h2>
 				<!-- CATEGORIES FEED -->
 			<?php get_template_part("template-parts/feed/categories", "feed"); ?>
 			</div>

@@ -15,21 +15,6 @@ get_header(); ?>
     the_post();
 
     get_template_part("template-parts/content", get_post_type());
-
-    printf(
-      '<div class="post-footer-nav prev-next-links"><div class="w-max max-gl">'
-    );
-    the_post_navigation([
-      "prev_text" =>
-        '<span class="nav-subtitle">' .
-        esc_html__("Previous:", "parts-per-million") .
-        '</span><span class="nav-title">%title</span>',
-      "next_text" =>
-        '<span class="nav-subtitle">' .
-        esc_html__("Next:", "parts-per-million") .
-        '</span><span class="nav-title">%title</span>',
-    ]);
-    printf("</div></div>");
   endwhile;
 // End of the loop.
 ?>

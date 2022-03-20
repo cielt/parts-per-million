@@ -57,7 +57,7 @@
 				<div class="header-bar">
 					<div class="header-bar-context">
 						<div class="overlay"></div>
-						<div class="bar-content w-max">
+						<div class="bar-content">
 							<a class="logo home-link" href="<?php echo esc_url(
          home_url("/")
        ); ?>" rel="home">
@@ -72,6 +72,9 @@
 					</div>
 				</div>
 				<div class="main">
-					<?php if (!is_page_template("front-page.php")): ?>
+					<?php if (
+       !is_page_template("front-page.php") &&
+       !(is_single() && "story" == get_post_type())
+     ): ?>
 						<div class="header-spacing"></div>
 					<?php endif; ?>

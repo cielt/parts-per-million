@@ -13,19 +13,201 @@
 //   Modules
 // -------------------------------------
 
-// ----- MAIN CONTENT AREA -----
+// ----- HEADER AREA ----- //
 
-.entry-content-pa {
-  padding: $b-space-5;
+.entry-header-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  border-bottom: 1px solid $darkGrey350;
+
+  .entry-header {
+    flex: 0 1 50%;
+    height: 100%;
+    padding: $b-space-4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: $darkGrey350;
+    color: $white;
+  }
+
+  .single-post-medium {
+    display: block;
+    color: $teal350;
+    margin-bottom: $b-space-2;
+  }
+
+  .featured-image-frame {
+    flex: 1;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+
+    img {
+      display: block;
+      width: auto;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  @media (max-width: $g-m) {
+    height: 60vh;
+    display: block;
+
+    .entry-header,
+    .featured-image-frame {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+
+    .entry-header {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      position: absolute;
+      z-index: 2;
+      background-color: $clear;
+      text-align: center;
+    }
+
+    .featured-image-frame {
+      position: relative;
+      z-index: 1;
+      overflow: hidden;
+
+      & > img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
 }
 
-// ----- POST NAVIGATION AREA -----
+// ----- MAIN CONTENT AREA ----- //
 
-.post-footer-nav {
-  padding: $b-space-5;
+.post-layout-main {
+  display: flex;
+  gap: $b-space-6;
+
+  .entry-meta,
+  .entry-sidebar {
+    flex: 0 0 300px;
+  }
+
+  .post-body {
+    flex: 1;
+  }
+
+  @media (max-width: $g-m) {
+    flex-direction: column;
+
+    .entry-meta,
+    .entry-sidebar {
+      flex-basis: auto;
+    }
+  }
 }
 
-// <nav class="navigation post-navigation" aria-label="Posts">
-// 		<h2 class="screen-reader-text">Post navigation</h2>
-// 		<div class="nav-links"><div class="nav-previous"><a href="http://localhost:8888/ppm/2021/10/17/the-internets-climate-impact-and-what-to-do-about-it/" rel="prev"><span class="nav-subtitle">Previous:</span> <span class="nav-title">The Internet’s Climate Impact… and What to Do About It</span></a></div><div class="nav-next"><a href="http://localhost:8888/ppm/2022/03/15/does-recycling-help-the-environment/" rel="next"><span class="nav-subtitle">Next:</span> <span class="nav-title">Does Recycling Help the Environment?</span></a></div></div>
-// 	</nav>
+.entry-meta {
+  .meta-section {
+    line-height: $b-lineHeight-header;
+
+    &:not(:last-of-type) {
+      padding-bottom: $b-space-4;
+      margin-bottom: $b-space-4;
+      border-bottom: 1px dotted $lightGrey350;
+    }
+  }
+  .post-date {
+    .post-meta {
+      display: block;
+      font-family: $b-mono-fontFamily;
+
+      &:not(:last-of-type) {
+        padding-bottom: $b-space-3;
+        margin-bottom: $b-space-3;
+        border-bottom: 1px solid $lightGrey350;
+      }
+    }
+  }
+
+  .contributor-block {
+    display: flex;
+    align-items: flex-start;
+
+    .contributor-thumbnail {
+      flex: 0 0 48px;
+      border-radius: 50%;
+      width: 48px;
+      height: 48px;
+      background-color: $grey1;
+    }
+
+    .contributor-info {
+      flex: 1;
+      margin-left: $b-space-2;
+
+      .contributor-name {
+        font-size: $b-fontSize-l;
+        display: block;
+        margin-bottom: $b-space-1;
+      }
+
+      .contributor-bio {
+        font-size: $b-fontSize-s;
+        font-family: $b-sans-fontFamily;
+        color: $grey5;
+        line-height: $b-lineHeight-header;
+      }
+    }
+  }
+}
+
+// ----- POST NAVIGATION AREA ----- //
+
+.entry-sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  .post-footer-nav {
+    .nav-links > div {
+      &:not(:first-of-type) {
+        margin-top: $b-space-5;
+      }
+      &.nav-previous {
+        text-align: left;
+      }
+
+      &.nav-next {
+        text-align: right;
+      }
+
+      a {
+        display: flex;
+        text-decoration: none;
+        gap: $b-space-1;
+
+        .nav-title {
+          flex: 1;
+        }
+
+        .ico-footer-link {
+          flex: 0 0 24px;
+          width: 24px;
+          height: 24px;
+          line-height: 24px;
+          text-align: center;
+          border-radius: 50%;
+          background-color: $red350Transparent;
+        }
+      }
+    }
+  }
+}
