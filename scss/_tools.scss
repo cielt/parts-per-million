@@ -125,7 +125,7 @@
 
 h1,
 .h1 {
-  font-size: $b-fontSize-xxl;
+  font-size: $b-fontSize-h2;
 
   @media (min-width: $g-m) {
     font-size: $b-fontSize-h1;
@@ -134,19 +134,19 @@ h1,
 
 h2,
 .h2 {
-  font-size: $b-fontSize-h2;
+  font-size: $b-fontSize-h3;
 
   @media (min-width: $g-m) {
-    font-size: $b-fontSize-xxl;
+    font-size: $b-fontSize-h2;
   }
 }
 
 h3,
 .h3 {
-  font-size: $b-fontSize-h3;
+  font-size: $b-fontSize-h4;
 
   @media (min-width: $g-m) {
-    font-size: em(20px);
+    font-size: $b-fontSize-h3;
   }
 }
 
@@ -169,8 +169,12 @@ h3,
 }
 
 .section-title {
-  font-family: $b-mono-fontFamily;
-  font-weight: 700;
+  font-family: $b-sans-fontFamily;
   color: $blue350;
   border-bottom: 1px dotted $blue350;
+  font-size: $b-fontSize-h3;
+
+  @media (min-width: $g-m) {
+    font-size: $b-fontSize-h2;
+  }
 }

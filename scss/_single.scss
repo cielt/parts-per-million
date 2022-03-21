@@ -28,6 +28,7 @@
     padding: $b-space-4;
     display: flex;
     flex-direction: column;
+    text-align: center;
     justify-content: center;
     background-color: $darkGrey350;
     color: $white;
@@ -72,7 +73,6 @@
       position: absolute;
       z-index: 2;
       background-color: $clear;
-      text-align: center;
     }
 
     .featured-image-frame {
@@ -97,7 +97,7 @@
 
   .entry-meta,
   .entry-sidebar {
-    flex: 0 0 300px;
+    flex: 0 0 280px;
   }
 
   .post-body {
@@ -121,7 +121,7 @@
     &:not(:last-of-type) {
       padding-bottom: $b-space-4;
       margin-bottom: $b-space-4;
-      border-bottom: 1px dotted $lightGrey350;
+      border-bottom: 1px solid $lightGrey350;
     }
   }
   .post-date {
@@ -132,7 +132,7 @@
       &:not(:last-of-type) {
         padding-bottom: $b-space-3;
         margin-bottom: $b-space-3;
-        border-bottom: 1px solid $lightGrey350;
+        border-bottom: 1px dotted $lightGrey350;
       }
     }
   }
@@ -166,6 +166,27 @@
         line-height: $b-lineHeight-header;
       }
     }
+  }
+}
+
+// ----- POST CONTENT ----- //
+
+.post-body {
+  // paragraph 1
+  p:first-child {
+    font-size: 1.25em;
+  }
+
+  // drop cap
+  p:first-child:first-letter {
+    color: $red350;
+    float: left;
+    font-family: $b-fontFamily;
+    font-size: 5em;
+    line-height: 0.64;
+    padding-top: 25px;
+    padding-right: 15px;
+    padding-bottom: 10px;
   }
 }
 

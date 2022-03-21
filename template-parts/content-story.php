@@ -72,8 +72,34 @@
 						</div>
 						<!-- categories -->
 						<div class="entry-footer meta-section">
-							<?php parts_per_million_entry_footer(); ?>
-									 </div><!-- .entry-footer -->
+							<ul class="categories-list">
+								<?php
+        $post_categories = wp_get_post_categories(get_the_ID(), [
+          "fields" => "all",
+        ]);
+
+        if ($post_categories) {
+          foreach ($post_categories as $category) {
+            $category_link = sprintf(
+              '<a href="%1$s" alt="%2$s" class="category-link"><span class="cat-name">%3$s</span></a>',
+              esc_url(get_category_link($category->term_id)),
+              esc_attr(
+                sprintf(
+                  __("View all posts in %s", "textdomain"),
+                  $category->name
+                )
+              ),
+              esc_html($category->name)
+            );
+
+            echo "<li class='category-list-item'>" .
+              sprintf($category_link) .
+              "</li> ";
+          }
+        }
+        ?>
+							</ul>
+						</div><!-- .entry-footer -->
 					</div><!-- .entry-meta -->
 					<div class="post-body">
 						<?php the_content(); ?>
