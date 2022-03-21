@@ -1,0 +1,68 @@
+// =====================================
+//
+//   350Brooklyn :: Parts per Million
+//   -> Single Page styles
+//
+// =====================================
+
+// -------------------------------------
+//   Variables
+// -------------------------------------
+
+// -------------------------------------
+//   Modules
+// -------------------------------------
+
+// ----- HEADER AREA ----- //
+
+.page-header {
+  padding: $b-space-4;
+  text-align: center;
+
+  .page-title {
+    margin-bottom: $b-space-4;
+  }
+
+  .featured-image-frame {
+    border-bottom: 3px solid $red350;
+    overflow: hidden;
+
+    & > img {
+      object-fit: cover;
+    }
+  }
+
+  .cover-image-caption {
+    padding: $b-space-2;
+    text-align: right;
+    font-size: $b-fontSize-s;
+    color: $grey5;
+  }
+}
+
+// ----- MAIN CONTENT AREA ----- //
+
+.page-layout-main {
+  display: flex;
+  gap: $b-space-6;
+
+  .page-sidebar {
+    flex: 0 0 360px;
+  }
+
+  .page-body {
+    flex: 1;
+  }
+
+  @media (max-width: $g-m) {
+    flex-direction: column;
+
+    .page-sidebar {
+      flex-basis: auto;
+    }
+  }
+}
+
+// <div class="post-meta cover-image-caption">
+// 				<span class="caption"><?php echo get_field("cover_image_caption"); ?></span>
+// 		</div>

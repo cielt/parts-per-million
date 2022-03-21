@@ -86,12 +86,12 @@ $b-borderWidth-m: 3px;
 // ----- Sizing ----- //
 
 $b-maxWidth: em(1600px);
-$b-space-1: em(5px);
-$b-space-2: em(10px); // v spacing, default type
-$b-space-3: em(15px);
-$b-space-4: em(20px); // gutter
-$b-space-5: em(30px);
-$b-space-6: em(60px);
+$b-space-1: 0.5rem;
+$b-space-2: 1rem; // v spacing, default type
+$b-space-3: 1.5rem;
+$b-space-4: 2rem; // gutter
+$b-space-5: 3rem;
+$b-space-6: 6rem;
 
 // -------------------------------------
 //   Components

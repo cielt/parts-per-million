@@ -9,39 +9,41 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php the_title('<h1 class="entry-title">', "</h1>"); ?>
-	</header><!-- .entry-header -->
-
-	<div class="content">
+	<header class="page-header">
+		<?php the_title('<h1 class="page-title">', "</h1>"); ?>
 		<div class="image-frame featured-image-frame">
-		<?php if (
-    get_the_post_thumbnail(null, "thumbnail", "")
-  ): ?><div class=""><?php echo the_post_thumbnail("full", [
-  "class" => "fit",
-  "title" => "Featured image",
-]); ?></div><?php endif; ?>
+			<?php if (get_the_post_thumbnail(null, "thumbnail", "")):
+     echo the_post_thumbnail("full", [
+       "class" => "fit",
+       "title" => "Featured image",
+     ]);
+   endif; ?>
+		</div><!-- /.image-frame -->
+		<?php if (get_field("cover_image_caption")): ?>
+			<div class="post-meta cover-image-caption">
+				<span class="caption"><?php echo get_field("cover_image_caption"); ?></span>
 		</div>
-		<div class="entry-content">
-			<div class="entry-content-pa px-4 pt-6 pb-6">
-				<div class="w-max max-gl">
-			<?php
-   the_content();
-
-   wp_link_pages([
-     "before" =>
-       '<div class="page-links">' . esc_html__("Pages:", "parts-per-million"),
-     "after" => "</div>",
-   ]);
-   ?>
-	 </div><!-- /.max-gl -->
-
-	</div><!-- /.entry-content-pa -->
-		</div><!-- .entry-content -->
-	</div>
+		<?php endif; ?>
+	</header><!-- .page-header -->
+	<div id="page-content" class="page-content">
+		<div class="page-content-pa px-4 pt-6 pb-6">
+			<div class="w-max max-gl">
+				<div class="page-layout-main">
+				<div class="page-body">
+				<?php the_content(); ?>
+				</div>
+			<div class="page-sidebar">
+				<h2 class="section-title mb-5">Explore Topics</h2>
+				<!-- CATEGORIES FEED -->
+				<?php get_template_part("template-parts/feed/categories", "feed"); ?>
+			</div>
+			</div><!-- /page-layout-main -->
+			</div><!-- /.max-gl -->
+	</div><!-- /page-content-pa -->
+</div><!-- .page-content -->
 
 	<?php if (get_edit_post_link()): ?>
-		<footer class="entry-footer">
+		<footer class="page-footer">
 			<?php edit_post_link(
      sprintf(
        wp_kses(

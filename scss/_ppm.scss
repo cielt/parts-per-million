@@ -141,7 +141,7 @@ $marqueeMaxHeight: em(512px);
     font-weight: 300;
     line-height: em(28px, 14px);
     vertical-align: middle;
-    color: $white;
+    color: $blue350;
     text-transform: uppercase;
     text-decoration: none;
     border-radius: $b-borderRad-1;
@@ -150,7 +150,7 @@ $marqueeMaxHeight: em(512px);
 
     &:focus,
     &:hover {
-      border-color: $white;
+      border-color: $blue350;
     }
   }
 }
@@ -218,12 +218,11 @@ $marqueeMaxHeight: em(512px);
   position: relative;
   z-index: 2;
   background: $darkGrey350;
-  padding: $b-space-6 0;
 }
 
 .footer-content {
   color: $lightGrey350;
-  padding: $b-space-5;
+  padding: $b-space-6 $b-space-5;
 
   a {
     color: $teal350;

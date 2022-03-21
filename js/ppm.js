@@ -47,7 +47,7 @@
         break;
       case "ppm-page":
       default:
-        $heroEl = $(".entry-header");
+        $heroEl = $(".page-header");
         break;
     }
 
