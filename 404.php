@@ -20,6 +20,11 @@ get_header(); ?>
 			</header><!-- .page-header -->
 
 			<div class="page-content">
+				<div class="page-content-pa px-4 pt-6 pb-6">
+			<div class="w-max max-gl">
+				<div class="page-layout-main">
+				<div class="page-body">
+
 				<p><?php esc_html_e(
       "It looks like nothing was found at this location. Maybe try one of the links below or a search?",
       "parts-per-million"
@@ -31,42 +36,22 @@ get_header(); ?>
      the_widget("WP_Widget_Recent_Posts");
      ?>
 
-					<div class="widget widget_categories">
-						<h2 class="widget-title"><?php esc_html_e(
-        "Most Used Categories",
-        "parts-per-million"
-      ); ?></h2>
-						<ul>
-							<?php wp_list_categories([
-         "orderby" => "count",
-         "order" => "DESC",
-         "show_count" => 1,
-         "title_li" => "",
-         "number" => 10,
-       ]); ?>
-						</ul>
+
+		 	</div><!-- /.page-body -->
+			 <div class="page-sidebar">
+			<div class="widget widget_categories mb-5">
+				<h2 class="section-title mb-5">Topics</h2>
+				<!-- CATEGORIES FEED -->
+			<?php get_template_part("template-parts/feed/categories", "feed"); ?>
 					</div><!-- .widget -->
-
+<!-- TODO: TAGS??? -->
 					<?php
-     /* translators: %1$s: smiley */
-     $parts_per_million_archive_content =
-       "<p>" .
-       sprintf(
-         esc_html__(
-           'Try looking in the monthly archives. %1$s',
-           "parts-per-million"
-         ),
-         convert_smilies(":)")
-       ) .
-       "</p>";
-     the_widget(
-       "WP_Widget_Archives",
-       "dropdown=1",
-       "after_title=</h2>$parts_per_million_archive_content"
-     );
-
-     the_widget("WP_Widget_Tag_Cloud");
-     ?>
+//the_widget("WP_Widget_Tag_Cloud");
+?>
+			 </div><!-- /.page-sidebar -->
+	</div><!-- /.page-layout-main -->
+	</div><!-- /.w-max -->
+		</div><!-- /.page-content-pa -->
 
 			</div><!-- .page-content -->
 		</section><!-- .error-404 -->

@@ -15,6 +15,12 @@
     "parts-per-million"
   ); ?></h1>
 	</header><!-- .page-header -->
+	<div id="page-content" class="page-content">
+		<div class="page-content-pa px-4 pt-6 pb-6">
+			<div class="w-max max-gl">
+				<div class="page-layout-main">
+				<div class="page-body">
+
 		<?php if (is_home() && current_user_can("publish_posts")):
     printf(
       "<p>" .
@@ -46,4 +52,16 @@
      "parts-per-million"
    ); ?></p>
 	<?php get_search_form();endif; ?>
+	</div><!-- /.page-body -->
+	<div class="page-sidebar">
+<div class="widget widget_categories mb-5">
+				<h2 class="section-title mb-5">Topics</h2>
+				<!-- CATEGORIES FEED -->
+			<?php get_template_part("template-parts/feed/categories", "feed"); ?>
+					</div><!-- .widget -->
+	</div><!-- /.page-sidebar -->
+</div><!-- /.page-layout-main -->
+</div><!-- /.w-max -->
+</div><!-- /.page-content-pa -->
+</div><!-- /.page-content -->
 </div><!-- /.search-results -->

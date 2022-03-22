@@ -1,4 +1,4 @@
-<li class="feed-item">
+<li class="feed-item" id="post-<?php the_ID(); ?>" data-rel="post-feed-item">
 	<div class="feed-item-content">
 	<div class="story-info">
     <h3 class="feed-story-title">
@@ -30,8 +30,8 @@
 
 		</a>
 		<?php endif; ?>
-		</div>
+	</div>
 		<?php if (get_field("medium")): ?>
-			<span class="post-medium"><?php echo get_field("medium"); ?></span>
-    <?php endif; ?>
-	</li>
+		<span class="post-medium"><?php echo get_field("medium"); ?></span>
+  <?php endif; ?>
+</li>

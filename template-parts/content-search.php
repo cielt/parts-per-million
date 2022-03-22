@@ -8,33 +8,30 @@
  */
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> data-rel="search-feed-item">
-	<header class="entry-header">
-		<?php the_title(
-    sprintf(
-      '<h2 class="entry-title"><a href="%s" rel="bookmark">',
-      esc_url(get_permalink())
-    ),
-    "</a></h2>"
-  ); ?>
+<li class="feed-item" id="post-<?php the_ID(); ?>" data-rel="search-feed-item">
+	<div class="feed-item-content">
+	<div class="story-info">
+    <h3 class="feed-story-title">
+			<a href="<?php the_permalink(); ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a>
+		</h3>
+    <!-- intro -->
+		<div class="contributor-info">
+			<?php if (get_field("contributor")): ?>
+		 		<span class="post-meta author"><?php echo get_field("contributor"); ?></span>
+				<?php endif; ?>
+		</div>
+		<div class="feed-item-summary">
+			<?php the_excerpt(); ?>
+		</div><!-- .feed-item-summary -->
+	</div><!-- /.story-info  -->
+			<?php if (get_the_post_thumbnail(null, "thumbnail", "")): ?>
+		 		<a href="<?php the_permalink(); ?>" class="story-thumbnail feed-item-thumbnail-link">
+					 <?php echo the_post_thumbnail(
+        [320, 240],
+        ["class" => "fit feed-item-thumbnail", "title" => get_the_title()]
+      ); ?>
 
-		<?php if ("post" === get_post_type()): ?>
-		<div class="entry-meta">
-			<?php
-   parts_per_million_posted_on();
-   parts_per_million_posted_by();
-   ?>
-		</div><!-- .entry-meta -->
+		</a>
 		<?php endif; ?>
-	</header><!-- .entry-header -->
-
-	<?php parts_per_million_post_thumbnail(); ?>
-
-	<div class="entry-summary">
-		<?php the_excerpt(); ?>
-	</div><!-- .entry-summary -->
-
-	<footer class="entry-footer">
-		<?php parts_per_million_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
-</article><!-- #post-<?php the_ID(); ?> -->
+	</div>
+</li>
