@@ -15,12 +15,11 @@ get_header(); ?>
 
 			<header class="page-header">
 				<h1 class="page-title">
-					 /* translators: %s: search query. */<?php
-    /* translators: %s: search query. */
-    ?>printf(
-       esc_html__("Search Results for: %s", "parts-per-million"),
-       "<span>" . get_search_query() . "</span>"
-     ); ?>
+					 <?php /* translators: %s: search query. */
+      printf(
+        esc_html__("Search Results for: %s", "parts-per-million"),
+        "<span>" . get_search_query() . "</span>"
+      ); ?>
 				</h1>
 			</header><!-- .page-header -->
 
@@ -45,4 +44,6 @@ get_header(); ?>
 <?php
 get_sidebar();
 get_footer();
- ?>
+
+
+?>

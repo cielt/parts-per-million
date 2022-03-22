@@ -1,7 +1,8 @@
 <?php
 $paged = get_query_var("paged") ? get_query_var("paged") : 1;
 $args = [
-  "orderby" => "date",
+  "meta_key" => "date_published",
+  "orderby" => "meta_value",
   "order" => "DESC",
   "post_type" => "story",
   "posts_per_page" => 10,

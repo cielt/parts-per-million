@@ -1,4 +1,4 @@
-<li class="home-feed-item">
+<li class="feed-item">
 	<div class="feed-item-content">
 	<div class="story-info">
     <h3 class="feed-story-title">

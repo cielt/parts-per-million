@@ -4,6 +4,7 @@
 $categories = get_categories([
   "orderby" => "count",
   "order" => "DESC",
+  "hide_empty" => true,
 ]);
 
 foreach ($categories as $category) {
