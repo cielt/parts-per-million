@@ -10,6 +10,10 @@
     var $body = $("body"),
       bodyLayout = $body.data("layout"),
       $globalMenuBtns = $("#global-menu-btn, #close-menu-btn, .menu-overlay"),
+      $searchToggleBtns = $(
+        "#search-toggle-btn, #close-search-btn, .search-overlay"
+      ),
+      $searchForm = $(".search-form"),
       $heroEl, // main marquee el for Waypoint settings
       $marqueeMain = $(".marquee-main"),
       headerWaypoint,
@@ -27,8 +31,28 @@
       });
     }
 
-    // Global Nav Links
+    // Search Toggle
+    if ($searchForm.length) {
+      $searchForm.on("click", function (ev) {
+        ev.stopPropagation();
+      });
+    }
+
+    if ($("#close-search-btn").length) {
+      $("#close-search-btn").on("click", function (ev) {
+        ev.stopPropagation();
+      });
+    }
+    if ($searchToggleBtns.length) {
+      $searchToggleBtns.on("click", function (ev) {
+        ev.preventDefault();
+        $body.toggleClass("search-widget-open search-widget-closed");
+        $siteNavBlock.scrollTop(0);
+      });
+    }
+
     if ($siteNavMenu.find(".page_item > a").length) {
+      // Global Nav Links
       $siteNavMenu.on("click", ".page_item a", function () {
         $body.removeClass("nav-open").addClass(".nav-closed");
       });

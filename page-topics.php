@@ -11,12 +11,6 @@ get_header(); ?>
 
 <main id="primary" class="site-main">
 	<div id="topics" class="page-content-area">
-		<?php while (have_posts()):
-    the_post();
-    get_template_part("template-parts/content", "page");
-  endwhile;
-// End of the loop.
-?>
 	<!-- All topics -->
 	<div class="categories">
 		<h2 class="h1"><?php esc_html_e("All PPM Topics", "parts-per-million"); ?></h2>

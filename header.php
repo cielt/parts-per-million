@@ -22,7 +22,7 @@
 	<?php wp_head(); ?>
 </head>
 
-<body <?php body_class("nav-closed header-waypoint"); ?>
+<body <?php body_class("nav-closed header-waypoint search-widget-closed"); ?>
   data-layout="<?php if (is_page_template("front-page.php")) {
     echo "ppm-home";
   } elseif (is_single()) {
@@ -38,7 +38,7 @@
 	<div class="scaffold-outer p-rel">
 		<div class="site-nav-block">
 			<div class="site-nav-wrapper">
-    		<button type="button" id="close-menu-btn" class="close-menu close-btn">
+    		<button type="button" id="close-menu-btn" class="close-menu close-btn" aria-label="close menu">
 					<b class="ico" aria-hidden="true">&times;</b>
 					<span class="vis-hidden">Close Menu</span>
 				</button>
@@ -53,6 +53,15 @@
       </div>
 			</div><!-- /.site-nav-wrapper -->
 		<div class="scaffold-inner">
+			<div class="search-overlay">
+				<div class="search-widget-inner">
+					<button type="button" id="close-search-btn" class="close-search-btn" aria-label="close search">Cancel <b>&times;</b></button>
+					<div class="search-form-block">
+						<?php get_search_form(); ?>
+					</div>
+
+				</div>
+			</div>
 			<div class="menu-overlay"></div>
 				<div class="header-bar">
 					<div class="header-bar-context">
@@ -66,7 +75,8 @@
         ); ?></b>
 							</a>
 							<div class="header-bar-block">
-							<a href="#" id="global-menu-btn" class="menu-btn"><b class="fas fa-bars" aria-hidden="true"></b> Menu</a>
+								<button type="button" id="search-toggle-btn" class="search-toggle-btn"><b class="fas fa-search" aria-hidden="true"></b><span class="vis-hidden">Toggle Search</span></button>
+								<button type="button" id="global-menu-btn" class="menu-btn"><b class="fas fa-bars" aria-hidden="true"></b> Menu</button>
 							</div>
 						</div>
 					</div>
