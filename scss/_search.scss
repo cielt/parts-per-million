@@ -1,0 +1,67 @@
+// =====================================
+//
+//   350Brooklyn :: Parts per Million
+//   -> search styles
+//
+// =====================================
+
+// -------------------------------------
+//   Variables
+// -------------------------------------
+
+// caption ahead of search results listings
+.search-results-summary {
+  color: $blue350;
+  font-family: $b-mono-fontFamily;
+}
+
+// -------------------------------------
+//   Form
+// -------------------------------------
+
+form[role="search"] {
+  position: relative;
+  display: flex;
+  gap: $b-space-2;
+
+  label {
+    flex: 1;
+
+    input[type="search"] {
+      display: block;
+      width: 100%;
+      border: 3px solid $blue350Transparent;
+      padding: 0 $b-space-4;
+      font-size: $b-fontSize-xl;
+      line-height: $b-lineHeight;
+      border-radius: $b-borderRad-2;
+      font-family: $b-mono-fontFamily;
+
+      &::placeholder {
+        color: $blue350;
+      }
+
+      &:focus {
+        outline: 0;
+        background-color: $lightGrey350;
+        border-color: $blue350;
+      }
+    }
+  }
+
+  input[type="submit"] {
+    flex: 0 0 60px;
+    border: none;
+    background-color: $blue350;
+    color: $white;
+    font-size: $b-fontSize-l;
+    line-height: 48px;
+    padding: 0 $b-space-3;
+    border-radius: $b-borderRad-2;
+
+    &:focus,
+    &:hover {
+      background-color: $blue350Darker;
+    }
+  }
+}

@@ -56,8 +56,15 @@ get_header(); ?>
      the_posts_navigation();
      else:get_template_part("template-parts/content", "none");endif; ?>
 		 </ul>
+		  <?php wp_reset_postdata(); ?>
 				</div><!-- /.page-body -->
-				<div class="page-sidebar"></div><!-- /.page-sidebar -->
+				<div class="page-sidebar">
+					<div class="widget widget_categories mb-5">
+				<h2 class="section-title mb-5">Topics</h2>
+				<!-- CATEGORIES FEED -->
+			<?php get_template_part("template-parts/feed/categories", "feed"); ?>
+					</div><!-- .widget -->
+				</div><!-- /.page-sidebar -->
 	 </div><!-- /.w-max -->
 	</div><!-- /.page-content-pa -->
 	</div><!-- /.page-content -->

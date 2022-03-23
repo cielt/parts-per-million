@@ -1,37 +1,34 @@
 <?php
 /**
- * Template part for displaying results in search pages
+ * Template part for displaying a list of search results on the search page
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
  * @package Parts_Per_Million
  */
 ?>
-
-<li class="feed-item" id="post-<?php the_ID(); ?>" data-rel="search-feed-item">
-	<div class="feed-item-content">
-	<div class="story-info">
-    <h3 class="feed-story-title">
-			<a href="<?php the_permalink(); ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a>
-		</h3>
-    <!-- intro -->
-		<div class="contributor-info">
-			<?php if (get_field("contributor")): ?>
-		 		<span class="post-meta author"><?php echo get_field("contributor"); ?></span>
-				<?php endif; ?>
-		</div>
-		<div class="feed-item-summary">
-			<?php the_excerpt(); ?>
-		</div><!-- .feed-item-summary -->
-	</div><!-- /.story-info  -->
-			<?php if (get_the_post_thumbnail(null, "thumbnail", "")): ?>
-		 		<a href="<?php the_permalink(); ?>" class="story-thumbnail feed-item-thumbnail-link">
-					 <?php echo the_post_thumbnail(
-        [320, 240],
-        ["class" => "fit feed-item-thumbnail", "title" => get_the_title()]
-      ); ?>
-
-		</a>
-		<?php endif; ?>
-	</div>
-</li>
+<div class="search-form-block mb-5">
+	 <?php get_search_form(); ?>
+</div>
+<div class="search-results-area">
+	<?php if (have_posts()): ?>
+			<p class="search-results-summary"><?php printf(
+     esc_html__("Showing: %s Results", "parts-per-million"),
+     "<span>" . $wp_query->found_posts . "</span>"
+   ); ?></p>
+	<?php endif; ?>
+	<?php
+ printf("<ul class='posts-feed'>");
+ /* Start the Loop */
+ while (have_posts()):
+   the_post();
+   /**
+    * Run the loop for the search to output the results.
+    * If you want to overload this in a child theme then include a file
+    * called content-search.php and that will be used instead.
+    */
+   get_template_part("template-parts/feed/search", "result-item");
+ endwhile;
+ printf("</ul>");
+ ?>
+</div><!-- /.search-results-area -->

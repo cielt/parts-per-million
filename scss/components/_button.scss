@@ -2,7 +2,8 @@
 //   Form elements
 // -------------------------------------
 
-button {
+button,
+input[type="submit"] {
   appearance: none;
 
   &::-moz-focus-inner {
