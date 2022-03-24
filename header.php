@@ -53,16 +53,8 @@
       </div>
 			</div><!-- /.site-nav-wrapper -->
 		<div class="scaffold-inner">
-			<div class="search-overlay">
-				<div class="search-widget-inner">
-					<button type="button" id="close-search-btn" class="close-search-btn" aria-label="close search">Cancel <b>&times;</b></button>
-					<div class="search-form-block">
-						<h2 class="overlay-header mb-5">Search Parts Per Million</h2>
-						<?php get_search_form(); ?>
-					</div>
-
-				</div>
-			</div>
+			<!-- SEARCH -->
+			<?php get_template_part("template-parts/submodules/search", "overlay"); ?>
 			<div class="menu-overlay"></div>
 				<div class="header-bar">
 					<div class="header-bar-context">
