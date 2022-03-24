@@ -163,6 +163,29 @@ $marqueeMaxHeight: em(512px);
   }
 }
 
+// Responsive Logo Area
+// PPM / name
+
+.header-bar {
+  .xs--ppm-show {
+    display: block;
+  }
+
+  .xs--ppm-hide.home-label {
+    display: none;
+  }
+
+  @media (min-width: $g-xs) {
+    .xs--ppm-show {
+      display: none;
+    }
+
+    .xs--ppm-hide.home-label {
+      display: block;
+    }
+  }
+}
+
 // ----- Only on pages without front-page hero area ----- //
 .header-spacing {
   width: 100%;
@@ -218,13 +241,12 @@ $marqueeMaxHeight: em(512px);
 // ----- Search Widget ----- //
 
 .search-overlay {
-  // display: block;
   display: none;
   position: absolute;
   z-index: 1;
   width: 100%;
   height: 100vh;
-  background-color: $blackTransparent;
+  background-color: $darkGrey350;
 
   .search-widget-inner {
     position: relative;
@@ -234,8 +256,14 @@ $marqueeMaxHeight: em(512px);
     justify-content: center;
     align-items: center;
 
+    .overlay-header {
+      color: $teal350;
+      font-family: $b-sans-fontFamily;
+      font-weight: bold;
+    }
+
     .search-form-block {
-      flex: 1;
+      flex: 0 1 640px;
       padding: $b-space-5;
     }
 
@@ -252,6 +280,21 @@ $marqueeMaxHeight: em(512px);
 
       b {
         font-size: $b-fontSize-xl;
+      }
+    }
+
+    // very compact search form
+    @media (max-width: $g-xs) {
+      .search-form {
+        .search-submit {
+          font-size: 1px;
+          color: $clear;
+          padding: 0 $b-space-1;
+          flex-basis: 48px;
+          background: url("images/ico-search.svg") no-repeat $blue350 center
+            center;
+          background-size: 50%;
+        }
       }
     }
   }

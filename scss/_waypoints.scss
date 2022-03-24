@@ -3,26 +3,27 @@
 // -------------------------------------
 
 .scroll-down {
-	.header-bar {
-		// home link
-		.home-link {
-			color: $darkGrey350;
-		}
+  .header-bar {
+    // home link
+    .home-link {
+      color: $darkGrey350;
+    }
 
-		// menu button
-		.menu-btn {
-			color: $darkGrey350;
+    // menu button
+    .menu-btn,
+    .search-toggle-btn {
+      color: $darkGrey350;
 
-			&:focus,
-			&:hover {
-				border-color: $red350;
-			}
-		}
-	}
+      &:focus,
+      &:hover {
+        border-color: $red350;
+      }
+    }
+  }
 }
 
 .scroll-down {
-	.header-bar .overlay {
-		opacity: 0.64;
-	}
+  .header-bar .overlay {
+    opacity: 0.64;
+  }
 }
