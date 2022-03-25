@@ -39,9 +39,11 @@
     }
   }
 
-  .single-post-medium {
+  .single-post-author {
     display: block;
     color: $teal350;
+    // text-transform: uppercase;
+    font-weight: bold;
     margin-bottom: $b-space-2;
   }
 
@@ -118,34 +120,38 @@
 
 .post-layout-main {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   gap: $b-space-6;
 
   .entry-meta,
+  .post-body,
   .entry-sidebar {
-    flex: 0 0 280px;
+    max-width: 600px;
+    margin: 0 auto;
   }
 
-  .entry-sidebar {
-    flex-basis: 300px;
-  }
-
-  .post-body {
-    flex: 1 0 480px;
-  }
-
-  @media (max-width: $g-m) {
-    flex-direction: column;
+  @media (min-width: $g-m) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
 
     .entry-meta,
+    .post-body,
     .entry-sidebar {
-      flex-basis: auto;
+      margin: inherit;
     }
 
-    .post-body,
     .entry-meta {
-      max-width: 480px;
-      margin: 0 auto;
+      flex: 0 1 240px;
+    }
+
+    .entry-sidebar {
+      flex: 1 0 240px;
+      max-width: 100%;
+    }
+
+    .post-body {
+      flex: 1 0 auto;
     }
   }
 }
@@ -180,6 +186,7 @@
     .contributor-thumbnail {
       flex: 0 0 48px;
       border-radius: 50%;
+      overflow: hidden;
       width: 48px;
       height: 48px;
       background-color: $grey1;
@@ -241,15 +248,26 @@
 // ----- POST NAVIGATION AREA ----- //
 
 .entry-sidebar {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
+  // TODO
+}
+
+// Prev / Next nav
+
+.post-content-footer {
+  border-top: 1px solid $lightGrey350;
 
   .post-footer-nav {
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: $b-space-5;
+      justify-content: center;
+      align-items: flex-start;
+    }
+
     .nav-links > div {
-      &:not(:first-of-type) {
-        margin-top: $b-space-5;
-      }
+      flex: 1 0 240px;
+
       &.nav-previous {
         text-align: left;
       }
@@ -261,10 +279,13 @@
       a {
         display: flex;
         text-decoration: none;
-        gap: $b-space-1;
+        gap: $b-space-2;
+        align-items: center;
+        color: $blue350;
 
         .nav-title {
           flex: 1;
+          margin: 0;
         }
 
         .ico-footer-link {
@@ -274,7 +295,8 @@
           line-height: 24px;
           text-align: center;
           border-radius: 50%;
-          background-color: $red350Transparent;
+          color: $white;
+          background-color: $blue350;
         }
       }
     }

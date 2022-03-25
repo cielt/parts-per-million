@@ -15,8 +15,8 @@
   echo "has-hero-image";
 } ?>">
 	<header class="entry-header">
-		<?php if (get_field("medium")): ?>
-			<span class="single-post-medium"><?php echo get_field("medium"); ?></span>
+		<?php if (get_field("contributor")): ?>
+			<span class="single-post-author"><?php echo get_field("contributor"); ?></span>
     <?php endif; ?>
 		<?php the_title('<h1 class="entry-title">', "</h1>"); ?>
 	</header><!-- .entry-header -->
@@ -61,12 +61,12 @@
 						<div class="post-date meta-section">
 							<?php if (get_field("date_published")): ?>
 						 		<span class="post-meta date-published">
-									 Published: <?php echo get_field("date_published"); ?>
+									 Date: <?php echo get_field("date_published"); ?>
 								</span>
 							<?php endif; ?>
 							<?php if (get_field("location")): ?>
 						 		<span class="post-meta location">
-									 Created in: <?php echo get_field("location"); ?>
+									 From: <?php echo get_field("location"); ?>
 								</span>
 							<?php endif; ?>
 						</div>
@@ -105,22 +105,31 @@
 						<?php the_content(); ?>
 					</div>
 					<div class="entry-sidebar">
+						<div class="w-max max-gm">
 						<!-- TODO: sidebar -->
-						<?php
-      printf('<div class="post-footer-nav prev-next-links">');
-      the_post_navigation([
-        "prev_text" =>
-          '<span class="ico-footer-link"><i class="fas fa-chevron-left fa-sm"></i></span>' .
-          '<span class="nav-title">%title</span>',
-        "next_text" =>
-          '<span class="nav-title">%title</span>' .
-          '<span class="ico-footer-link"><i class="fas fa-chevron-right fa-sm"></i></span>',
-      ]);
-      printf("</div>");
-      ?>
+						<p>Drop sidebar contents here &hellip;</p>
+						</div><!-- /.w-max -->
 					</div>
 				</div><!-- /.post-layout-main -->
 			</div><!-- /.max-gl -->
 		</div><!-- /.entry-content-pa -->
+		<div class="post-content-footer">
+			<div class="px-4 pt-6 pb-6">
+				<div class="w-max max-gm">
+			<?php
+   printf('<div class="post-footer-nav prev-next-links">');
+   the_post_navigation([
+     "prev_text" =>
+       '<span class="ico-footer-link"><i class="fas fa-chevron-left fa-sm"></i></span>' .
+       '<h4 class="nav-title">%title</h4>',
+     "next_text" =>
+       '<h4 class="nav-title">%title</h4>' .
+       '<span class="ico-footer-link"><i class="fas fa-chevron-right fa-sm"></i></span>',
+   ]);
+   printf("</div>");
+   ?>
+	 			</div>
+			</div>
+		</div><!-- /.post-content-footer -->
 	</div><!-- .entry-content -->
 </article><!-- #post-<?php the_ID(); ?> -->
