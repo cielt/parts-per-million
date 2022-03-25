@@ -63,6 +63,58 @@
   }
 }
 
-// <div class="post-meta cover-image-caption">
-// 				<span class="caption"><?php echo get_field("cover_image_caption"); ?></span>
-// 		</div>
+// -------------------------------------
+//  Footer
+// -------------------------------------
+
+.footer {
+  position: relative;
+  z-index: 2;
+  background: $darkGrey350;
+}
+
+.footer-content {
+  color: $lightGrey350;
+  padding: $b-space-6 $b-space-4;
+
+  a {
+    color: $teal350;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      color: $red350;
+    }
+  }
+
+  .footer-content-inner {
+    display: flex;
+    flex-direction: column;
+    gap: $b-space-6;
+
+    @media (min-width: $g-m) {
+      flex-direction: row;
+      .site-info {
+        flex: 0 0 30%;
+      }
+    }
+  }
+
+  .site-links {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: $b-space-5;
+  }
+
+  // Footer Navigation
+  .footer-nav {
+    .footer-menu {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      font-family: $b-sans-fontFamily;
+      font-size: $b-fontSize-s;
+    }
+  }
+}

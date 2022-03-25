@@ -318,30 +318,6 @@ $marqueeMaxHeight: em(512px);
 // -------------------------------------
 
 // -------------------------------------
-//  Footer
-// -------------------------------------
-
-.footer {
-  position: relative;
-  z-index: 2;
-  background: $darkGrey350;
-}
-
-.footer-content {
-  color: $lightGrey350;
-  padding: $b-space-6 $b-space-5;
-
-  a {
-    color: $teal350;
-  }
-
-  .info {
-    margin: 0;
-    max-width: 40em;
-  }
-}
-
-// -------------------------------------
 //   Scaffolding - Nav - Container
 // -------------------------------------
 

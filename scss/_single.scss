@@ -283,9 +283,18 @@
         align-items: center;
         color: $blue350;
 
-        .nav-title {
+        .footer-nav-label {
           flex: 1;
           margin: 0;
+
+          .kicker {
+            display: block;
+            margin-bottom: $b-space-1;
+            font-size: $b-fontSize-xs;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: $darkGrey350;
+          }
         }
 
         .ico-footer-link {
