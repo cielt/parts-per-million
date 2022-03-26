@@ -135,6 +135,7 @@ $marqueeMaxHeight: em(512px);
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    gap: $b-space-2;
   }
 
   // menu button, search toggle button
