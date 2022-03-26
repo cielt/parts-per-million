@@ -108,6 +108,12 @@
   }
 
   // Footer Navigation
+  .links-col {
+    h5 {
+      color: $grey4;
+    }
+  }
+
   .footer-nav {
     .footer-menu {
       list-style-type: none;
@@ -115,6 +121,12 @@
       padding: 0;
       font-family: $b-sans-fontFamily;
       font-size: $b-fontSize-s;
+
+      li {
+        &:not(:last-of-type) {
+          margin-bottom: $b-space-1;
+        }
+      }
     }
   }
 }

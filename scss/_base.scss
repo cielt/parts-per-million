@@ -60,7 +60,7 @@ h6,
 .h6 {
   font-weight: inherit;
   line-height: $b-lineHeight-header;
-  margin-top: 0; // use tool class for other spacing attributes
+  margin: 0 0 1em; // use tool class for other spacing attributes
   font-family: $b-fontFamily;
 
   & > a {

@@ -150,6 +150,24 @@ h3,
   }
 }
 
+h4,
+.h4 {
+  font-size: $b-fontSize-l;
+
+  @media (min-width: $g-m) {
+    font-size: $b-fontSize-h4;
+  }
+}
+
+h5,
+.h5 {
+  font-size: $b-fontSize;
+
+  @media (min-width: $g-m) {
+    font-size: $b-fontSize-l;
+  }
+}
+
 .m--ts-xl {
   @media (min-width: $g-m) {
     font-size: $b-fontSize-xl;

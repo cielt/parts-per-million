@@ -48,4 +48,37 @@
       }
     }
   }
+
+  &.list-xl {
+    .category-list-item {
+      display: block;
+      margin: 0 0 $b-space-5;
+
+      .category-link {
+        display: flex;
+        font-size: $b-fontSize-xl;
+
+        .cat-name,
+        .cat-count {
+          padding: 0 $b-space-4;
+        }
+
+        .cat-name {
+          flex: 1;
+        }
+
+        .cat-count {
+          flex: 0 0 auto;
+        }
+      }
+    }
+
+    @media (min-width: $g-m) {
+      .category-list-item {
+        .category-link {
+          font-size: $b-fontSize-xxl;
+        }
+      }
+    }
+  }
 }

@@ -29,7 +29,7 @@
 				</div>
 				<div class="site-links">
 					<div class="links-col ppm-links">
-						<h5 class="h5">Parts Per Million</h5>
+						<h5 class="h5 tf-sans">Parts Per Million</h5>
 						<nav id="footer-navigation" class="footer-nav">
           		<?php wp_nav_menu([
               "theme_location" => "menu-1",
@@ -40,7 +40,7 @@
 						</nav>
 					</div>
 					<div class="links-col 350bk-links">
-						<h5 class="h5">350Brooklyn</h5>
+						<h5 class="h5 tf-sans">350Brooklyn</h5>
 						<nav id="footer-navigation" class="footer-nav">
           		<ul id="footer-ppm-menu" class="footer-menu">
 								<li class="menu-item"><a href="https://350brooklyn.org/">350Brooklyn Home</a></li>
@@ -50,7 +50,7 @@
 						</nav>
 					</div>
 					<div class="links-col topics-links">
-						<h5 class="h5">Top Topics</h5>
+						<h5 class="h5 tf-sans">Top Topics</h5>
 						<nav id="footer-navigation" class="footer-topics-nav footer-nav">
           		<ul id="footer-topics-menu" class="footer-menu footer-topics-menu">
 								<?php wp_list_categories([
