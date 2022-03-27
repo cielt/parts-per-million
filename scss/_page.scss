@@ -131,3 +131,13 @@
     }
   }
 }
+
+// 350Brooklyn logo
+
+.logo-350bk a {
+  display: inline-block;
+  width: 180px;
+  height: 24px;
+  background: url("images/logo-350brooklyn.svg") no-repeat $clear center center;
+  background-size: contain;
+}

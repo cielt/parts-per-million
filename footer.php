@@ -16,11 +16,18 @@
 			<div class="footer-content-inner">
 				<div class="site-info">
 					<h4 class="h4">About This Site</h4>
-				<p class="mb-5">
+				<p class="ts-s mb-5">
       		<em>Parts Per Million</em> vitae semper quis lectus nulla at volutpat. Id consectetur purus ut faucibus pulvinar elementum integer enim neque. Amet nisl purus in mollis nunc sed id semper.
     		</p>
-				<p class="ts-xs mb-5">350Brooklyn works locally to address the climate crisis through education, legislation and direct action. We are one of more than 200 international affiliates of <a href="https://350.org/">350.org</a></p>
-    		<div class="copyright"><p class="ts-xs">&copy; <?php echo date(
+
+				<h5 class="logo-350bk mb-1">
+					<a href="https://350brooklyn.org/" title="Visit the 350Brooklyn website">
+						<span class="vis-hidden">350Brooklyn</span>
+					</a>
+				</h5>
+				<p class="ts-s mb-5">
+				350Brooklyn works locally to address the climate crisis through education, legislation and direct action. We are one of more than 200 international affiliates of <a href="https://350.org/">350.org</a></p>
+    		<div class="copyright"><p class="ts-s tf-sans">&copy; <?php echo date(
         "Y"
       ); ?> <?php bloginfo(
    "name"
