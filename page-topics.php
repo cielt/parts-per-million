@@ -19,7 +19,7 @@ get_header(); ?>
 			<div class="w-max max-gl">
 				<div class="page-layout-main">
 				<div class="page-body">
-						<ul class="categories-list list-xl">
+						<ul class="categories-list-grid">
 <?php
 $categories = get_categories([
   "orderby" => "count",
@@ -46,9 +46,10 @@ foreach ($categories as $category) {
 ?>
 </ul>
 				</div><!-- /.page-body -->
-				<div class="page-sidebar">
+				<!-- <div class="page-sidebar">
 					<p>Drop sidebar here</p>
-				</div><!-- /.page-sidebar -->
+				</div> -->
+				<!-- /.page-sidebar -->
 				</div><!-- /.page-layout-main -->
 				</div><!-- /.w-max -->
 			</div><!-- /.page-content-pa -->

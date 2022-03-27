@@ -16,101 +16,77 @@
 // ----- HEADER AREA ----- //
 
 .entry-header-wrapper {
+  height: 60vh;
+  display: block;
   position: relative;
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  border-bottom: 1px solid $darkGrey350;
+  background-color: $darkGrey350;
 
-  .entry-header {
-    flex: 1;
+  .entry-header,
+  .featured-image-frame {
+    width: 100%;
     height: 100%;
-    padding: $b-space-4;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    justify-content: center;
-    background-color: $darkGrey350;
-    color: $white;
-
-    .entry-title {
-      max-width: 80%;
-      margin: 0 auto;
-    }
+    top: 0;
+    left: 0;
   }
 
-  .single-post-author {
+  .featured-image-frame {
     display: block;
-    color: $teal350;
-    // text-transform: uppercase;
-    font-weight: bold;
-    margin-bottom: $b-space-2;
-  }
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
 
-  // has title + hero image sxs
-  &.has-hero-image {
-    .entry-header {
-      flex: 0 1 50%;
-
-      .entry-title {
-        max-width: 100%;
-      }
-    }
-
-    .featured-image-frame {
-      flex: 1;
-      height: 100%;
-      overflow: hidden;
-      position: relative;
-      z-index: 1;
-
-      img {
-        display: block;
-        width: auto;
-        height: 100%;
-        object-fit: cover;
-      }
-    }
-  }
-
-  @media (max-width: $g-m) {
-    height: 60vh;
-    display: block;
-
-    .entry-header,
-    .featured-image-frame {
-      display: block;
+    img {
       width: 100%;
       height: 100%;
+      object-fit: cover;
     }
+  }
 
+  .entry-header {
+    position: absolute;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    color: $white;
+    padding: $b-space-4;
+
+    .single-post-author {
+      display: block;
+      color: $teal350;
+      font-weight: bold;
+      margin-bottom: $b-space-2;
+    }
+  }
+
+  // wide viewport
+  @media (min-width: $g-m) {
+    height: 100vh;
+    display: flex;
+
+    // No hero image
     .entry-header {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      position: absolute;
-      z-index: 2;
+      flex: 1;
+      padding: $b-space-5;
     }
 
+    // has hero image
     &.has-hero-image {
-      .entry-header {
-        background-color: $clear;
+      .entry-header,
+      .featured-image-frame {
+        top: inherit;
+        left: inherit;
+        width: auto;
+      }
 
-        .entry-title {
-          max-width: 80%;
-        }
+      .entry-header {
+        position: relative;
+        flex-basis: 50%;
       }
 
       .featured-image-frame {
-        position: relative;
-        z-index: 1;
-        overflow: hidden;
-
-        img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-        }
+        flex: 1 1 50%;
       }
     }
   }

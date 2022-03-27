@@ -9,7 +9,7 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="page-header">
+	<header class="page-header w-max max-gl">
 		<?php the_title('<h1 class="page-title">', "</h1>"); ?>
 		<div class="image-frame featured-image-frame">
 			<?php if (get_the_post_thumbnail(null, "thumbnail", "")):

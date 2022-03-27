@@ -16,7 +16,7 @@
 // ----- HEADER AREA ----- //
 
 .page-header {
-  padding: $b-space-4;
+  padding: $b-space-4 0;
   text-align: center;
 
   .page-title {
@@ -26,6 +26,7 @@
   .featured-image-frame {
     border-bottom: 3px solid $red350;
     overflow: hidden;
+    aspect-ratio: 16 / 9;
 
     & > img {
       object-fit: cover;
