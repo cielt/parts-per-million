@@ -12,11 +12,13 @@ get_header(); ?>
 	<main id="primary" class="site-main">
 <div id="page-404" class="page-content-area ">
 		<section class="error-404 not-found">
-			<header class="page-header">
-				<h1 class="page-title"><?php esc_html_e(
-      "Oops! That page can&rsquo;t be found.",
-      "parts-per-million"
-    ); ?></h1>
+			<header class="page-header w-max max-gl">
+				<div class="page-title-block">
+					<h1 class="page-title"><?php esc_html_e(
+       "Oops! That page can&rsquo;t be found.",
+       "parts-per-million"
+     ); ?></h1>
+				</div>
 			</header><!-- .page-header -->
 
 			<div class="page-content">
@@ -40,7 +42,7 @@ get_header(); ?>
 		 	</div><!-- /.page-body -->
 			 <div class="page-sidebar">
 			<div class="widget widget_categories mb-5">
-				<h2 class="section-title mb-5">Topics</h2>
+				<h3 class="section-title mb-5">Topics</h3>
 				<!-- CATEGORIES FEED -->
 			<?php get_template_part("template-parts/feed/categories", "feed"); ?>
 					</div><!-- .widget -->

@@ -29,7 +29,7 @@ get_header(); ?>
 			<?php get_template_part("template-parts/feed/content", "stories-feed"); ?>
 			</div>
 			<div class="side-col col-topics">
-				<h2 class="section-title mb-5">Topics</h2>
+				<h3 class="section-title mb-5">Topics</h3>
 				<!-- CATEGORIES FEED -->
 			<?php get_template_part("template-parts/feed/categories", "feed"); ?>
 			</div>

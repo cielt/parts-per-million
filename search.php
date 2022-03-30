@@ -11,7 +11,8 @@ get_header(); ?>
 
 <main id="primary" class="site-main">
 	<div id="search-results" class="page-content-area">
-		<header class="page-header">
+		<header class="page-header w-max max-gl">
+			<div class="page-title-block">
 				<h1 class="page-title">
 		<?php
   global $wp_query;
@@ -26,6 +27,7 @@ get_header(); ?>
   endif;
   ?>
 		</h1>
+</div><!-- /.page-title-block -->
 	</header><!-- .page-header -->
 			<div id="page-content" class="page-content">
 		<div class="page-content-pa px-4 pt-6 pb-6">
@@ -46,7 +48,7 @@ get_header(); ?>
 </div><!-- /.page-body -->
 <div class="page-sidebar">
 	<div class="widget widget_categories mb-5">
-		<h2 class="section-title mb-5">Topics</h2>
+		<h3 class="section-title mb-5">Topics</h3>
 		<!-- CATEGORIES FEED -->
 		<?php get_template_part("template-parts/feed/categories", "feed"); ?>
 	</div><!-- .widget -->

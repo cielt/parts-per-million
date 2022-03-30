@@ -23,16 +23,17 @@ get_header(); ?>
   query_posts($args);
   ?>
 		<?php if (have_posts()): ?>
-			<header class="page-header">
-				<?php the_archive_title('<h1 class="page-title archive-title">', "</h1>"); ?>
-		<?php if (get_the_archive_description()): ?>
-				<?php printf(
-      "<div class='archive-description'>" .
-        get_the_archive_description() .
-        "</div>"
-    ); ?>
-
-			<?php endif; ?>
+			<header class="page-header w-max max-gl">
+				<div class="page-title-block">
+					<?php the_archive_title('<h1 class="page-title archive-title">', "</h1>"); ?>
+					<?php if (get_the_archive_description()): ?>
+						<?php printf(
+        "<div class='page-intro archive-description'>" .
+          get_the_archive_description() .
+          "</div>"
+      ); ?>
+					<?php endif; ?>
+				</div>
 			</header><!-- .page-header -->
 <div id="page-content" class="page-content">
 		<div class="page-content-pa px-4 pt-6 pb-6">
@@ -60,7 +61,7 @@ get_header(); ?>
 				</div><!-- /.page-body -->
 				<div class="page-sidebar">
 					<div class="widget widget_categories mb-5">
-				<h2 class="section-title mb-5">Topics</h2>
+				<h3 class="section-title mb-5">Topics</h3>
 				<!-- CATEGORIES FEED -->
 			<?php get_template_part("template-parts/feed/categories", "feed"); ?>
 					</div><!-- .widget -->

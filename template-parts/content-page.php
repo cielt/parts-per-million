@@ -10,7 +10,14 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="page-header w-max max-gl">
-		<?php the_title('<h1 class="page-title">', "</h1>"); ?>
+		<div class="page-title-block">
+			<?php the_title('<h1 class="page-title">', "</h1>"); ?>
+			<?php if (get_field("page_intro")): ?>
+				<div class="page-intro">
+					<p class="intro sub-header"><?php echo get_field("page_intro"); ?></p>
+				</div>
+			<?php endif; ?>
+		</div>
 		<div class="image-frame featured-image-frame">
 			<?php if (get_the_post_thumbnail(null, "thumbnail", "")):
      echo the_post_thumbnail("full", [
@@ -21,7 +28,7 @@
 		</div><!-- /.image-frame -->
 		<?php if (get_field("cover_image_caption")): ?>
 			<div class="post-meta cover-image-caption">
-				<span class="caption"><?php echo get_field("cover_image_caption"); ?></span>
+				<p class="caption"><?php echo get_field("cover_image_caption"); ?></p>
 		</div>
 		<?php endif; ?>
 	</header><!-- .page-header -->
@@ -33,7 +40,7 @@
 				<?php the_content(); ?>
 				</div>
 			<div class="page-sidebar">
-				<h2 class="section-title mb-5">Explore Topics</h2>
+				<h3 class="section-title mb-5">Explore Topics</h3>
 				<!-- CATEGORIES FEED -->
 				<?php get_template_part("template-parts/feed/categories", "feed"); ?>
 			</div>

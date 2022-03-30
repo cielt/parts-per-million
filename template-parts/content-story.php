@@ -105,11 +105,8 @@
 						<?php the_content(); ?>
 					</div>
 					<div class="entry-sidebar">
-						<div class="w-max max-gm">
 						<!-- TODO: sidebar -->
-						<p>Drop sidebar contents here &hellip;</p>
-						</div><!-- /.w-max -->
-					</div>
+					</div><!-- /.entry-sidebar -->
 				</div><!-- /.post-layout-main -->
 			</div><!-- /.max-gl -->
 		</div><!-- /.entry-content-pa -->

@@ -17,14 +17,30 @@
 
 .page-header {
   padding: $b-space-4 0;
-  text-align: center;
 
-  .page-title {
-    margin-bottom: $b-space-4;
+  .page-title-block {
+    padding: 0 $b-space-4;
+
+    .page-title {
+      margin-bottom: $b-space-2;
+    }
+
+    .page-intro {
+      font-size: $b-fontSize-l;
+      margin-bottom: $b-space-5;
+      width: 100%;
+      max-width: 600px;
+      color: $redBrown;
+
+      p {
+        font-family: $b-sans-fontFamily;
+        line-height: $b-lineHeight-header;
+      }
+    }
   }
 
   .featured-image-frame {
-    border-bottom: 3px solid $red350;
+    border-top: 3px solid $red350;
     overflow: hidden;
     aspect-ratio: 16 / 9;
 
@@ -33,11 +49,10 @@
     }
   }
 
-  .cover-image-caption {
-    padding: $b-space-2;
-    text-align: right;
-    font-size: $b-fontSize-s;
-    color: $grey5;
+  @media (min-width: $g-l) {
+    .page-title-block {
+      padding: 0;
+    }
   }
 }
 
@@ -45,21 +60,22 @@
 
 .page-layout-main {
   display: flex;
+  flex-direction: column;
   gap: $b-space-6;
 
   .page-sidebar {
-    flex: 0 0 360px;
+    flex: 0 0 auto;
   }
 
   .page-body {
     flex: 1;
   }
 
-  @media (max-width: $g-m) {
-    flex-direction: column;
+  @media (min-width: $g-m) {
+    flex-direction: row;
 
     .page-sidebar {
-      flex-basis: auto;
+      flex-basis: 360px;
     }
   }
 }
@@ -111,7 +127,8 @@
   // Footer Navigation
   .links-col {
     h5 {
-      color: $grey4;
+      color: $white;
+      font-weight: 700;
     }
   }
 

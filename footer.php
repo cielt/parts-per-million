@@ -15,11 +15,6 @@
 		<div class="w-max max-gl">
 			<div class="footer-content-inner">
 				<div class="site-info">
-					<h4 class="h4">About This Site</h4>
-				<p class="ts-s mb-5">
-      		<em>Parts Per Million</em> vitae semper quis lectus nulla at volutpat. Id consectetur purus ut faucibus pulvinar elementum integer enim neque. Amet nisl purus in mollis nunc sed id semper.
-    		</p>
-
 				<h5 class="logo-350bk mb-1">
 					<a href="https://350brooklyn.org/" title="Visit the 350Brooklyn website">
 						<span class="vis-hidden">350Brooklyn</span>

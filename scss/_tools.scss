@@ -196,14 +196,18 @@ h5,
   font-family: $b-sans-fontFamily;
 }
 
-.section-title {
+.caption {
+  padding: $b-space-2 $b-space-4;
+  text-align: left;
+  font-size: $b-fontSize-s;
   font-family: $b-sans-fontFamily;
-  color: $blue350;
-  border-bottom: 1px dotted $blue350;
-  font-size: $b-fontSize-h3;
-  font-weight: 700;
+  color: $grey5;
+  line-height: $b-lineHeight-header;
 
-  @media (min-width: $g-m) {
-    font-size: $b-fontSize-h2;
+  @media (min-width: $g-l) {
+    .page-header .cover-image-caption & {
+      padding-left: 0;
+      padding-right: 0;
+    }
   }
 }

@@ -11,8 +11,11 @@ get_header(); ?>
 
 <main id="primary" class="site-main">
 	<div id="topics" class="page-content-area">
-	<header class="page-header">
-		<h1 class="h1"><?php esc_html_e("All PPM Topics", "parts-per-million"); ?></h1>
+	<header class="page-header w-max max-gl">
+		<h1 class="page-title"><?php esc_html_e(
+    "All PPM Topics",
+    "parts-per-million"
+  ); ?></h1>
 	</header><!-- .page-header -->
 	<div id="page-content" class="page-content">
 		<div class="page-content-pa px-4 pt-6 pb-6">
