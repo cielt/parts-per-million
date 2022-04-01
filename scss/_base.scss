@@ -90,6 +90,15 @@ ol {
   }
 }
 
+// nested lists
+ol,
+ul {
+  ul,
+  ol {
+    margin: $b-space-4 0;
+  }
+}
+
 .list-reset {
   list-style: none;
   margin: 0;

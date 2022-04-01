@@ -21,7 +21,7 @@ get_header(); ?>
 </div>
 <!-- Intro -->
 <div id="home-intro" class="page-content-area">
-	<div class="px-5 pt-6 pb-6">
+	<div class="px-4 pt-6 pb-6">
 		<div class="col-flex-row w-max max-gl">
 			<div class="main-col col-feed">
 				<h2 class="section-title mb-5">Stories</h2>

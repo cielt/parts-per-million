@@ -72,7 +72,7 @@
     .feed-story-title {
       font-family: $b-fontFamily;
       font-weight: 700;
-      font-size: $b-fontSize-h4;
+      font-size: $b-fontSize-l;
       margin: $b-space-2 0 $b-space-1 0;
 
       a {
@@ -137,7 +137,7 @@
     .story-info {
       order: 1;
       .feed-story-title {
-        font-size: $b-fontSize-h3;
+        font-size: $b-fontSize-h4;
       }
     }
 

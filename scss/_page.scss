@@ -42,7 +42,10 @@
   .featured-image-frame {
     border-top: 3px solid $red350;
     overflow: hidden;
-    aspect-ratio: 16 / 9;
+
+    &.has-image {
+      aspect-ratio: 16 / 9;
+    }
 
     & > img {
       object-fit: cover;
@@ -97,10 +100,11 @@
   a {
     color: $teal350;
     text-decoration: none;
+    transition: all 300ms ease;
 
     &:hover,
     &:focus {
-      color: $red350;
+      color: $white;
     }
   }
 

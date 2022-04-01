@@ -18,7 +18,11 @@
 				</div>
 			<?php endif; ?>
 		</div>
-		<div class="image-frame featured-image-frame">
+		<div class="image-frame featured-image-frame <?php if (
+    get_the_post_thumbnail(null, "thumbnail", "")
+  ) {
+    echo "has-image";
+  } ?>">
 			<?php if (get_the_post_thumbnail(null, "thumbnail", "")):
      echo the_post_thumbnail("full", [
        "class" => "fit",

@@ -51,11 +51,13 @@
     text-align: center;
     color: $white;
     padding: $b-space-4;
+    background-color: $blackTransparent;
 
-    .single-post-author {
+    .single-post-med {
       display: block;
       color: $teal350;
       font-weight: bold;
+      text-transform: uppercase;
       margin-bottom: $b-space-2;
     }
   }
@@ -69,6 +71,7 @@
     .entry-header {
       flex: 1;
       padding: $b-space-5;
+      background-color: $clear;
     }
 
     // has hero image

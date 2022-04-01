@@ -9,9 +9,8 @@
 //   Variables
 // -------------------------------------
 
-$logoIcoHeight: em(28px);
-$logoIcoWidth: em(28px);
-$marqueeMaxHeight: em(512px);
+$logoIcoHeight: em(24px);
+$logoIcoWidth: em(24px);
 
 // -------------------------------------
 //   Global
@@ -91,13 +90,13 @@ $marqueeMaxHeight: em(512px);
   .overlay {
     position: absolute;
     z-index: 1;
-    background: $red350Transparent;
+    background: $redBrown;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     opacity: 0;
-    transition: opacity 600ms ease 300ms;
+    transition: all 300ms ease;
   }
 
   .bar-content {
@@ -171,7 +170,8 @@ $marqueeMaxHeight: em(512px);
     display: block;
   }
 
-  .xs--ppm-hide.home-label {
+  .xs--ppm-hide.home-label,
+  .xs--ppm-hide.menu-label {
     display: none;
   }
 
@@ -182,6 +182,10 @@ $marqueeMaxHeight: em(512px);
 
     .xs--ppm-hide.home-label {
       display: block;
+    }
+
+    .xs--ppm-hide.menu-label {
+      display: inline-block;
     }
   }
 }
@@ -238,67 +242,7 @@ $marqueeMaxHeight: em(512px);
   }
 }
 
-// ----- Search Widget ----- //
-
-.search-overlay {
-  display: none;
-  position: absolute;
-  z-index: 1;
-  width: 100%;
-  height: 100vh;
-  background-color: $darkGrey350;
-
-  .search-widget-inner {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    .overlay-header {
-      color: $teal350;
-      font-family: $b-sans-fontFamily;
-      font-weight: bold;
-    }
-
-    .search-form-block {
-      flex: 0 1 640px;
-      padding: $b-space-5;
-    }
-
-    .close-search-btn {
-      position: absolute;
-      top: 0;
-      right: 0;
-      background-color: $clear;
-      color: $white;
-      font-size: $b-fontSize-l;
-      margin-right: $b-space-5;
-      margin-top: $b-space-5;
-      text-transform: uppercase;
-
-      b {
-        font-size: $b-fontSize-xl;
-      }
-    }
-
-    // very compact search form
-    @media (max-width: $g-xs) {
-      .search-form {
-        .search-submit {
-          font-size: 1px;
-          color: $clear;
-          padding: 0 $b-space-1;
-          flex-basis: 48px;
-          background: url("images/ico-search.svg") no-repeat $blue350 center
-            center;
-          background-size: 50%;
-        }
-      }
-    }
-  }
-}
+// SEARCH OVERLAY
 
 .search-widget-open {
   overflow: hidden;

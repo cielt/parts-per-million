@@ -211,3 +211,19 @@ h5,
     }
   }
 }
+
+// ----- Hairline ----- //
+
+.hairline {
+  display: block;
+  border: 0;
+  height: 0;
+  width: auto;
+  margin: $b-space-5 auto;
+  clear: both;
+  border-bottom: 1px solid $red350Transparent;
+
+  &.dotted {
+    border-style: dotted;
+  }
+}

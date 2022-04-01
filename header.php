@@ -69,7 +69,7 @@
 							</a>
 							<div class="header-bar-block">
 								<button type="button" id="search-toggle-btn" class="search-toggle-btn"><b class="fas fa-search" aria-hidden="true"></b><span class="vis-hidden">Toggle Search</span></button>
-								<button type="button" id="global-menu-btn" class="menu-btn"><b class="fas fa-bars" aria-hidden="true"></b> Menu</button>
+								<button type="button" id="global-menu-btn" class="menu-btn"><b class="fas fa-bars" aria-hidden="true"></b> <b class="xs--ppm-hide menu-label">Menu</b></button>
 							</div>
 						</div>
 					</div>

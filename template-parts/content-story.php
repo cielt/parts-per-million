@@ -15,8 +15,8 @@
   echo "has-hero-image";
 } ?>">
 	<header class="entry-header">
-		<?php if (get_field("contributor")): ?>
-			<span class="single-post-author"><?php echo get_field("contributor"); ?></span>
+		<?php if (get_field("medium")): ?>
+			<span class="single-post-med"><?php echo get_field("medium"); ?></span>
     <?php endif; ?>
 		<?php the_title('<h1 class="entry-title">', "</h1>"); ?>
 	</header><!-- .entry-header -->
