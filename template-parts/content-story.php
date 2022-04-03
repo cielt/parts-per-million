@@ -118,9 +118,9 @@
    the_post_navigation([
      "prev_text" =>
        '<span class="ico-footer-link"><i class="fas fa-chevron-left fa-sm"></i></span>' .
-       '<div class="footer-nav-label prev-item"><span class="kicker">Previous</span><h4 class="nav-title">%title</h4></div>',
+       '<div class="footer-nav-label prev-item"><span class="kicker">Previous</span><h4 class="nav-title h5">%title</h4></div>',
      "next_text" =>
-       '<div class="footer-nav-label next-item"><span class="kicker">Next</span><h4 class="nav-title">%title</h4></div>' .
+       '<div class="footer-nav-label next-item"><span class="kicker">Next</span><h4 class="nav-title h5">%title</h4></div>' .
        '<span class="ico-footer-link"><i class="fas fa-chevron-right fa-sm"></i></span>',
    ]);
    printf("</div>");

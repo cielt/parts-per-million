@@ -29,9 +29,9 @@ get_header(); ?>
 			<?php get_template_part("template-parts/feed/content", "stories-feed"); ?>
 			</div>
 			<div class="side-col col-topics">
-				<h3 class="section-title mb-5">Topics</h3>
+				<h3 class="section-title mb-5">About Us</h3>
 				<!-- CATEGORIES FEED -->
-			<?php get_template_part("template-parts/feed/categories", "feed"); ?>
+			<?php get_template_part("template-parts/feed/about", "ppm-excerpt"); ?>
 			</div>
 		</div>
 	</div>
