@@ -297,9 +297,9 @@ function wpdocs_excerpt_more($more)
 {
   if (!is_single()) {
     $more = sprintf(
-      '&nbsp;<a class="read-more-link" href="%1$s">%2$s</a>',
+      '&hellip;&nbsp;<a class="read-more-link" href="%1$s">%2$s</a>',
       get_permalink(get_the_ID()),
-      __("continue", "textdomain")
+      __("Read more", "textdomain")
     );
   }
 

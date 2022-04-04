@@ -102,6 +102,12 @@
         }
       }
     }
+
+    .feed-item-summary {
+      .read-more-link {
+        font-family: $b-sans-fontFamily;
+      }
+    }
   }
 
   .story-thumbnail {

@@ -18,9 +18,6 @@
 				<?php endif; ?>
 		</div>
 		<div class="feed-item-summary">
-			<!--<?php
-// the_excerpt();
-?>-->
 		</div><!-- .feed-item-summary -->
 	</div><!-- /.story-info  -->
 			<?php if (get_the_post_thumbnail(null, "thumbnail", "")): ?>

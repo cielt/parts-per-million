@@ -16,7 +16,7 @@
 // ----- HEADER AREA ----- //
 
 .page-header {
-  padding: $b-space-4 0;
+  padding-top: $b-space-4;
 
   .page-title-block {
     padding: 0 $b-space-4;
@@ -40,7 +40,7 @@
   }
 
   .featured-image-frame {
-    border-top: 3px solid $red350;
+    border-top: 3px solid $redBrown;
     overflow: hidden;
 
     &.has-image {

@@ -84,10 +84,10 @@ ol {
   margin: 0 auto $b-space-4;
   line-height: $b-lineHeight;
   font-family: $b-fontFamily;
+}
 
-  &:last-child {
-    margin-bottom: 0;
-  }
+p:last-child {
+  margin-bottom: 0;
 }
 
 // nested lists

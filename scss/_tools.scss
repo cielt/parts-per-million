@@ -73,6 +73,11 @@
   white-space: nowrap;
 }
 
+// shout it
+.upper {
+  text-transform: uppercase;
+}
+
 // -------------------------------------
 //   Sizing
 // -------------------------------------
@@ -90,6 +95,11 @@
 
   &.max-gm {
     max-width: $g-m;
+  }
+
+  &.max-400 {
+    max-width: 400px;
+    margin: 0 auto !important;
   }
 }
 
@@ -201,8 +211,11 @@ h5,
   text-align: left;
   font-size: $b-fontSize-s;
   font-family: $b-sans-fontFamily;
-  color: $grey5;
   line-height: $b-lineHeight-header;
+
+  .image-credit {
+    color: $grey5;
+  }
 
   @media (min-width: $g-l) {
     .page-header .cover-image-caption & {
