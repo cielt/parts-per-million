@@ -1,6 +1,9 @@
 <li class="feed-item" id="post-<?php the_ID(); ?>" data-rel="post-feed-item">
 	<div class="feed-item-content">
 	<div class="story-info">
+		<?php if (get_field("medium")): ?>
+		<span class="post-medium"><?php echo get_field("medium"); ?></span>
+  <?php endif; ?>
     <h3 class="feed-story-title">
 			<a href="<?php the_permalink(); ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a>
 		</h3>
@@ -26,11 +29,7 @@
         [320, 240],
         ["class" => "fit feed-item-thumbnail", "title" => get_the_title()]
       ); ?>
-
 		</a>
 		<?php endif; ?>
 	</div>
-		<?php if (get_field("medium")): ?>
-		<span class="post-medium"><?php echo get_field("medium"); ?></span>
-  <?php endif; ?>
 </li>

@@ -17,8 +17,10 @@
     <!-- intro -->
 		<div class="contributor-info">
 			<?php if (get_field("contributor")): ?>
-		 		<span class="post-meta author"><?php echo get_field("contributor"); ?></span>
-				<?php endif; ?>
+		 		<span class="post-meta author"><span class="post-medium"><?php echo get_field(
+       "medium"
+     ); ?></span> by <?php echo get_field("contributor"); ?></span>
+			<?php endif; ?>
 		</div>
 		<div class="feed-item-summary">
 			<?php the_excerpt(); ?>

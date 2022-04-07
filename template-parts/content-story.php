@@ -32,7 +32,8 @@
 	</div><!-- /.entry-header-wrapper -->
 	<div id="story-content" class="entry-content">
 		<div class="entry-content-pa px-4 pt-6 pb-6">
-			<div class="w-max max-gl">
+			<!-- TODO: extra classes -->
+			<div class="w-max">
 				<div class="post-layout-main">
 					<div class="entry-meta">
 						<!-- contributor -->
