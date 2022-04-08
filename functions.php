@@ -306,3 +306,53 @@ function wpdocs_excerpt_more($more)
   return $more;
 }
 add_filter("excerpt_more", "wpdocs_excerpt_more");
+
+// Query all images in media library
+function get_all_images_from_media_library()
+{
+  $args = [
+    "post_type" => "attachment",
+    "post_mime_type" => "image",
+    "post_status" => "inherit",
+    "posts_per_page" => 10,
+    "orderby" => "rand",
+  ];
+
+  $query_images = new WP_Query($args);
+  $all_images = range(1, 125);
+  $foundImgPosts = $query_images->posts;
+  $foundImgsArrLength = count($foundImgPosts);
+
+  for ($i = 0; $i < $foundImgsArrLength; $i++) {
+    $all_images[$i] = $foundImgPosts[$i];
+  }
+
+  return $all_images;
+}
+
+// display all images in template
+function display_images_from_media_library()
+{
+  $imgs = get_all_images_from_media_library();
+  $arrLength = count($imgs);
+  $html = '<div id="hero-mosaic" class="mosaic-tiles-grid">';
+
+  shuffle($imgs);
+
+  for ($i = 0; $i < $arrLength; $i++) {
+    $currImg = $imgs[$i];
+    if (gettype($currImg) === "object") {
+      $html .=
+        '<div class="mosaic-tile has-image">' .
+        wp_get_attachment_image($currImg->ID) .
+        "</div>";
+    } else {
+      $tileType = rand(0, 5);
+      $html .= '<div class="mosaic-tile tile-' . $tileType . '"></div>';
+    }
+  }
+
+  $html .= "</div>";
+
+  return $html;
+}
