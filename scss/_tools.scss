@@ -82,6 +82,8 @@
 //   Sizing
 // -------------------------------------
 
+// applies to block-level layout elements
+// image frames inline
 .w-max {
   width: 100%;
   max-width: $b-maxWidth;
@@ -95,9 +97,8 @@
     max-width: $g-m;
   }
 
-  &.max-400 {
-    max-width: 400px;
-    margin: 0 auto !important;
+  &.img-width-m {
+    max-width: $img-width-m;
   }
 }
 
@@ -210,6 +211,7 @@ h5,
   font-size: $b-fontSize-s;
   font-family: $b-sans-fontFamily;
   line-height: $b-lineHeight-header;
+  color: $redBrown;
 
   .image-credit {
     color: $grey5;

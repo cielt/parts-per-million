@@ -111,7 +111,7 @@
     margin: 0 auto;
   }
 
-  @media (min-width: 1240px) {
+  @media (min-width: $g-l) {
     flex-direction: row;
     align-items: flex-start;
     justify-content: center;
@@ -225,8 +225,10 @@
 
   @media (min-width: $g-l) {
     .post-image-inline .inline-image-frame {
-      margin-left: -$b-space-5;
-      margin-right: -$b-space-5;
+      &.wide-format {
+        margin-left: -$b-space-5;
+        margin-right: -$b-space-5;
+      }
     }
   }
 }

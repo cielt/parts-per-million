@@ -37,8 +37,7 @@ $grey1: #f4f4f4;
 $grey2: #e0e0e0;
 $grey3: #ccc;
 $grey4: #bebebe;
-$grey5: #808080;
-$grey6: #333;
+$grey5: #888;
 $black: #000;
 $clear: transparent;
 
@@ -105,8 +104,12 @@ $b-space-6: 6rem;
 $g-xs: em(480px);
 $g-s: em(768px);
 $g-m: em(960px);
-$g-l: em(1200px);
-$g-xl: em(1440px);
+$g-l: em(1240px); // esp for single post layout
+
+// ----- Image / Content elts ----- //
+
+$img-width-s: em(128px);
+$img-width-m: em(400px);
 
 // -------------------------------------
 //   Structures
