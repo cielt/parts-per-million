@@ -18,11 +18,13 @@
 .mosaic-tiles-grid {
   display: grid;
   gap: 0;
-  grid-template-columns: repeat(auto-fill, minmax(48px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(20px, 1fr));
+  max-height: 120px; // 6 rows * 20px
+  overflow: hidden;
 
   .mosaic-tile {
     background-color: $grey0;
-    min-height: 48px;
+    min-height: 20px;
 
     &.has-image {
       overflow: hidden;
@@ -42,30 +44,17 @@
     &.tile-1,
     &.tile-5 {
       background-color: $red350;
-      opacity: 0.64;
     }
 
     &.tile-2,
     &.tile-3 {
       background-color: $redBrown;
+    }
+
+    &.tile-4,
+    &.tile-5,
+    &.tile-3 {
       opacity: 0.64;
     }
   }
 }
-
-// $html = '<div id="media-gallery" class="mosaic-tile-grid">';
-
-// shuffle($imgs);
-
-// for ($i = 0; $i < $arrLength; $i++) {
-//   $currImg = $imgs[$i];
-//   if (gettype($currImg) === "object") {
-//     $html .=
-//       '<div class="mosiac-tile has-image">' .
-//       wp_get_attachment_image($currImg->ID) .
-//       "</div>";
-//   } else {
-//     $tileType = rand(0, 5);
-//     $html .= '<div class="mosaic-tile">' . $tileType . "</div>";
-//   }
-// }

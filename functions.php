@@ -314,12 +314,12 @@ function get_all_images_from_media_library()
     "post_type" => "attachment",
     "post_mime_type" => "image",
     "post_status" => "inherit",
-    "posts_per_page" => 10,
+    "posts_per_page" => 25,
     "orderby" => "rand",
   ];
 
   $query_images = new WP_Query($args);
-  $all_images = range(1, 125);
+  $all_images = range(1, 248);
   $foundImgPosts = $query_images->posts;
   $foundImgsArrLength = count($foundImgPosts);
 
@@ -344,7 +344,7 @@ function display_images_from_media_library()
     if (gettype($currImg) === "object") {
       $html .=
         '<div class="mosaic-tile has-image">' .
-        wp_get_attachment_image($currImg->ID) .
+        wp_get_attachment_image($currImg->ID, "thumbnail") .
         "</div>";
     } else {
       $tileType = rand(0, 5);
