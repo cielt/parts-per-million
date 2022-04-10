@@ -319,7 +319,7 @@ function get_all_images_from_media_library()
   ];
 
   $query_images = new WP_Query($args);
-  $all_images = range(1, 248);
+  $all_images = range(1, 310);
   $foundImgPosts = $query_images->posts;
   $foundImgsArrLength = count($foundImgPosts);
 
