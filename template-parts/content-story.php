@@ -28,7 +28,14 @@
      "title" => "Featured image",
    ]); ?>
 		<?php endif; ?>
+	</div><!-- /.featured-image-frame -->
+	<?php if (get_field("cover_image_caption")): ?>
+	<div class="cover-caption-block">
+		<p class="cover-image-caption">
+			<?php echo get_field("cover_image_caption"); ?>
+		</p>
 	</div>
+	<?php endif; ?>
 	</div><!-- /.entry-header-wrapper -->
 	<div id="story-content" class="entry-content">
 		<div class="entry-content-pa px-4 pt-6 pb-6">
@@ -38,6 +45,7 @@
 					<div class="entry-meta">
 						<!-- contributor -->
 						<div class="contributor-block meta-section">
+							<div class="contributor-byline">
     					<?php if (get_field("contributor_image")): ?>
 		 						<div class="contributor-thumbnail">
 						 			<img src="<?php echo get_field(
@@ -45,19 +53,20 @@
           ); ?>" class="contributor-thumbnail-img" />
 								</div>
 							<?php endif; ?>
-							<?php if (get_field("contributor")): ?>
-								<div class="contributor-info">
-		 							<span class="contributor-name author"><strong><?php echo get_field(
-            "contributor"
-          ); ?></strong></span>
-									 <?php if (get_field("contributor_bio")): ?>
+								<?php if (get_field("contributor")): ?>
+		 							<div class="contributor-name author">
+										 <strong><?php echo get_field("contributor"); ?></strong>
+								</div>
+							<?php endif; ?>
+							</div><!-- /.contirbutor-byline -->
+
+							<?php if (get_field("contributor_bio")): ?>
 		 						<p class="contributor-bio">
 						 			<?php echo get_field("contributor_bio"); ?>
 								</p>
 							<?php endif; ?>
-								</div>
-							<?php endif; ?>
-						</div>
+						</div><!-- /.contributor-block -->
+
 						<!-- Date -->
 						<div class="post-date meta-section">
 							<?php if (get_field("date_published")): ?>
@@ -113,7 +122,7 @@
 		</div><!-- /.entry-content-pa -->
 		<div class="post-content-footer">
 			<div class="px-4 pt-6 pb-6">
-				<div class="w-max max-gm">
+				<div class="w-max max-gl">
 			<?php
    printf('<div class="post-footer-nav prev-next-links">');
    the_post_navigation([
