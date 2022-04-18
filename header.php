@@ -19,6 +19,15 @@
 	<link rel="icon" href="<?php echo get_template_directory_uri(); ?>/images/favicon.ico" sizes="any" />
 	<link rel="icon" href="<?php echo get_template_directory_uri(); ?>/images/favicon.svg" type="image/svg+xml" />
 	<link rel="manifest" href="<?php echo get_template_directory_uri(); ?>/manifest.json" />
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-SLE7DNESPB"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'G-SLE7DNESPB');
+	</script>
 	<?php wp_head(); ?>
 </head>
 
