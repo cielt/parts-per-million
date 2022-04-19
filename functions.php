@@ -356,3 +356,48 @@ function display_images_from_media_library()
 
   return $html;
 }
+
+// Add OG meta tags to pages
+function doctype_opengraph($output)
+{
+  return $output .
+    '
+	xmlns:og="http://opengraphprotocol.org/schema/"
+	xmlns:fb="http://www.facebook.com/2008/fbml"
+	';
+}
+add_filter("language_attributes", "doctype_opengraph");
+
+function fb_opengraph()
+{
+  global $post;
+
+  if (is_singular()) {
+    if (has_post_thumbnail($post->ID)) {
+      $img_src = wp_get_attachment_image_src(
+        get_post_thumbnail_id($post->ID),
+        "medium"
+      )[0];
+    } else {
+      $img_src = get_stylesheet_directory_uri() . "/img/ppm-og.png";
+    }
+
+    if ($excerpt = $post->post_excerpt) {
+      $excerpt = strip_tags($post->post_excerpt);
+      $excerpt = str_replace("", "'", $excerpt);
+    } else {
+      $excerpt = get_bloginfo("description");
+    }
+
+    echo '<meta property="og:title" content="' . get_the_title() . '"/>';
+    echo '<meta property="og:description" content="' . $excerpt . '"/>';
+    echo '<meta property="og:type" content="article"/>';
+    echo '<meta property="og:url" content="' . get_the_permalink() . '"/>';
+    echo '<meta property="og:site_name" content="' . get_bloginfo() . '"/>';
+    echo '<meta property="og:image" content="' . $img_src . '"/>';
+  } else {
+    return;
+  }
+}
+
+add_action("wp_head", "fb_opengraph", 5);
