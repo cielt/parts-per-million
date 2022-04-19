@@ -30,6 +30,17 @@
 		</div><!-- /.copyright -->
 				</div>
 				<div class="site-links">
+					<div class="links-col 350bk-links">
+						<h5 class="h5 tf-sans">350Brooklyn <i class="fas fa-external-link-alt fa-xs c-red350"></i></h5>
+						<nav id="footer-navigation" class="footer-nav">
+          		<ul id="footer-ppm-menu" class="footer-menu">
+								<li class="menu-item"><a href="https://350brooklyn.org/">350Brooklyn Home</a></li>
+								<li class="menu-item"><a href="https://350brooklyn.org/get-involved/#plug-in">Get Involved</a></li>
+								<li class="menu-item"><a href="https://350brooklyn.org/about-us/">About 350Brooklyn</a></li>
+								<li class="menu-item"><a href="https://350brooklyn.org/privacy-policy/" target="_blank" rel="noopener noreferrer">Privacy Policy</a></li>
+							</ul>
+						</nav>
+					</div>
 					<div class="links-col ppm-links">
 						<h5 class="h5 tf-sans">Parts Per Million</h5>
 						<nav id="footer-navigation" class="footer-nav">
@@ -38,17 +49,9 @@
               "container" => false,
               "menu_id" => "footer-ppm-menu",
               "menu_class" => "footer-ppm-menu footer-menu",
+              "link_after" =>
+                "&nbsp;<i class='fas fa-external-link-alt fa-xs ico-global-nav-link c-red350' aria-hidden='true'></i>",
             ]); ?>
-						</nav>
-					</div>
-					<div class="links-col 350bk-links">
-						<h5 class="h5 tf-sans">350Brooklyn</h5>
-						<nav id="footer-navigation" class="footer-nav">
-          		<ul id="footer-ppm-menu" class="footer-menu">
-								<li class="menu-item"><a href="https://350brooklyn.org/">350Brooklyn Home</a></li>
-								<li class="menu-item"><a href="https://350brooklyn.org/get-involved/#plug-in">Get Involved</a></li>
-								<li class="menu-item"><a href="https://350brooklyn.org/about-us/">About 350Brooklyn</a></li>
-							</ul>
 						</nav>
 					</div>
 					<div class="links-col topics-links">

@@ -301,6 +301,8 @@ $logoIcoWidth: em(24px);
     color: $grey3;
     text-decoration: none;
     border: none;
+    display: block;
+    line-height: 2;
 
     &:hover,
     &:focus {
@@ -309,6 +311,22 @@ $logoIcoWidth: em(24px);
 
     &[aria-current="page"] {
       color: $red350;
+    }
+  }
+}
+
+// Nav Menu icons
+
+.site-nav-menu li,
+.footer-ppm-menu li {
+  // external link ico
+  .ico-global-nav-link {
+    display: none;
+  }
+
+  &.menu-item-type-custom a {
+    .ico-global-nav-link {
+      display: inline;
     }
   }
 }

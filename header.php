@@ -57,6 +57,8 @@
             "container" => false,
             "menu_id" => "primary-menu",
             "menu_class" => "site-nav-menu",
+            "link_after" =>
+              "&nbsp;<i class='fas fa-external-link-alt fa-xs ico-global-nav-link c-red350' aria-hidden='true'></i>",
           ]); ?>
 				</nav>
       </div>

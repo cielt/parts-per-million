@@ -77,9 +77,17 @@
   white-space: nowrap;
 }
 
-// shout it
+// shout
 .upper {
   text-transform: uppercase;
+}
+
+// -------------------------------------
+//   Text Color
+// -------------------------------------
+
+.c-red350 {
+  color: $red350;
 }
 
 // -------------------------------------
@@ -209,11 +217,15 @@ h5,
   font-family: $b-sans-fontFamily;
 }
 
-.caption {
-  padding: $b-space-2 $b-space-4;
+.caption,
+.footnote {
   text-align: left;
   font-size: $b-fontSize-s;
   font-family: $b-sans-fontFamily;
+}
+
+.caption {
+  padding: $b-space-2 $b-space-4;
   line-height: $b-lineHeight-header;
   color: $redBrown;
 
@@ -229,6 +241,10 @@ h5,
   }
 }
 
+.footnote {
+  color: $grey5;
+}
+
 // ----- Hairline ----- //
 
 .hairline {
@@ -242,5 +258,9 @@ h5,
 
   &.dotted {
     border-style: dotted;
+  }
+
+  &.grey1 {
+    border-bottom-color: $grey1;
   }
 }
