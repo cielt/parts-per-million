@@ -9,13 +9,16 @@
 		</h3>
     <!-- intro -->
 		<div class="contributor-info">
-    	<?php if (get_field("contributor_image")): ?>
-		 		<div class="contributor-thumbnail">
-					 <img src="<?php echo get_field(
-        "contributor_image"
-      ); ?>" class="contributor-thumbnail-img" />
-				</div>
-			<?php endif; ?>
+			<?php if (get_field("contributor_image")):
+
+     $contributor_img = get_field("contributor_image");
+     $size = "medium";
+     ?>
+		 						<div class="contributor-thumbnail">
+									 <?php echo wp_get_attachment_image($contributor_img, $size); ?>
+								</div>
+							<?php
+   endif; ?>
 			<?php if (get_field("contributor")): ?>
 		 		<span class="post-meta author"><?php echo get_field("contributor"); ?></span>
 				<?php endif; ?>

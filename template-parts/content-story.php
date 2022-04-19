@@ -46,13 +46,16 @@
 						<!-- contributor -->
 						<div class="contributor-block meta-section">
 							<div class="contributor-byline">
-    					<?php if (get_field("contributor_image")): ?>
+    					<?php if (get_field("contributor_image")):
+
+           $contributor_img = get_field("contributor_image");
+           $size = "medium";
+           ?>
 		 						<div class="contributor-thumbnail">
-						 			<img src="<?php echo get_field(
-            "contributor_image"
-          ); ?>" class="contributor-thumbnail-img" />
+									 <?php echo wp_get_attachment_image($contributor_img, $size); ?>
 								</div>
-							<?php endif; ?>
+							<?php
+         endif; ?>
 								<?php if (get_field("contributor")): ?>
 		 							<div class="contributor-name author">
 										 <strong><?php echo get_field("contributor"); ?></strong>
