@@ -59,12 +59,13 @@
 						<nav id="footer-navigation" class="footer-topics-nav footer-nav">
           		<ul id="footer-topics-menu" class="footer-menu footer-topics-menu">
 								<?php wp_list_categories([
-          "orderby" => "count",
-          "order" => "DESC",
+          "taxonomy" => "category",
+          "orderby" => ["count" => "DESC", "name" => "ASC"],
           "show_count" => 1,
           "title_li" => "",
           "number" => 8,
           "hide_title_if_empty" => true,
+          "hide_empty" => true,
         ]); ?>
 							</ul>
 						</nav>

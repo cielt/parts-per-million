@@ -2,8 +2,11 @@
 	<ul class="categories-list">
 <?php
 $categories = get_categories([
-  "orderby" => "count",
-  "order" => "DESC",
+  "taxonomy" => "category",
+  "orderby" => [
+    "count" => "DESC",
+    "name" => "ASC",
+  ],
   "hide_empty" => true,
 ]);
 
@@ -14,7 +17,6 @@ foreach ($categories as $category) {
     esc_attr(
       sprintf(__("View all posts in %s", "textdomain"), $category->name)
     ),
-    // esc_html($category->name . " (" . $category->count . ")"),
     esc_html($category->name),
     esc_html($category->count)
   );
