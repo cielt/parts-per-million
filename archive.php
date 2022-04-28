@@ -22,7 +22,7 @@ get_header(); ?>
   ]);
   query_posts($args);
   ?>
-		<?php if (have_posts()): ?>
+
 			<header class="page-header w-max max-gl">
 				<div class="page-title-block">
 					<?php the_archive_title('<h1 class="page-title archive-title">', "</h1>"); ?>
@@ -45,7 +45,6 @@ get_header(); ?>
      esc_html__("Showing: %s items", "parts-per-million"),
      "<span>" . $wp_query->found_posts . "</span>"
    ); ?></p>
-	<?php endif; ?>
 					<ul class="posts-feed">
 					<?php
      /* Start the Loop */
