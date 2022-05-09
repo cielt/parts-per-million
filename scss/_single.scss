@@ -79,6 +79,12 @@ $authorImgSize: 60px;
       font-family: $b-sans-fontFamily;
       text-align: right;
       color: $redBrown;
+
+      a:link,
+      a:active,
+      a:visited {
+        color: $redBrown;
+      }
     }
   }
 
