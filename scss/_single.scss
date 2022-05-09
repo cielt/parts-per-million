@@ -63,6 +63,10 @@ $authorImgSize: 60px;
       letter-spacing: 1px;
       margin-bottom: $b-space-2;
     }
+
+    .entry-title {
+      font-size: $b-fontSize-xl;
+    }
   }
 
   // caption (optional)
@@ -98,6 +102,10 @@ $authorImgSize: 60px;
       flex: 1;
       padding: $b-space-5;
       background-color: $clear;
+
+      .entry-title {
+        font-size: $b-fontSize-h1;
+      }
     }
 
     // has hero image
