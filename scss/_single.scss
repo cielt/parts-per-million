@@ -252,6 +252,14 @@ $authorImgSize: 60px;
   .post-image-inline {
     margin-bottom: $b-space-5;
 
+    .inline-image-frame .paper-frame {
+      background: $white;
+      padding: $b-space-4;
+      padding-bottom: 20%;
+      border-radius: 3px;
+      box-shadow: 0 0 8px 2px hsla(0, 0%, 40%, 0.24);
+    }
+
     img {
       display: block;
       width: 100%;
@@ -264,6 +272,12 @@ $authorImgSize: 60px;
       &.wide-format {
         margin-left: -$b-space-5;
         margin-right: -$b-space-5;
+      }
+
+      .paper-frame {
+        padding-top: $b-space-5;
+        padding-left: $b-space-5;
+        padding-right: $b-space-5;
       }
     }
   }

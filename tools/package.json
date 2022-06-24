@@ -19,6 +19,7 @@
   "license": "ISC",
   "browserslist": "last 2 versions",
   "devDependencies": {
+    "@types/gulp-autoprefixer": "^0.0.33",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^8.0.0",
     "gulp-cssnano": "^2.1.3",
