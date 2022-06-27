@@ -238,7 +238,7 @@ $authorImgSize: 60px;
 
 .post-body {
   // drop cap
-  & > p:first-child:first-letter {
+  & > p:not(.plain-first-p):first-child:first-letter {
     color: $red350;
     float: left;
     font-family: $b-fontFamily;
