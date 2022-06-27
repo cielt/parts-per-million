@@ -238,7 +238,7 @@ $authorImgSize: 60px;
 
 .post-body {
   // drop cap
-  & > p:not(.plain-first-p):first-child:first-letter {
+  & > p:not(.stan-block):first-child:first-letter {
     color: $red350;
     float: left;
     font-family: $b-fontFamily;
@@ -247,6 +247,16 @@ $authorImgSize: 60px;
     padding-top: 15px;
     padding-right: 15px;
     padding-bottom: 10px;
+  }
+
+  // poem
+  .stan-block {
+    .stan-line {
+      display: inline-block;
+      width: 100%;
+      padding-left: 1.5em;
+      text-indent: -1.5em;
+    }
   }
 
   .post-image-inline {
