@@ -33,6 +33,7 @@ $thumbnailSize: 48px;
 
 .feed-item {
   position: relative;
+  padding: $b-space-5 0;
 
   &:not(:last-of-type) {
     border-bottom: 1px dotted $lightGrey350;
@@ -131,7 +132,6 @@ $thumbnailSize: 48px;
   @media (min-width: $g-m) {
     flex-direction: row;
     row-gap: $b-space-6;
-    padding: $b-space-4 0;
 
     .story-info {
       order: 1;
