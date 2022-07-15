@@ -19,6 +19,11 @@
 			<span class="single-post-med"><?php echo get_field("medium"); ?></span>
     <?php endif; ?>
 		<?php the_title('<h1 class="entry-title">', "</h1>"); ?>
+		<?php if (get_field("subheading")): ?>
+		<span class="subheading">
+			<?php echo get_field("subheading"); ?>
+		</span>
+	<?php endif; ?>
 	</header><!-- .entry-header -->
 
 	<div class="featured-image-frame single-post-image">

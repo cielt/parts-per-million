@@ -66,6 +66,23 @@ $authorImgSize: 60px;
 
     .entry-title {
       font-size: $b-fontSize-xl;
+      margin-bottom: 0;
+    }
+
+    .subheading {
+      display: block;
+      padding: 0 $b-space-4;
+      line-height: $b-lineHeight-header;
+      margin-top: $b-space-2;
+      font-family: $b-fontFamily;
+      font-style: italic;
+      color: $grey3;
+
+      &::before {
+        content: "–";
+        display: inline-block;
+        margin-right: $b-space-1;
+      }
     }
   }
 
@@ -105,6 +122,10 @@ $authorImgSize: 60px;
 
       .entry-title {
         font-size: $b-fontSize-h1;
+      }
+
+      .subheading {
+        font-size: $b-fontSize-h4;
       }
     }
 
