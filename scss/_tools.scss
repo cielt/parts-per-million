@@ -229,12 +229,12 @@ h5,
 }
 
 .caption {
-  padding: $b-space-2 $b-space-4;
+  padding: $b-space-2 0;
   line-height: $b-lineHeight-header;
-  color: $redBrown;
+  color: $grey5;
 
   .image-credit {
-    color: $grey5;
+    color: $grey4;
   }
 
   @media (min-width: $g-l) {
