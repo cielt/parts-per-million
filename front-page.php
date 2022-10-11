@@ -10,9 +10,21 @@ get_header(); ?>
 
 <div id="bk-word-cloud" class="word-cloud bk-env"></div>
 <div class="marquee-main graph-block">
-  <div class="title-block p-abs z3">
-    <h1 class="h1 site-title"><?php bloginfo("name"); ?></h1>
-    <p class="site-description"><?php bloginfo("description"); ?></p>
+  <div class="title-block">
+		<a class="callout" href="<?php echo site_url("/contribute"); ?>">
+		<div class="burst"><h5 class="mb-0">Submit your work!</h5></div>
+		<div class="callout-message">
+			<h4 class="mb-1 c-darkGold"><i class="fas fa-bullhorn mr-1 c-darkGold"></i> Issue #1: <em>Our City</em></h4>
+			<p><span class="mr-1">We&rsquo;d love your submissions of original work exploring climate change and our city, New York!</span> <span class="cta-mobile">Learn More &rarr;</span></p>
+		</div>
+		<div class="cta-block">
+			<span class="btn-block">Learn More &rarr;</span>
+		</div>
+	</a>
+		<div class="heading-block">
+    	<h1 class="h1 site-title"><?php bloginfo("name"); ?></h1>
+    	<p class="site-description"><?php bloginfo("description"); ?></p>
+		</div>
   </div>
 	<a href="#home-intro" class="scroll-to-content-btn c-white" data-offset="0">
     <b class="fas fa-angle-down fa-2x" aria-hidden="true"></b>

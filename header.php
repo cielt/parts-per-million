@@ -25,7 +25,6 @@
 	  window.dataLayer = window.dataLayer || [];
 	  function gtag(){dataLayer.push(arguments);}
 	  gtag('js', new Date());
-
 	  gtag('config', 'G-SLE7DNESPB');
 	</script>
 	<?php wp_head(); ?>
