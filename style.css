@@ -1308,8 +1308,7 @@ button {
     text-align: left;
     background-color: #fef8d8;
     padding: 1.5rem 1.5rem 1.5rem 3rem;
-    width: auto;
-    max-width: 96%;
+    width: 88%;
     margin: 0 auto;
     border-radius: 6px;
     box-shadow: 0 0 8px 2px rgba(102, 102, 102, 0.24);
