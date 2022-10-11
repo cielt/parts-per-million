@@ -4,7 +4,9 @@
   "description": "Utils for Parts per Million theme",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "test": "test",
+    "css": "node-sass ../scss/style.scss -o ../",
+    "css:watch": "npm run css && node-sass ../scss/style.scss -wo ../"
   },
   "repository": {
     "type": "git",

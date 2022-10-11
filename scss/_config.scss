@@ -23,6 +23,7 @@ $white: #fff;
 $lightGrey350: #e6f0fa;
 $darkGrey350: #17292e;
 $redBrown: #8d3618;
+$darkGold: #8c801f;
 
 // states
 $blue350Darker: darken($blue350, 10%);
@@ -30,6 +31,7 @@ $orange350Darker: darken($orange350, 10%);
 
 $blue350Transparent: rgba(15, 129, 232, 0.12);
 $red350Transparent: rgba(255, 97, 18, 0.48);
+$darkGoldTransparent: rgba(140, 128, 31, 0.48);
 $blackTransparent: rgba(0, 0, 0, 0.64);
 
 $grey0: #fafafa;
@@ -60,8 +62,8 @@ $b-fontSize: 1.6rem; // HTML
 $b-fontSize-xs: 1.2rem;
 $b-fontSize-s: 1.4rem;
 $b-fontSize-l: 1.8rem;
-$b-fontSize-xl: 3rem;
-$b-fontSize-xxl: 3.8rem;
+$b-fontSize-xl: 2.5rem;
+$b-fontSize-xxl: 3.2rem;
 $b-fontSize-h1: 4.8rem;
 $b-fontSize-xxxl: 12rem;
 $b-fontSize-h2: $b-fontSize-xxl;
