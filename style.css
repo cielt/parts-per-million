@@ -709,6 +709,49 @@ a {
   background: url("images/logo-350brooklyn.svg") no-repeat transparent center center;
   background-size: contain; }
 
+.current-issue-cta {
+  position: relative;
+  background-color: #fef8d8;
+  padding: 2rem;
+  color: #635c38;
+  border-radius: 12px; }
+  .current-issue-cta .callout-open {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: -2rem;
+    margin-right: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem;
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    background-color: #8d3618;
+    color: #fff;
+    text-align: center;
+    font-size: 1.4rem;
+    line-height: 1.25;
+    transform: rotateZ(15deg); }
+  .current-issue-cta h2 {
+    border-bottom: 1px dotted #8c801f; }
+  .current-issue-cta a:link,
+  .current-issue-cta a:active,
+  .current-issue-cta a:visited {
+    color: #8d3618; }
+
+.kicker {
+  display: block;
+  font-family: sans-serif;
+  color: #8c801f;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: bold; }
+
+.instructions {
+  font-family: sans-serif; }
+
 .search-results-summary {
   color: #0f81e8;
   font-family: "Courier New", monospace; }
