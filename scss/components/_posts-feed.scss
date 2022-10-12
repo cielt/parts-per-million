@@ -11,14 +11,8 @@
 $thumbnailSize: 48px;
 
 // -------------------------------------
-//  Stories Feed
+//  Common
 // -------------------------------------
-
-.posts-feed {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
 
 .post-medium {
   display: block;
@@ -31,119 +25,230 @@ $thumbnailSize: 48px;
   text-transform: uppercase;
 }
 
-.feed-item {
-  position: relative;
-  padding: $b-space-5 0;
+// -------------------------------------
+//  Search Results Feed
+// -------------------------------------
 
-  &:not(:last-of-type) {
-    border-bottom: 1px dotted $lightGrey350;
-    margin-bottom: $b-space-6;
+.posts-feed {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  .feed-item {
+    position: relative;
+    padding: $b-space-5 0;
+
+    &:not(:last-of-type) {
+      border-bottom: 1px dotted $lightGrey350;
+      margin-bottom: $b-space-6;
+    }
   }
-}
 
-.feed-item-content {
-  position: relative;
-  z-index: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: $b-space-4;
+  .feed-item-content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: $b-space-4;
 
-  .story-info {
-    font-family: $b-fontFamily;
-    flex: 1;
-    order: 2;
-
-    .feed-story-title {
+    .story-info {
       font-family: $b-fontFamily;
-      font-weight: 700;
-      font-size: $b-fontSize-l;
-      margin-bottom: $b-space-2;
+      flex: 1;
+      order: 2;
 
-      a {
-        transition: all 300ms ease;
-        color: $darkGrey350;
+      .feed-story-title {
+        font-family: $b-fontFamily;
+        font-weight: 700;
+        font-size: $b-fontSize-l;
+        margin-bottom: $b-space-2;
+
+        a {
+          transition: all 300ms ease;
+          color: $darkGrey350;
+        }
       }
-    }
 
-    // post item feed
-    .post-medium + .feed-story-title {
-      margin-top: $b-space-2;
-    }
+      // post item feed
+      .post-medium + .feed-story-title {
+        margin-top: $b-space-2;
+      }
 
-    .contributor-info {
-      display: flex;
-      align-items: center;
-      justify-content: flex-start;
-      gap: $b-space-4;
-      font-family: $b-sans-fontFamily;
-      font-weight: 700;
-      margin-bottom: $b-space-4;
+      .contributor-info {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: $b-space-4;
+        font-family: $b-sans-fontFamily;
+        font-weight: 700;
+        margin-bottom: $b-space-4;
 
-      .contributor-thumbnail {
-        flex: 0 0 $thumbnailSize;
-        width: $thumbnailSize;
-        height: $thumbnailSize;
-        border-radius: 50%;
-        overflow: hidden;
-        background-color: $grey1;
+        .contributor-thumbnail {
+          flex: 0 0 $thumbnailSize;
+          width: $thumbnailSize;
+          height: $thumbnailSize;
+          border-radius: 50%;
+          overflow: hidden;
+          background-color: $grey1;
 
-        img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+      }
+
+      .feed-item-summary {
+        .read-more-link {
+          font-family: $b-sans-fontFamily;
         }
       }
     }
 
-    .feed-item-summary {
-      .read-more-link {
-        font-family: $b-sans-fontFamily;
+    .story-thumbnail {
+      border: 3px solid $darkGrey350;
+      flex: 0 1 auto;
+      order: 0;
+      transition: all 300ms ease;
+      width: 100%;
+      height: auto;
+      max-height: 200px;
+      overflow: hidden;
+
+      .fit {
+        object-fit: cover;
+      }
+    }
+
+    &:hover,
+    &:focus {
+      .story-info .feed-story-title a {
+        color: $red350;
+      }
+
+      .story-thumbnail {
+        border-color: $red350;
+      }
+    }
+
+    @media (min-width: $g-m) {
+      flex-direction: row;
+      row-gap: $b-space-6;
+
+      .story-info {
+        order: 1;
+        .feed-story-title {
+          font-size: $b-fontSize-h4;
+        }
+      }
+
+      .story-thumbnail {
+        order: 2;
+        flex-basis: 240px;
+        width: auto;
       }
     }
   }
+}
 
-  .story-thumbnail {
-    border: 3px solid $darkGrey350;
-    flex: 0 1 auto;
-    order: 0;
-    transition: all 300ms ease;
-    width: 100%;
-    height: auto;
-    max-height: 200px;
-    overflow: hidden;
+// -------------------------------------
+//  Stories Feed - Home et al.
+// -------------------------------------
 
-    .fit {
-      object-fit: cover;
-    }
-  }
+.grid-feed {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: $b-space-5;
 
-  &:hover,
-  &:focus {
-    .story-info .feed-story-title a {
-      color: $red350;
+  .feed-item-content {
+    a {
+      color: $c-text;
     }
 
     .story-thumbnail {
-      border-color: $red350;
+      display: block;
+      position: relative;
+      height: 128px;
+      overflow: hidden;
+      background-color: $darkGrey350;
+      margin-bottom: $b-space-2;
+
+      img {
+        position: relative;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .post-medium {
+        position: absolute;
+        font-weight: 500;
+        z-index: 2;
+        color: $white;
+        width: 100%;
+        height: 28px;
+        line-height: 28px;
+        bottom: 0;
+        left: 0;
+        padding: 0 $b-space-2;
+        background-color: $blackTransparent;
+      }
     }
-  }
 
-  @media (min-width: $g-m) {
-    flex-direction: row;
-    row-gap: $b-space-6;
-
+    // story info, author info
     .story-info {
-      order: 1;
-      .feed-story-title {
-        font-size: $b-fontSize-h4;
-      }
-    }
+      font-family: $b-fontFamily;
+      display: flex;
+      flex-direction: column;
+      gap: $b-space-2;
 
-    .story-thumbnail {
-      order: 2;
-      flex-basis: 240px;
-      width: auto;
+      .feed-story-title {
+        font-family: $b-fontFamily;
+        font-weight: 700;
+        font-size: $b-fontSize-s;
+        margin-bottom: $b-space-2;
+        flex: 1 0 auto;
+
+        a {
+          transition: all 300ms ease;
+          color: $darkGrey350;
+        }
+      }
+
+      .contributor-info {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: $b-space-2;
+        font-family: $b-sans-fontFamily;
+        font-weight: 700;
+
+        .contributor-thumbnail {
+          flex: 0 0 $thumbnailSize;
+          width: $thumbnailSize;
+          height: $thumbnailSize;
+          border-radius: 50%;
+          overflow: hidden;
+          background-color: $grey1;
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+      }
+
+      .feed-item-summary {
+        .read-more-link {
+          font-family: $b-sans-fontFamily;
+        }
+      }
     }
   }
 }

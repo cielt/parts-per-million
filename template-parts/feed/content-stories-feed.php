@@ -11,7 +11,7 @@ $args = [
 
 $posts_query = new WP_Query($args);
 if (have_posts()): ?>
-	<ul class="posts-feed">
+	<ul class="grid-feed stories-feed">
   <?php
   while ($posts_query->have_posts()):
     $posts_query->the_post(); ?>

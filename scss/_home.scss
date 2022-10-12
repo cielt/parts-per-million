@@ -132,7 +132,7 @@
 
         .cta-mobile {
           display: none;
-          color: $redBrown;
+          color: $blue350;
           text-decoration: underline;
           font-weight: bold;
         }
@@ -148,9 +148,9 @@
         font-size: $b-fontSize-xs;
         padding: 0 $b-space-2;
         line-height: 2;
-        background-color: $redBrown;
-        color: $white;
-        font-weight: 500;
+        background-color: $blue350;
+        color: $lightGrey350;
+        font-weight: 600;
         border-radius: $b-borderRad-3;
       }
     }
