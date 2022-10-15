@@ -14,7 +14,7 @@ get_header(); ?>
 		<a class="callout" href="<?php echo site_url("/contribute"); ?>">
 		<div class="burst"><h5 class="mb-0">Submit your work!</h5></div>
 		<div class="callout-message">
-			<h4 class="mb-1 c-darkGold"><i class="fas fa-bullhorn mr-1 c-darkGold"></i> Issue #1: <em>Our City</em></h4>
+			<h4 class="mb-1"><i class="fas fa-bullhorn mr-1"></i> Issue #1: <em>Our City</em></h4>
 			<p><span class="mr-1">We&rsquo;d love your submissions of original work exploring climate change and our home city, <span class="text-unit">New York!</span> <span class="cta-mobile">Learn More &rarr;</span></p>
 		</div>
 		<div class="cta-block">

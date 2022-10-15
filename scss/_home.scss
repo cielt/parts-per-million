@@ -88,6 +88,7 @@
     gap: $b-space-2;
     align-items: flex-end;
     text-decoration: none;
+    color: $c-text;
 
     .burst {
       position: absolute;
@@ -121,12 +122,12 @@
       h4 {
         font-weight: 500;
         font-size: $b-fontSize-l;
+        color: $darkGold;
       }
       p {
         font-size: $b-fontSize-s;
         font-family: $b-sans-fontFamily;
         line-height: $b-lineHeight-header;
-        color: $darkGold0;
         font-weight: bold;
         border-radius: 16px;
 
@@ -149,7 +150,7 @@
         padding: 0 $b-space-2;
         line-height: 2;
         background-color: $blue350;
-        color: $lightGrey350;
+        color: $gold0;
         font-weight: 600;
         border-radius: $b-borderRad-3;
       }
@@ -187,7 +188,6 @@
     .callout {
       padding: $b-space-3;
       max-width: 98%;
-      border: 3px solid $darkGold;
 
       .burst {
         display: none;

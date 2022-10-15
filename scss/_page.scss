@@ -171,7 +171,6 @@
   position: relative;
   background-color: $gold0;
   padding: $b-space-4;
-  color: $darkGold0;
   border-radius: $b-borderRad-3;
 
   .callout-open {
@@ -193,6 +192,7 @@
     font-size: $b-fontSize-s;
     line-height: $b-lineHeight-header;
     transform: rotateZ(15deg);
+    box-shadow: 0 0 8px 2px hsla(0, 0%, 40%, 0.24);
   }
 
   h2 {
@@ -202,7 +202,7 @@
   a:link,
   a:active,
   a:visited {
-    color: $redBrown;
+    color: $darkGold;
   }
 }
 
