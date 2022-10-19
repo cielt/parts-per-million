@@ -711,7 +711,7 @@ a {
 
 .current-issue-cta {
   position: relative;
-  background-color: #f2eed8;
+  background-color: #f2efdf;
   padding: 2rem;
   border-radius: 12px; }
   .current-issue-cta .callout-open {
@@ -1373,7 +1373,7 @@ button {
   .marquee-main .callout {
     position: relative;
     text-align: left;
-    background-color: #f2eed8;
+    background-color: #e7eff8;
     padding: 1.5rem 1.5rem 1.5rem 3rem;
     width: 88%;
     margin: 0 auto;
@@ -1395,7 +1395,7 @@ button {
       height: 96px;
       border-radius: 50%;
       padding: 1.5rem;
-      background-color: #8d801f;
+      background-color: #0f81e8;
       color: #fff;
       text-align: center;
       justify-content: center;
@@ -1411,7 +1411,7 @@ button {
       .marquee-main .callout .callout-message h4 {
         font-weight: 500;
         font-size: 1.8rem;
-        color: #8d801f; }
+        color: #0c66b8; }
       .marquee-main .callout .callout-message p {
         font-size: 1.4rem;
         font-family: sans-serif;
@@ -1432,7 +1432,7 @@ button {
         padding: 0 1rem;
         line-height: 2;
         background-color: #0f81e8;
-        color: #f2eed8;
+        color: #fff;
         font-weight: 600;
         border-radius: 12px; }
 
