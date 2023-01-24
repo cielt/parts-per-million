@@ -11,7 +11,7 @@ get_header(); ?>
 <div id="bk-word-cloud" class="word-cloud bk-env"></div>
 <div class="marquee-main graph-block">
   <div class="title-block">
-		<a class="callout" href="<?php echo site_url("/contribute"); ?>">
+		<!-- <a class="callout" href="<?php echo site_url("/contribute"); ?>">
 		<div class="burst"><h5 class="mb-0">Submit your work!</h5></div>
 		<div class="callout-message">
 			<h4 class="mb-1"><i class="fas fa-bullhorn mr-1"></i> Issue #1: <em>Our City</em></h4>
@@ -20,7 +20,7 @@ get_header(); ?>
 		<div class="cta-block">
 			<span class="btn-block">Learn More &rarr;</span>
 		</div>
-	</a>
+	</a> -->
 		<div class="heading-block">
     	<h1 class="h1 site-title"><?php bloginfo("name"); ?></h1>
     	<p class="site-description"><?php bloginfo("description"); ?></p>

@@ -636,7 +636,8 @@ a {
       color: #8d801f; }
       .page-header .page-title-block .page-intro p {
         font-family: sans-serif;
-        line-height: 1.25; }
+        line-height: 1.25;
+        font-weight: 300; }
   .page-header .featured-image-frame {
     border-top: 3px solid #8d801f;
     overflow: hidden; }
@@ -1358,8 +1359,7 @@ button {
     padding: 1.5rem;
     color: #fff;
     flex-direction: column;
-    justify-content: flex-start;
-    margin-top: 6rem;
+    justify-content: center;
     gap: 15vh; }
   .marquee-main .heading-block .site-title {
     font-size: 12rem;
