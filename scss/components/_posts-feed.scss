@@ -165,9 +165,9 @@ $thumbnailSize: 48px;
   gap: $b-space-5;
 
   .feed-item-content {
-    a {
-      color: $c-text;
-    }
+    text-decoration: none;
+    color: $c-text;
+    transition: all 300ms ease;
 
     .story-thumbnail {
       display: block;
@@ -197,6 +197,7 @@ $thumbnailSize: 48px;
         left: 0;
         padding: 0 $b-space-2;
         background-color: $blackTransparent;
+        transition: all 300ms ease;
       }
     }
 
@@ -213,11 +214,6 @@ $thumbnailSize: 48px;
         font-size: $b-fontSize-s;
         margin-bottom: $b-space-2;
         flex: 1 0 auto;
-
-        a {
-          transition: all 300ms ease;
-          color: $darkGrey350;
-        }
       }
 
       .contributor-info {
@@ -247,6 +243,18 @@ $thumbnailSize: 48px;
       .feed-item-summary {
         .read-more-link {
           font-family: $b-sans-fontFamily;
+        }
+      }
+    }
+
+    &:hover,
+    &:focus {
+      color: $darkGold;
+
+      .story-thumbnail {
+        .post-medium {
+          background-color: $darkGoldTransparent;
+          height: 100%;
         }
       }
     }
