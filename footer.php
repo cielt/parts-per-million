@@ -60,7 +60,8 @@
           		<ul id="footer-topics-menu" class="footer-menu footer-topics-menu">
 								<?php wp_list_categories([
           "taxonomy" => "category",
-          "orderby" => ["count" => "DESC", "name" => "ASC"],
+          "orderby" => "count",
+          "order" => "DESC",
           "show_count" => 1,
           "title_li" => "",
           "number" => 8,
