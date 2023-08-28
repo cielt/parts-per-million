@@ -125,6 +125,10 @@
     max-width: $g-m;
   }
 
+  &.max-640 {
+    max-width: 640px;
+  }
+
   &.img-width-m {
     max-width: $img-width-m;
   }
@@ -279,4 +283,10 @@ h5,
   &.grey1 {
     border-bottom-color: $grey1;
   }
+}
+
+// ----- Text alignment ----- //
+
+.t-alignC {
+  text-align: center;
 }

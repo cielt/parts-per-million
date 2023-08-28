@@ -33,8 +33,10 @@
 <body <?php body_class("nav-closed header-waypoint search-widget-closed"); ?>
   data-layout="<?php if (is_page_template("front-page.php")) {
     echo "ppm-home";
-  } elseif (is_single()) {
+  } elseif (is_single() && "story" == get_post_type()) {
     echo "ppm-single";
+  } elseif (is_single() && "photo-book" == get_post_type()) {
+    echo "ppm-photo-book";
   } else {
     echo "ppm-page";
   } ?>">
@@ -87,7 +89,8 @@
 				<div class="main">
 					<?php if (
        !is_page_template("front-page.php") &&
-       !(is_single() && "story" == get_post_type())
+       !(is_single() && "story" == get_post_type()) &&
+       !(is_single() && "photo-book" == get_post_type())
      ): ?>
 						<div class="header-spacing"></div>
 					<?php endif; ?>
