@@ -239,8 +239,13 @@ $authorImgSize: 60px;
         color: $white;
       }
 
+      &.theme-green {
+        background-color: $green;
+        color: $white;
+      }
+
       .page-bg {
-        min-height: 100vh;
+        height: 100vh;
         position: sticky;
         z-index: 1;
         top: 0;
@@ -257,10 +262,67 @@ $authorImgSize: 60px;
         }
       }
 
+      // ensure text has bag overlay to improve readability
+      &.bg-image-page {
+        .page-heading,
+        p {
+          padding: $b-space-2;
+          border-radius: $b-borderRad-2;
+          background: rgba(32, 32, 32, 0.48);
+        }
+
+        &.theme-green {
+          .page-heading,
+          p {
+            background: rgba(14, 132, 72, 0.88);
+          }
+        }
+      }
+
+      &.flex-page {
+        .page-content {
+          // min-height: auto;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+
+      .page-bg.has-image {
+        .bg-image-screen {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100vh;
+          background-color: $black;
+          z-index: 1;
+          overflow: hidden;
+
+          img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+          }
+        }
+
+        .page-heading {
+          position: relative;
+          z-index: 2;
+        }
+      }
+
       .page-content {
         position: relative;
         z-index: 2;
         min-height: 100vh;
+
+        .page-heading {
+          font-size: $b-fontSize-h1;
+          font-family: $b-serif-fontFamily;
+          text-align: center;
+          transition: opacity 1000ms ease-in-out;
+        }
 
         .first-paragraph:first-letter {
           color: $white;
@@ -280,6 +342,41 @@ $authorImgSize: 60px;
           .page-heading {
             opacity: 0;
           }
+        }
+      }
+
+      // Text + image inline
+      .sxs-page {
+        display: flex;
+        gap: $b-space-6;
+        justify-content: center;
+        align-items: flex-start;
+
+        .image-frame-inline {
+          flex: 0 0 45%;
+          overflow: hidden;
+          border-radius: $b-borderRad-3;
+
+          img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+          }
+        }
+
+        .text-content-inline {
+        }
+      }
+
+      // Photo Book type styles
+      .page-subheading {
+        color: $gold1;
+        text-transform: uppercase;
+      }
+
+      &.theme-green {
+        .page-subheading {
+          color: $white;
         }
       }
     }
