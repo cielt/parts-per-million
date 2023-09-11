@@ -152,15 +152,130 @@
 								</div>
 							</div>
 						</div>
-						<!-- Slide 2 -->
-						<div class="book-page flex-page theme-dark goawnus-1">
+						<!-- Clock's Ticking :: Delay = Denial -->
+						<!-- Slide 1 -->
+						<div class="book-page theme-dark bg-image-page climate-clock">
+							<div class="page-bg has-image">
+								<div class="bg-image-screen">
+									<img src="<?php echo get_template_directory_uri(); ?>/images/book/book-climate-clock-delay-denial.png" class="image-full-screen" />
+								</div>
+								<h2 class="page-heading">The Clock&rsquo;s Ticking</h2>
+							</div>
 							<div class="page-content">
 								<div class="pt-6 pb-6 px-4">
 									<div class="w-max max-640">
-										<div class="text-content-inline">
-											<h3 class="page-subheading upper">The Clock&rsquo;s Ticking</h3>
-											<p><em>Add the rest of the book here&hellip;</em></p>
-										</div>
+										<p class="first-paragraph ts-l">
+											Photos taken at Union Square, NYC of the Climate Clock which counts down to doomsday. The clock was installed in 2020 by an organization known simply as &ldquo;Climate Clock.&rdquo;
+										</p>
+										<p>The clock&rsquo;s purpose is to inform citizens of how much time the world has to reach zero emissions before the effects of climate change are permanently solidified. Additionally, the clock tells how much time the world has until total warming of 1.5 degrees centigrade, a milestone that if reached would encourage the global community to set a new warming limit. Setting a new warming ceiling can have catastrophic effects including increased food and water shortages as well as more frequent natural disaster events. There are three clocks worldwide, one in Seoul, one in Glasgow, and one in NYC. In addition to a simple countdown, the clock displays three additional messages including &ldquo;solutions exist&rdquo;, &ldquo;delay=denial,&rdquo; as well as the signature hashtag &ldquo;Let&rsquo;s #Act In Time.&rdquo;</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- Clock's Ticking :: Hamilton Asphalt plant -->
+						<!-- Slide 1 -->
+						<div class="book-page theme-dark bg-image-page climate-clock">
+							<div class="page-bg has-image">
+								<div class="bg-image-screen">
+									<img src="<?php echo get_template_directory_uri(); ?>/images/book/book-hamilton-asphalt-plant.png" class="image-full-screen" />
+								</div>
+								<h2 class="page-heading">The Clock&rsquo;s Ticking</h2>
+							</div>
+							<div class="page-content">
+								<div class="pt-6 pb-6 px-4">
+									<div class="w-max max-640">
+										<p class="first-paragraph ts-l">
+											<strong>The Hamilton Asphalt plant, Hamilton Ave, Brooklyn.</strong> Originally opened in 1979, the plant was a leading asphalt producer helping to fix and pave roads all across NYC.
+										</p>
+										<p>The plant was more recently closed down but was eventually restored and reopened in 2014 by Bill De Blasio. The plant&rsquo;s reopening was a part of an initiative to repave 1,000 lane miles of streets and repair 400,000 potholes. As a result of the plant&rsquo;s recycling abilities as well as its novel asphalt producing process which saves a total of 2.2 million barrels of crude oil, the plant is much more environmentally sustainable than other similar sites; it has substantially reduced its externalized costs. Still, while the factory is somewhat environmentally suitable, emissions from the asphalt production process remain. Since 2005, NYC CO<sub>2</sub> emissions have decreased by over 17%. However, CO<sub>2</sub> emissions still remain at a hefty 52 million metric tons. The effects of greenhouse gas emissions produced by different processes in NYC possess the potential to have detrimental effects on the different ecosystems within the city. Since 1970, the average NY state temperature has risen by 3 degrees Fahrenheit. Increased temperatures give way to a multitude of potential risks including increased extreme weather events such as heavier rainfall due to increased water evaporation into the atmosphere as well as &ldquo;the heat island effect.&rdquo;</p>
+										<p>While the city is constantly pushing closer to reaching its goal of reducing total emissions by 80% by 2050, achieving that goal remains distant.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- Clock's Ticking – We're Fighting It :: Windmills -->
+						<!-- Slide 1 -->
+						<div class="book-page theme-green bg-image-page climate-clock">
+							<div class="page-bg has-image">
+								<div class="bg-image-screen fit-portrait">
+									<img src="<?php echo get_template_directory_uri(); ?>/images/book/book-windmills-wf-carroll-gardens.png" class="image-full-screen" />
+								</div>
+								<h2 class="page-heading">The Clock&rsquo;s Ticking</h2>
+							</div>
+							<div class="page-content">
+								<div class="pt-6 pb-6 px-4">
+									<div class="w-max max-640">
+										<h2 class="page-heading">We&rsquo;re Fighting It</h2>
+									</div>
+								</div>
+							</div>
+							<div class="page-content">
+								<div class="pt-6 pb-6 px-4">
+									<div class="w-max max-640">
+										<p class="first-paragraph ts-l">
+											<strong>Two windmills at Whole Foods Market Carroll Gardens, Brooklyn.</strong> Windmills are notable renewable energy producers.
+										</p>
+										<p>In recent years, NYC has taken a much keener interest in wind energy in order to further its goal of reaching 70% of electricity from renewable sources by 2030. NYC currently has five offshore wind farms set to be constructed in the coming years. The five wind farms will produce 4,300 megawatts of energy, nearly 50% of the capacity needed to meet NY&rsquo;s offshore wind goal of 9,000 megawatts by 2035. The farms will power 2.4 million New York homes, provide an economic impact of $12.1 billion dollars, and will provide over 6,800 jobs. Parts for the five projects will be housed at the South Brooklyn Marine Terminal. The wind farms known as the Empire and Beacon projects will be completed and expected to enter commercial operation by 2027 and 2028.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- Is It Enough? :: Bike Share -->
+						<!-- Slide 1 -->
+						<div class="book-page theme-green bg-image-page climate-clock">
+							<div class="page-bg has-image">
+								<div class="bg-image-screen fit-portrait">
+									<img src="<?php echo get_template_directory_uri(); ?>/images/book/book-citibike-dock.png" class="image-full-screen" />
+								</div>
+								<h2 class="page-heading">Is It Enough?</h2>
+							</div>
+							<div class="page-content">
+								<div class="pt-6 pb-6 px-4">
+									<div class="w-max max-640">
+										<p class="first-paragraph ts-l">
+											<strong>Citibikes being stored on 3rd Street in Gowanus, Brooklyn. </strong> The bike sharing program has become increasingly popular over the last few years as daily rides jumped from an average of 48,315 rides per day in 2018, to a record number of 138,372 rides in a single day in 2022.
+										</p>
+										<p>The service gained prominence especially during and after the height of the Covid-19 pandemic in 2020. Citibikes have been proven as a means of reducing greenhouse gas emissions therefore improving climate change and the environment overall. In 2022, it was announced that 100 new citibike stations would be installed in Brooklyn alone with more set to be introduced across the five boroughs.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- Is It Enough? :: Energy Efficiency Rating -->
+						<!-- Slide 1 -->
+						<div class="book-page theme-dark bg-image-page climate-clock">
+							<div class="page-bg has-image">
+								<div class="bg-image-screen fit-portrait">
+									<img src="<?php echo get_template_directory_uri(); ?>/images/book/book-energy-efficiency-grade-wf-gowanus.png" class="image-full-screen" />
+								</div>
+								<h2 class="page-heading">Is It Enough?</h2>
+							</div>
+							<div class="page-content">
+								<div class="pt-6 pb-6 px-4">
+									<div class="w-max max-640">
+										<p class="first-paragraph ts-l">
+											<strong>An energy efficiency rating posted on the front of Whole Foods Market in Gowanus, Brooklyn.</strong> The rating compares a building&rsquo;s energy consumption with similar buildings nationwide.
+										</p>
+										<p>A rating of one signifies that the building performs worse than 99% of other similar buildings nationwide. Each building is required to submit benchmark information about energy and water consumption to the city. Out of the nearly 40,000 buildings that submitted the required information, half received a D rating meaning a score less than 55. While businesses are not fined as a result of a poor rating, a low score may still harm a company in the long run as it reflects poorly on the practices of the business and therefore may influence potential customers to steer clear of the location. By 2030, NYC hopes to reduce total carbon emissions by 40%. This is one of the actions they are taking to do so.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- Is It Enough? :: Pollution -->
+						<!-- Slide 1 -->
+						<div class="book-page theme-green bg-image-page climate-clock">
+							<div class="page-bg has-image">
+								<div class="bg-image-screen fit-portrait">
+									<img src="<?php echo get_template_directory_uri(); ?>/images/book/book-pollution-carroll-gardens.png" class="image-full-screen" />
+								</div>
+								<h2 class="page-heading">Is It Enough?</h2>
+							</div>
+							<div class="page-content">
+								<div class="pt-6 pb-6 px-4">
+									<div class="w-max max-640">
+										<p class="first-paragraph ts-l">
+											<strong>Local pollution. Photo taken in Carroll Gardens, Brooklyn.</strong> The photo was taken recently after a statement issued by New York City mayor Eric Adams on June 22, 2022 in which he communicated that increased litter collection, rat control, severe crackdowns on illegal dumping, and new operations to clean the city would all be on NYC&rsquo;s agenda in the coming years.
+										</p>
+										<p>With a new budget passed by the City Council of about $22 million dollars, litter bins will be emptied 50,000 times more per week than in the years prior. An additional $7.5 million dollars will be pledged towards fighting litterers and illegal dumpers. $5 million dollars will go towards paying sanitation workers and $4.8 million dollars will go towards rat mitigation which have reportedly hit a population total of 2 million in NYC. All of these actions will greatly help to assist in the preservation of many of NYC&rsquo;s ecosystems which have been gravely effected by increased pollution in recent years.</p>
 									</div>
 								</div>
 							</div>
