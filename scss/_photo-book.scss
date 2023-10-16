@@ -268,20 +268,19 @@ $authorImgSize: 60px;
         p {
           padding: $b-space-2;
           border-radius: $b-borderRad-2;
-          background: rgba(32, 32, 32, 0.48);
+          background: $overlayBgBlack;
         }
 
         &.theme-green {
           .page-heading,
           p {
-            background: rgba(14, 132, 72, 0.88);
+            background: $overlayBgGreen;
           }
         }
       }
 
       &.flex-page {
         .page-content {
-          // min-height: auto;
           display: flex;
           justify-content: center;
           align-items: center;
@@ -305,16 +304,17 @@ $authorImgSize: 60px;
           img {
             width: 100%;
             height: auto;
+            min-height: 100%;
             object-fit: cover;
           }
 
-          &.fit-portrait {
-            img {
-              height: 100%;
-              width: auto;
-              object-fit: contain;
-            }
-          }
+          // &.fit-portrait {
+          //   img {
+          //     height: 100%;
+          //     width: auto;
+          //     object-fit: contain;
+          //   }
+          // }
         }
 
         .page-heading {
