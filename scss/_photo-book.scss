@@ -154,10 +154,10 @@ $authorImgSize: 60px;
 
 // ----- MAIN CONTENT AREA ----- //
 
-.photo-book {
-  .post-layout-main {
-  }
-}
+// .photo-book {
+//   .post-layout-main {
+//   }
+// }
 
 // POST META - own slide?
 
@@ -234,16 +234,6 @@ $authorImgSize: 60px;
     .book-page {
       position: relative;
 
-      &.theme-dark {
-        background-color: $black;
-        color: $white;
-      }
-
-      &.theme-green {
-        background-color: $green;
-        color: $white;
-      }
-
       .page-bg {
         height: 100vh;
         position: sticky;
@@ -255,10 +245,56 @@ $authorImgSize: 60px;
         justify-content: center;
 
         .page-heading {
-          font-size: $b-fontSize-h1;
-          font-family: $b-serif-fontFamily;
           text-align: center;
           transition: opacity 1000ms ease-in-out;
+
+          // h2
+          .heading-main {
+            font-size: $b-fontSize-xxl;
+            font-family: $b-serif-fontFamily;
+            margin-bottom: 0;
+          }
+
+          .photo-meta {
+            display: block;
+            font-size: $b-fontSize;
+            text-transform: uppercase;
+            font-weight: bold;
+            letter-spacing: 2px;
+            line-height: $b-lineHeight-header;
+          }
+
+          .heading-main + .photo-meta {
+            margin-top: $b-space-3;
+          }
+
+          @media (min-width: $g-m) {
+            .heading-main {
+              font-size: $b-fontSize-hxl;
+            }
+
+            .photo-meta {
+              font-size: $b-fontSize-l;
+            }
+          }
+        }
+      }
+
+      &.theme-dark {
+        background-color: $black;
+        color: $white;
+
+        .page-bg {
+          background-color: $black;
+        }
+      }
+
+      &.theme-green {
+        background-color: $green;
+        color: $white;
+
+        .page-bg {
+          background-color: $green;
         }
       }
 
@@ -308,13 +344,13 @@ $authorImgSize: 60px;
             object-fit: cover;
           }
 
-          // &.fit-portrait {
-          //   img {
-          //     height: 100%;
-          //     width: auto;
-          //     object-fit: contain;
-          //   }
-          // }
+          &.fit-portrait {
+            img {
+              height: 100%;
+              width: auto;
+              object-fit: contain;
+            }
+          }
         }
 
         .page-heading {
@@ -328,11 +364,14 @@ $authorImgSize: 60px;
         z-index: 2;
         min-height: 100vh;
 
-        .page-heading {
-          font-size: $b-fontSize-h1;
+        .content-heading {
+          font-size: $b-fontSize-xxl;
           font-family: $b-serif-fontFamily;
           text-align: center;
-          transition: opacity 1000ms ease-in-out;
+
+          @media (min-width: $g-m) {
+            font-size: $b-fontSize-h1;
+          }
         }
 
         .first-paragraph:first-letter {
@@ -344,6 +383,10 @@ $authorImgSize: 60px;
           padding-top: 15px;
           padding-right: 15px;
           padding-bottom: 10px;
+        }
+
+        &.flex-height {
+          min-height: 0;
         }
       }
 
@@ -381,8 +424,10 @@ $authorImgSize: 60px;
 
       // Photo Book type styles
       .page-subheading {
+        font-size: $b-fontSize-h2;
         color: $gold1;
         text-transform: uppercase;
+        margin-bottom: $b-space-2;
       }
 
       &.theme-green {
@@ -395,6 +440,57 @@ $authorImgSize: 60px;
 }
 
 // ----- POST NAVIGATION AREA ----- //
+
+// COUNTDOWN
+.countdown-block {
+  font-family: $b-mono-fontFamily;
+  font-size: $b-fontSize-h1;
+  color: $white;
+  display: flex;
+  gap: $b-space-4;
+  justify-content: center;
+
+  .segment {
+    flex: 0 1 auto;
+  }
+
+  .num {
+    font-weight: bold;
+    font-size: $b-fontSize-hxl;
+    display: inline-block;
+    padding: 0 $b-space-1;
+  }
+}
+
+// actions
+
+.orgs-list {
+  width: 100%;
+
+  .org-item {
+    display: flex;
+    gap: $b-space-4;
+    margin: 0 0 $b-space-5;
+    font-size: $b-fontSize-l;
+    align-items: flex-start;
+    line-height: $b-lineHeight-header;
+
+    a {
+      color: $yellowGreen;
+    }
+
+    dt {
+      margin: 0;
+      font-weight: bold;
+      flex: 0 0 10em;
+    }
+
+    dd {
+      margin: 0;
+      flex: 1 1 auto;
+    }
+  }
+}
 
 // Prev / Next nav
 

@@ -50,7 +50,11 @@
 				<!-- FOREWORD -->
 				<div class="book-page theme-dark forward">
 					<div class="page-bg">
-						<h2 class="page-heading">Forward</h2>
+						<div class="page-heading">
+							<h2 class="heading-main">
+								Forward
+							</h2>
+						</div>
 					</div>
 					<div class="page-content">
 						<div class="pt-6 pb-6 px-4">
@@ -58,8 +62,8 @@
 								<p class="first-paragraph ts-l">
 									This collection is a wake up call for everyone. The climate crisis worsens each day pollution increases, and while action is being taken there is still much work to be done. Pasted on the cover is a clock. That clock—located in Union Square, New York City—counts down to a grim milestone. A total warming of 1.5 degrees celsius, the original annual average temperature rise ceiling set by the global community. 1.5 degrees of warming was nearly unimaginable almost a century ago yet today we inch closer and closer towards reaching it.
 								</p>
-								<p><em>Through this collection, it is my aim to spread awareness for the effects of climate change and pollution apparent all around us, to shed light on these things we don&rsquo;t often notice. In this book, you will find a showcase of photos all based in New York City, centered around climate change, pollution, and finally, the wide variety of resiliency projects currently being undertaken by the local NYC population as well as the City&rsquo;s governing body. Each page focuses on a different location in NYC.</em></p>
-								<p><em>It is my hope that this collection will evoke a sense of urgency to act within you. Hopefully, one day, we can come together as a society, fully educated and ready to act, in order to fight the different crises facing our civilization.</em></p>
+								<p>Through this collection, it is my aim to spread awareness for the effects of climate change and pollution apparent all around us, to shed light on these things we don&rsquo;t often notice. In this book, you will find a showcase of photos all based in New York City, centered around climate change, pollution, and finally, the wide variety of resiliency projects currently being undertaken by the local NYC population as well as the City&rsquo;s governing body. Each page focuses on a different location in NYC.</p>
+								<p>It is my hope that this collection will evoke a sense of urgency to act within you. Hopefully, one day, we can come together as a society, fully educated and ready to act, in order to fight the different crises facing our civilization.</p>
 
 								<p class="t-alignR">&mdash; Elias Bukai-Leite</p>
 							</div>
@@ -73,7 +77,11 @@
 						<div class="bg-image-screen">
 							<img src="<?php echo get_template_directory_uri(); ?>/images/book/book-gowanus-canal-0.jpg" class="image-full-screen" />
 						</div>
-						<h2 class="page-heading">The Clock&rsquo;s Ticking</h2>
+						<!-- <h2 class="page-heading">The Clock&rsquo;s Ticking</h2> -->
+						<div class="page-heading">
+							<h2 class="heading-main">Gowanus Canal</h2>
+							<span class="photo-meta">Brooklyn, NY</span>
+						</div>
 					</div>
 					<div class="page-content">
 						<div class="pt-6 pb-6 px-4">
@@ -86,16 +94,42 @@
 					</div>
 				</div>
 				<!-- Slide 2 -->
-				<div class="book-page flex-page theme-dark goawnus-1">
+				<div class="book-page theme-dark bg-image-page gowanus-0">
+					<div class="page-bg has-image">
+						<div class="bg-image-screen">
+							<img src="<?php echo get_template_directory_uri(); ?>/images/book/book-gowanus-canal-1.jpg" class="image-full-screen" />
+						</div>
+					</div>
 					<div class="page-content">
 						<div class="pt-6 pb-6 px-4">
-							<div class="sxs-page w-max max-gl">
-								<div class="image-frame-inline">
-									<img src="<?php echo get_template_directory_uri(); ?>/images/book/book-gowanus-canal-1.jpg" class="image-full-screen" />
-								</div>
-								<div class="text-content-inline">
-									<h3 class="page-subheading upper">The Clock&rsquo;s Ticking</h3>
-									<p>For years pollutants such as polycyclic aromatic hydrocarbons, polychlorinated biphenyls, and heavy metals such as mercury, lead, and copper were dumped into the canal by surrounding factories. In 2010, the canal was placed on the national priorities list and a program taken up by the U.S. Environmental Protection Agency to clean out and restore the canal was implemented. Since 2010, the EPA has dredged 300,000 cubic yards of contaminated sediment, cleaned up the surrounding factories, and finally is installing a cement cap on the bottom of the canal to keep any additional contaminants residing in the bottom sediments from spreading throughout the canal. The entire project is expected to be completed by 2023 and will likely cost over $1 billion dollars.</p>
+							<div class="w-max max-640">
+								<p class="first-paragraph ts-l">
+									For years pollutants such as polycyclic aromatic hydrocarbons, polychlorinated biphenyls, and heavy metals such as mercury, lead, and copper were dumped into the canal by surrounding factories.
+								</p>
+								<p>
+									In 2010, the canal was placed on the national priorities list and a program taken up by the U.S. Environmental Protection Agency to clean out and restore the canal was implemented. Since 2010, the EPA has dredged 300,000 cubic yards of contaminated sediment, cleaned up the surrounding factories, and finally is installing a cement cap on the bottom of the canal to keep any additional contaminants residing in the bottom sediments from spreading throughout the canal. The entire project is expected to be completed by 2023 and will likely cost over $1 billion dollars.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- The Clock's Ticking -->
+				<div class="book-page theme-dark">
+					<div class="page-bg">
+						<div class="page-heading">
+							<h2 class="heading-main c-gold1">
+								The Clock&rsquo;s Ticking
+							</h2>
+						</div>
+					</div>
+					<div class="page-content">
+						<div class="pt-6 pb-6 px-4">
+							<div class="w-max max-gm">
+								<!-- countdown goes here -->
+								<div class="countdown-block">
+									<span class="segment"><strong class="num">5</strong>years</span>
+									<span class="segment"><strong class="num">274</strong>days</span>
+									<span class="segment"><strong class="hours-mins-secs num">00:00:00</strong></span>
 								</div>
 							</div>
 						</div>
@@ -108,28 +142,40 @@
 						<div class="bg-image-screen">
 							<img src="<?php echo get_template_directory_uri(); ?>/images/book/book-fdr-drive-escr-construction.jpg" class="image-full-screen" />
 						</div>
-						<h2 class="page-heading">The Clock&rsquo;s Ticking</h2>
+						<div class="page-heading">
+							<h2 class="heading-main">
+								East Side Coastal Resiliency Project
+							</h2>
+							<span class="photo-meta">Manhattan, New York City</span>
+						</div>
 					</div>
 					<div class="page-content">
 						<div class="pt-6 pb-6 px-4">
 							<div class="w-max max-640">
-								<h2 class="page-heading"><span class="db mb-5">We&rsquo;re Fighting It</span>Is It Enough?</h2>
+								<p class="first-paragraph ts-l">
+									Construction taking place next to the FDR Drive for the East Side Coastal Resiliency (ESCR) project. The project is an initiative taken by the City of New York to protect vulnerable areas of Manhattan from rising sea levels.
+								</p>
+								<p>
+									 It is jointly funded by NYC as well as the federal government. The project, being a sea wall, will stretch about 2.5 miles from East 25th St. to Montgomery St. Construction of the wall is scheduled to be completed by 2026 and will hopefully help to prevent the ocean from damaging essential infrastructure and destroying the different ecosystems that reside near the shoreline. The program will cause a temporary disturbance in the equilibrium of the area as many prominent parks and other wild life areas will be temporarily closed off in order to aid the construction of the project.
+								</p>
 							</div>
 						</div>
 					</div>
 				</div>
 				<!-- Slide 2 -->
-				<div class="book-page flex-page theme-green goawnus-1">
+				<div class="book-page theme-green">
+					<div class="page-bg">
+						<div class="page-heading">
+							<h2 class="heading-main">
+								The Clock&rsquo;s Ticking
+							</h2>
+						</div>
+					</div>
 					<div class="page-content">
 						<div class="pt-6 pb-6 px-4">
-							<div class="sxs-page w-max max-640">
-								<div class="text-content-inline">
-									<h3 class="page-subheading upper">The Clock&rsquo;s Ticking</h3>
-									<p class="ts-l">
-										Construction taking place next to the FDR drive for the East Side Coastal Resiliency (ESCR) project.
-									</p>
-									<p>The project is an initiative taken by the City of New York to protect vulnerable areas of Manhattan from rising sea levels. It is jointly funded by NYC as well as the federal government. The project, being a sea wall, will stretch about 2.5 miles from East 25th St. to Montgomery St. Construction of the wall is scheduled to be completed by 2026 and will hopefully help to prevent the ocean from damaging essential infrastructure and destroying the different ecosystems that reside near the shoreline. The program will cause a temporary disturbance in the equilibrium of the area as many prominent parks and other wild life areas will be temporarily closed off in order to aid the construction of the project.</p>
-								</div>
+							<div class="w-max max-640">
+								<h2 class="content-heading">We&rsquo;re Fighting It</h2>
+								<h2 class="content-heading">Is It Enough?</h2>
 							</div>
 						</div>
 					</div>
@@ -141,7 +187,12 @@
 						<div class="bg-image-screen">
 							<img src="<?php echo get_template_directory_uri(); ?>/images/book/book-ev-charging-carroll-gardens.jpg" class="image-full-screen" />
 						</div>
-						<h2 class="page-heading">The Clock&rsquo;s Ticking</h2>
+						<div class="page-heading">
+						<h2 class="heading-main">
+							PlugNYC EV Charging Station
+						</h2>
+						<span class="photo-meta">Carroll Gardens, Brooklyn, NY</span>
+						</div>
 					</div>
 					<div class="page-content">
 						<div class="pt-6 pb-6 px-4">
@@ -149,7 +200,7 @@
 								<p class="first-paragraph ts-l">
 									Photo of two electric vehicles (EVs) charging at one of the City&rsquo;s 120 public EV charging stations in Carroll Gardens, Brooklyn.
 								</p>
-								<p>The portable station is known as plug NYC, an initiative taken by the NYC government partnered with ConEdison to reduce total emissions in the city. Regular gas powered cars are responsible for about 30% of total NYC emissions. These stations will help the city to encourage purchases of EV cars and hopefully push the city towards its goal of reducing emissions by about 80% by 2050. The charging stations are level 2 meaning that they charge at a rate of 20 miles of range per hour. They are mid level voltage (240v) which is similar voltage used to power larger appliances such as dryers. The project will last a total duration of 4 years as a test run.</p>
+								<p>The portable station is known as PlugNYC, an initiative taken by the NYC government partnered with ConEdison to reduce total emissions in the city. Regular gas powered cars are responsible for about 30% of total NYC emissions. These stations will help the city to encourage purchases of EV cars and hopefully push the city towards its goal of reducing emissions by about 80% by 2050. The charging stations are level 2 meaning that they charge at a rate of 20 miles of range per hour. They are mid level voltage (240v) which is similar voltage used to power larger appliances such as dryers. The project will last a total duration of 4 years as a test run.</p>
 							</div>
 						</div>
 					</div>
@@ -161,7 +212,12 @@
 						<div class="bg-image-screen">
 							<img src="<?php echo get_template_directory_uri(); ?>/images/book/book-climate-clock-delay-denial.jpg" class="image-full-screen" />
 						</div>
-						<h2 class="page-heading">The Clock&rsquo;s Ticking</h2>
+						<div class="page-heading">
+							<h2 class="heading-main">
+								Climate Clock
+							</h2>
+							<span class="photo-meta">Union Square, Manhattan, New York City</span>
+						</div>
 					</div>
 					<div class="page-content">
 						<div class="pt-6 pb-6 px-4">
@@ -174,6 +230,28 @@
 						</div>
 					</div>
 				</div>
+				<!-- The Clock's Ticking -->
+				<div class="book-page theme-dark">
+					<div class="page-bg">
+						<div class="page-heading">
+							<h2 class="heading-main c-gold1">
+								The Clock&rsquo;s Ticking
+							</h2>
+						</div>
+					</div>
+					<div class="page-content">
+						<div class="pt-6 pb-6 px-4">
+							<div class="w-max max-gm">
+								<!-- countdown goes here -->
+								<div class="countdown-block">
+									<span class="segment"><strong class="num">5</strong>years</span>
+									<span class="segment"><strong class="num">274</strong>days</span>
+									<span class="segment"><strong class="hours-mins-secs num">00:00:00</strong></span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
 				<!-- Clock's Ticking :: Hamilton Asphalt plant -->
 				<!-- Slide 1 -->
 				<div class="book-page theme-dark bg-image-page climate-clock">
@@ -181,7 +259,12 @@
 						<div class="bg-image-screen">
 							<img src="<?php echo get_template_directory_uri(); ?>/images/book/book-hamilton-asphalt-plant.jpg" class="image-full-screen" />
 						</div>
-						<h2 class="page-heading">The Clock&rsquo;s Ticking</h2>
+						<div class="page-heading">
+							<h2 class="heading-main">
+								Hamilton Asphalt Plant
+							</h2>
+							<span class="photo-meta">Gowanus, Brooklyn, NY</span>
+						</div>
 					</div>
 					<div class="page-content">
 						<div class="pt-6 pb-6 px-4">
@@ -197,18 +280,18 @@
 				</div>
 				<!-- Clock's Ticking – We're Fighting It :: Windmills -->
 				<!-- Slide 1 -->
-				<div class="book-page theme-green bg-image-page climate-clock">
+				<div class="book-page theme-green bg-image-page windmills">
 					<div class="page-bg has-image">
 						<div class="bg-image-screen fit-portrait">
 							<img src="<?php echo get_template_directory_uri(); ?>/images/book/book-windmills-wf-carroll-gardens.jpg" class="image-full-screen" />
 						</div>
-						<h2 class="page-heading">The Clock&rsquo;s Ticking</h2>
-					</div>
-					<div class="page-content">
-						<div class="pt-6 pb-6 px-4">
-							<div class="w-max max-640">
-								<h2 class="page-heading">We&rsquo;re Fighting It</h2>
-							</div>
+						<div class="page-heading">
+							<h2 class="heading-main">
+								Windmills
+							</h2>
+							<span class="photo-meta">
+								Carroll Gardens, Brooklyn, NY
+							</span>
 						</div>
 					</div>
 					<div class="page-content">
@@ -218,38 +301,87 @@
 									<strong>Two windmills at Whole Foods Market Carroll Gardens, Brooklyn.</strong> Windmills are notable renewable energy producers.
 									</p>
 									<p>In recent years, NYC has taken a much keener interest in wind energy in order to further its goal of reaching 70% of electricity from renewable sources by 2030. NYC currently has five offshore wind farms set to be constructed in the coming years. The five wind farms will produce 4,300 megawatts of energy, nearly 50% of the capacity needed to meet NY&rsquo;s offshore wind goal of 9,000 megawatts by 2035. The farms will power 2.4 million New York homes, provide an economic impact of $12.1 billion dollars, and will provide over 6,800 jobs. Parts for the five projects will be housed at the South Brooklyn Marine Terminal. The wind farms known as the Empire and Beacon projects will be completed and expected to enter commercial operation by 2027 and 2028.</p>
-								</div>
 							</div>
 						</div>
 					</div>
-					<!-- Is It Enough? :: Bike Share -->
-					<!-- Slide 1 -->
-					<div class="book-page theme-green bg-image-page climate-clock">
-						<div class="page-bg has-image">
-							<div class="bg-image-screen fit-portrait">
-								<img src="<?php echo get_template_directory_uri(); ?>/images/book/book-citibike-dock.jpg" class="image-full-screen" />
-							</div>
-							<h2 class="page-heading">Is It Enough?</h2>
+				</div><!-- /.book-page -->
+				<!-- Slide 2 -->
+				<div class="book-page theme-green">
+					<div class="page-bg">
+						<div class="page-heading">
+							<h2 class="heading-main">
+								The Clock&rsquo;s Ticking
+							</h2>
 						</div>
-						<div class="page-content">
-							<div class="pt-6 pb-6 px-4">
-								<div class="w-max max-640">
-									<p class="first-paragraph ts-l">
-										<strong>Citibikes being stored on 3rd Street in Gowanus, Brooklyn. </strong> The bike sharing program has become increasingly popular over the last few years as daily rides jumped from an average of 48,315 rides per day in 2018, to a record number of 138,372 rides in a single day in 2022.
+					</div>
+					<div class="page-content">
+						<div class="pt-6 pb-6 px-4">
+							<div class="w-max max-640">
+								<h2 class="content-heading">We&rsquo;re Fighting It</h2>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Is It Enough? :: CitiBike Share -->
+				<!-- Slide 1 -->
+				<div class="book-page theme-green bg-image-page bike-share">
+					<div class="page-bg has-image">
+						<div class="bg-image-screen">
+							<img src="<?php echo get_template_directory_uri(); ?>/images/book/book-citibike-dock.jpg" class="image-full-screen" />
+						</div>
+						<div class="page-heading">
+							<h2 class="heading-main">
+								Citi Bike Docking Station, 3rd Street
+							</h2>
+							<span class="photo-meta">
+								Gowanus, Brooklyn, NY
+							</span>
+						</div>
+					</div>
+					<div class="page-content">
+						<div class="pt-6 pb-6 px-4">
+							<div class="w-max max-640">
+								<p class="first-paragraph ts-l">
+									<strong>Citi Bikes being stored on 3rd Street in Gowanus, Brooklyn. </strong> The bike sharing program has become increasingly popular over the last few years as daily rides jumped from an average of 48,315 rides per day in 2018, to a record number of 138,372 rides in a single day in 2022.
 									</p>
-									<p>The service gained prominence especially during and after the height of the Covid-19 pandemic in 2020. Citibikes have been proven as a means of reducing greenhouse gas emissions therefore improving climate change and the environment overall. In 2022, it was announced that 100 new citibike stations would be installed in Brooklyn alone with more set to be introduced across the five boroughs.</p>
+									<p>The service gained prominence especially during and after the height of the Covid-19 pandemic in 2020. Citi Bikes have been proven as a means of reducing greenhouse gas emissions therefore improving climate change and the environment overall. In 2022, it was announced that 100 new Citi Bike stations would be installed in Brooklyn alone with more set to be introduced across the five boroughs.</p>
+							</div>
+						</div>
+					</div>
+				</div><!-- /.book-page -->
+				<!-- Slide 2 -->
+				<div class="book-page theme-green">
+					<div class="page-bg">
+						<div class="page-heading">
+							<h2 class="heading-main">
+								Is It Enough?
+							</h2>
+						</div>
+					</div>
+					<div class="page-content">
+						<div class="pt-6 pb-6 px-4">
+							<div class="w-max max-gm">
+								<!-- countdown goes here -->
+								<div class="countdown-block">
+									<span class="segment"><strong class="num">5</strong>years</span>
+									<span class="segment"><strong class="num">274</strong>days</span>
+									<span class="segment"><strong class="hours-mins-secs num">00:00:00</strong></span>
 								</div>
 							</div>
 						</div>
 					</div>
+				</div>
 					<!-- Is It Enough? :: Energy Efficiency Rating -->
 					<!-- Slide 1 -->
-					<div class="book-page theme-dark bg-image-page climate-clock">
+					<div class="book-page theme-dark bg-image-page building energy efficiency grades">
 						<div class="page-bg has-image">
-							<div class="bg-image-screen fit-portrait">
+							<div class="bg-image-screen">
 								<img src="<?php echo get_template_directory_uri(); ?>/images/book/book-energy-efficiency-grade-wf-gowanus.jpg" class="image-full-screen" />
 							</div>
-							<h2 class="page-heading">Is It Enough?</h2>
+							<div class="page-heading">
+								<h2 class="heading-main">Building Energy Efficiency Rating</h2>
+								<span class="photo-meta">Gowanus, Brooklyn, NY</span>
+							</div>
 						</div>
 						<div class="page-content">
 							<div class="pt-6 pb-6 px-4">
@@ -264,12 +396,17 @@
 					</div>
 					<!-- Is It Enough? :: Pollution -->
 					<!-- Slide 1 -->
-					<div class="book-page theme-green bg-image-page climate-clock">
+					<div class="book-page theme-green bg-image-page carroll-gardens-pollution">
 						<div class="page-bg has-image">
 							<div class="bg-image-screen fit-portrait">
 								<img src="<?php echo get_template_directory_uri(); ?>/images/book/book-pollution-carroll-gardens.jpg" class="image-full-screen" />
 							</div>
-							<h2 class="page-heading">Is It Enough?</h2>
+							<div class="page-heading">
+								<h2 class="heading-main">
+									Local Pollution
+								</h2>
+								<span class="photo-meta">Carroll Gardens, Brooklyn, NY</span>
+							</div>
 						</div>
 						<div class="page-content">
 							<div class="pt-6 pb-6 px-4">
@@ -282,11 +419,57 @@
 							</div>
 						</div>
 					</div>
+				<!-- Let's Stop the Count -->
+				<div class="book-page theme-green">
+					<div class="page-bg">
+						<div class="page-heading">
+							<h2 class="heading-main">
+								Let&rsquo;s Stop the Count
+							</h2>
+						</div>
+					</div>
+					<div class="page-content">
+						<div class="pt-6 pb-6 px-4">
+							<div class="w-max max-640">
+								<p class="ts-xl mb-5">
+									<em>Get involved in the fight against pollution and climate change with these organizations:</em>
+								</p>
+								<dl class="orgs-list">
+								<!-- 350.org -->
+								<div class="org-item">
+										<dt><a href="https://350.org/" target="_blank" rel="noreferrer noopener">350.org</a></dt>
+										<dd>&ldquo;We&rsquo;re an international movement of ordinary people working to end the age of fossil fuels and build a world of community-led renewable energy for all.&rdquo;</dd>
+									</div>
+									<!-- Climate Action 100+ -->
+									<div class="org-item">
+										<dt><a href="https://www.climateaction100.org/" target="_blank" rel="noreferrer noopener">Climate Action 100+</a></dt>
+										<dd>&ldquo;<strong>Climate Action 100+</strong> is an investor-led initiative to ensure the world&rsquo;s largest corporate greenhouse gas emitters take necessary action on climate change.&rdquo;</dd>
+									</div>
+									<!-- Gowanus Canal Conservancy -->
+									<div class="org-item">
+										<dt><a href="https://gowanuscanalconservancy.org/" target="_blank" rel="noreferrer noopener">Gowanus Canal Conservancy</a></dt>
+										<dd>&ldquo;<strong>Gowanus Canal Conservancy</strong> advocates and cares for ecologically sustainable parks and public spaces in the Gowanus lowlands while empowering a community of stewards.&rdquo;</dd>
+									</div>
+									<!-- NYC City Cleanup Corps -->
+									<div class="org-item">
+										<dt><a href="https://www.nyc.gov/site/safestbigcity/keep-nyc-safe/city-cleanup-corps.page" target="_blank" rel="noreferrer noopener">NYC City Cleanup Corps</a></dt>
+										<dd>&ldquo;<strong>The City Cleanup Corps (CCC)</strong> is employing 10,000 New Yorkers for beautification across our city. CCC workers wipe away graffiti, power-wash sidewalks, create community murals, tend to community gardens, transform public spaces, and work with community organizations to clean their neighborhoods. By making our city gleam, we're welcoming business and tourists back and helping revitalize our economy.&rdquo;</dd>
+									</div>
+									<!-- The Environmental Defense Fund -->
+									<div class="org-item">
+										<dt><a href="https://www.edf.org/" target="_blank" rel="noreferrer noopener">The Environmental Defense Fund</a></dt>
+										<dd>&ldquo;For over 50 years, <strong>EDF</strong> has brought together scientists and lawyers to protect the environment. Using strategic partnerships, scientific and economic research, and advocacy, EDF works to strengthen laws and policies that improve the environment and public health.&rdquo;</dd>
+									</div>
+								</dl>
+							</div>
+						</div>
+					</div>
 				</div>
+
 
 				<!-- Photo Book Meta, Credits, etc. -->
 				<div class="book-page entry-meta">
-					<div class="page-content">
+					<div class="page-content flex-height">
 						<div class="pt-6 pb-6 px-4">
 						<div class="w-max max-640">
 							<!-- contributor -->
@@ -330,8 +513,9 @@
 					</div>
 					</div><!-- /.w-max -->
 					</div><!-- /.pt-6 -->
-				</div>
-			</div><!-- .entry-meta -->
+						</div><!-- .page-content -->
+				</div><!-- .book-page -->
+			</div><!-- .pages-track -->
 		</div><!-- /.post-layout-main -->
 		<div class="post-content-footer">
 			<div class="px-4 pt-6 pb-6">

@@ -112,6 +112,34 @@
       });
     }
 
+    // Countdown
+    $(".countdown-block").each(function () {
+      var $this = $(this);
+      var $hoursMinsSecs = $this.find(".hours-mins-secs");
+
+      const futureDate = new Date("2023-10-21T12:00:00");
+      const futureDateAsTimestamp = futureDate.getTime();
+
+      const countdown = setInterval(() => {
+        const now = new Date();
+        const nowTimestamp = now.getTime();
+        const timeTillFutureDate = futureDateAsTimestamp - nowTimestamp;
+
+        // convert to days, hours, mins, secs
+        const days = Math.floor(timeTillFutureDate / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((timeTillFutureDate / (1000 * 60 * 60)) % 24);
+        const mins = Math.floor((timeTillFutureDate / (1000 * 60)) % 60);
+        const secs = Math.floor((timeTillFutureDate / 1000) % 60);
+
+        // set content of $hoursMinsSecs
+        $hoursMinsSecs.text(
+          `${hours < 10 ? "0" + hours : hours}:${
+            mins < 10 ? "0" + mins : mins
+          }:${secs < 10 ? "0" + secs : secs}`
+        );
+      }, 1000);
+    });
+
     // HOME page hero area
     // TODO: using [] of words from bk env description, populate bg or marquee / hero area
     const wordCloudWords = PPM.bkEnv
