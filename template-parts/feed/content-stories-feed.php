@@ -4,7 +4,7 @@ $args = [
   "meta_key" => "date_published",
   "orderby" => "meta_value",
   "order" => "DESC",
-  "post_type" => "story",
+  "post_type" => ["story", "photo-book"],
   "posts_per_page" => 10,
   "paged" => $paged,
 ];
