@@ -107,7 +107,7 @@
               $this.removeClass("page-content-scrolling-down");
             }
           },
-          offset: "50%",
+          offset: "75%",
         });
       });
     }
