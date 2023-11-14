@@ -240,12 +240,18 @@ add_action("wp_enqueue_scripts", "ppm_styles");
 
 function parts_per_million_scripts()
 {
-  // wp_enqueue_script( 'parts-per-million-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
   wp_enqueue_script(
     "jquery-waypoints",
     get_template_directory_uri() . "/js/lib/jquery.waypoints.min.js",
     ["jquery-core"],
     "2018",
+    false
+  );
+  wp_enqueue_script(
+    "climate-clock",
+    get_template_directory_uri() . "/js/lib/widget-v2.js",
+    [],
+    "2023",
     false
   );
   wp_enqueue_script(

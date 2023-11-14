@@ -127,9 +127,7 @@
 							<div class="w-max max-gm">
 								<!-- countdown goes here -->
 								<div class="countdown-block">
-									<span class="segment"><strong class="num">5</strong>years</span>
-									<span class="segment"><strong class="num">274</strong>days</span>
-									<span class="segment"><strong class="hours-mins-secs num">00:00:00</strong></span>
+									<climate-clock />
 								</div>
 							</div>
 						</div>
@@ -244,9 +242,7 @@
 							<div class="w-max max-gm">
 								<!-- countdown goes here -->
 								<div class="countdown-block">
-									<span class="segment"><strong class="num">5</strong>years</span>
-									<span class="segment"><strong class="num">274</strong>days</span>
-									<span class="segment"><strong class="hours-mins-secs num">00:00:00</strong></span>
+									<climate-clock />
 								</div>
 							</div>
 						</div>
@@ -363,9 +359,7 @@
 							<div class="w-max max-gm">
 								<!-- countdown goes here -->
 								<div class="countdown-block">
-									<span class="segment"><strong class="num">5</strong>years</span>
-									<span class="segment"><strong class="num">274</strong>days</span>
-									<span class="segment"><strong class="hours-mins-secs num">00:00:00</strong></span>
+									<climate-clock />
 								</div>
 							</div>
 						</div>
@@ -434,7 +428,7 @@
 								<p class="ts-xl mb-5">
 									<em>Get involved in the fight against pollution and climate change with these organizations:</em>
 								</p>
-								<dl class="orgs-list">
+								<dl class="orgs-list mb-5">
 								<!-- 350.org -->
 								<div class="org-item">
 										<dt><a href="https://350.org/" target="_blank" rel="noreferrer noopener">350.org</a></dt>
@@ -461,6 +455,10 @@
 										<dd>&ldquo;For over 50 years, <strong>EDF</strong> has brought together scientists and lawyers to protect the environment. Using strategic partnerships, scientific and economic research, and advocacy, EDF works to strengthen laws and policies that improve the environment and public health.&rdquo;</dd>
 									</div>
 								</dl>
+								<hr class="hairline white" />
+								<p class="tf-sans t-alignR">
+									Climate Clock Widget by <a href="https://github.com/climateclock" target="_blank" rel="noreferrer noopener"><strong>Climate Clock</strong></a>
+								</p>
 							</div>
 						</div>
 					</div>
@@ -468,53 +466,48 @@
 
 
 				<!-- Photo Book Meta, Credits, etc. -->
+				<!-- ++++++++++++++++++++++++++++++ -->
 				<div class="book-page entry-meta">
-					<div class="page-content flex-height">
-						<div class="pt-6 pb-6 px-4">
-						<div class="w-max max-640">
-							<!-- contributor -->
-							<div class="contributor-block meta-section">
-								<div class="contributor-byline">
-								<?php if (get_field("contributor_image")):
-
-          $contributor_img = get_field("contributor_image");
-          $size = "medium";
-          ?>
-									 <div class="contributor-thumbnail">
-										 <?php echo wp_get_attachment_image($contributor_img, $size); ?>
+					<div class="page-content flex-height sxs">
+						<div class="author-photo"><img src="<?php echo get_template_directory_uri(); ?>/images/book/elias-stand.jpg" class="fit" /></div>
+						<div class="author-bio">
+							<div class="text-col">
+								<!-- contributor -->
+								<div class="contributor-block meta-section">
+									<div class="contributor-byline">
+									<?php if (get_field("contributor")): ?>
+										 <div class="contributor-name author">
+											 <strong><?php echo get_field("contributor"); ?></strong>
 									</div>
-								<?php
-        endif; ?>
-								<?php if (get_field("contributor")): ?>
-									 <div class="contributor-name author">
-										 <strong><?php echo get_field("contributor"); ?></strong>
-								</div>
-							<?php endif; ?>
-							</div><!-- /.contributor-byline -->
+								<?php endif; ?>
+								</div><!-- /.contributor-byline -->
 
-							<?php if (get_field("contributor_bio")): ?>
-								 <p class="contributor-bio">
-									 <?php echo get_field("contributor_bio"); ?>
-								</p>
+								<?php if (get_field("contributor_bio")): ?>
+									 <p class="contributor-bio">
+										 <?php echo get_field("contributor_bio"); ?>
+									</p>
+								<?php endif; ?>
+							</div><!-- /.contributor-block -->
+							<!-- Date -->
+						<div class="post-date meta-section">
+							<?php if (get_field("date_published")): ?>
+								 <span class="post-meta date-published">
+									 Date: <?php echo get_field("date_published"); ?>
+								</span>
 							<?php endif; ?>
-						</div><!-- /.contributor-block -->
-						<!-- Date -->
-					<div class="post-date meta-section">
-						<?php if (get_field("date_published")): ?>
-							 <span class="post-meta date-published">
-								 Date: <?php echo get_field("date_published"); ?>
-							</span>
-						<?php endif; ?>
-						<?php if (get_field("location")): ?>
-							 <span class="post-meta location">
-								 From: <?php echo get_field("location"); ?>
-							</span>
-						<?php endif; ?>
-					</div>
-					</div><!-- /.w-max -->
-					</div><!-- /.pt-6 -->
+							<?php if (get_field("location")): ?>
+								 <span class="post-meta location">
+									 From: <?php echo get_field("location"); ?>
+								</span>
+							<?php endif; ?>
+
+
+							</div>
+					</div><!-- /.text-col -->
+					</div><!-- /.author-bio -->
 						</div><!-- .page-content -->
 				</div><!-- .book-page -->
+				<!-- ++++++++++++++++++++++++++++++ -->
 			</div><!-- .pages-track -->
 		</div><!-- /.post-layout-main -->
 		<div class="post-content-footer">

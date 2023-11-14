@@ -283,6 +283,10 @@ h5,
   &.grey1 {
     border-bottom-color: $grey1;
   }
+
+		&.white {
+			border-bottom-color: $whiteTransparent;
+		}
 }
 
 // ----- Box model ----- //
