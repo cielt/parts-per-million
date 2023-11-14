@@ -97,7 +97,6 @@
       // to each "page", add waypoint for content scroll
       $(".book-page").each(function () {
         var $this = $(this);
-        console.log($this);
         new Waypoint({
           element: $this.children(".page-content"),
           handler: function (direction) {
