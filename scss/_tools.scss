@@ -102,8 +102,8 @@
   color: $red350;
 }
 
-.c-darkGold {
-  color: $darkGold;
+.c-gold1 {
+  color: $gold1;
 }
 
 // -------------------------------------
@@ -123,6 +123,10 @@
 
   &.max-gm {
     max-width: $g-m;
+  }
+
+  &.max-640 {
+    max-width: 640px;
   }
 
   &.img-width-m {
@@ -279,4 +283,24 @@ h5,
   &.grey1 {
     border-bottom-color: $grey1;
   }
+
+		&.white {
+			border-bottom-color: $whiteTransparent;
+		}
+}
+
+// ----- Box model ----- //
+
+.db {
+  display: block;
+}
+
+// ----- Text alignment ----- //
+
+.t-alignC {
+  text-align: center;
+}
+
+.t-alignR {
+  text-align: right;
 }

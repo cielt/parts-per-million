@@ -25,6 +25,7 @@ $darkGrey350: #17292e;
 $redBrown: #8d3618;
 $darkGold: #8d801f;
 $gold0: #f2efdf;
+$gold1: #c1bc98;
 $blue0: #e7eff8;
 
 // states
@@ -35,6 +36,7 @@ $blue350Transparent: rgba(15, 129, 232, 0.12);
 $red350Transparent: rgba(255, 97, 18, 0.48);
 $darkGoldTransparent: rgba(140, 128, 31, 0.48);
 $blackTransparent: rgba(0, 0, 0, 0.64);
+$whiteTransparent: rgba(255, 255, 255, 0.48);
 
 $grey0: #fafafa;
 $grey1: #f4f4f4;
@@ -44,6 +46,8 @@ $grey4: #a8a8a8;
 $grey5: #818283;
 $black: #000;
 $clear: transparent;
+$green: #0e8448;
+$yellowGreen: #d9ef08;
 
 // ----- Context Names ----- //
 
@@ -67,6 +71,7 @@ $b-fontSize-l: 1.8rem;
 $b-fontSize-xl: 2.5rem;
 $b-fontSize-xxl: 3.2rem;
 $b-fontSize-h1: 4.8rem;
+$b-fontSize-hxl: 6rem;
 $b-fontSize-xxxl: 12rem;
 $b-fontSize-h2: $b-fontSize-xxl;
 $b-fontSize-h3: $b-fontSize-xl;
@@ -116,5 +121,10 @@ $img-width-s: em(128px);
 $img-width-m: em(400px);
 
 // -------------------------------------
-//   Structures
+//   Sections
 // -------------------------------------
+
+// ----- Photo Book ----- //
+
+$overlayBgBlack: rgba(32, 32, 32, 0.84);
+$overlayBgGreen: rgba(14, 132, 72, 0.88);

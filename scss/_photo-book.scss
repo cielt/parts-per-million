@@ -1,0 +1,564 @@
+// =====================================
+//
+//   350Brooklyn :: Parts per Million
+//   -> Photo Book Post styles
+//
+// =====================================
+
+// -------------------------------------
+//   Variables
+// -------------------------------------
+
+$authorImgSize: 60px;
+
+// -------------------------------------
+//   Modules
+// -------------------------------------
+
+// ----- HEADER AREA ----- //
+
+.photo-book {
+  .entry-header-wrapper {
+    height: 60vh;
+    display: block;
+    position: relative;
+    background-color: $darkGrey350;
+
+    .entry-header,
+    .featured-image-frame {
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+    }
+
+    .featured-image-frame {
+      display: block;
+      position: relative;
+      z-index: 1;
+      overflow: hidden;
+
+      img {
+        min-width: 100%;
+        min-height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .entry-header {
+      position: absolute;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      color: $white;
+      padding: $b-space-4;
+      background-color: $blackTransparent;
+
+      .single-post-med {
+        display: block;
+        color: $teal350;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: $b-space-2;
+      }
+
+      .entry-title {
+        font-size: $b-fontSize-h2;
+        margin-bottom: 0;
+      }
+
+      .subheading {
+        display: block;
+        padding: 0 $b-space-4;
+        line-height: $b-lineHeight-header;
+        margin-top: $b-space-2;
+        font-family: $b-fontFamily;
+        font-style: italic;
+        color: $grey3;
+
+        &::before {
+          content: "–";
+          display: inline-block;
+          margin-right: $b-space-1;
+        }
+      }
+    }
+
+    // caption (optional)
+    .cover-caption-block {
+      position: absolute;
+      z-index: 3;
+      top: 100%;
+      right: 0;
+      margin-top: $b-space-2;
+      margin-right: $b-space-4;
+
+      .cover-image-caption {
+        font-size: $b-fontSize-s;
+        font-family: $b-sans-fontFamily;
+        text-align: right;
+        color: $darkGold;
+
+        a:link,
+        a:active,
+        a:visited {
+          color: $darkGold;
+        }
+      }
+    }
+
+    // wide viewport
+    @media (min-width: $g-m) {
+      height: 100vh;
+      display: flex;
+
+      // No hero image
+      .entry-header {
+        flex: 1;
+        padding: $b-space-5;
+        background-color: $clear;
+
+        .entry-title {
+          font-size: $b-fontSize-h1;
+        }
+
+        .subheading {
+          font-size: $b-fontSize-h4;
+        }
+      }
+
+      // has hero image
+      &.has-hero-image {
+        .entry-header,
+        .featured-image-frame {
+          top: inherit;
+          left: inherit;
+          width: auto;
+        }
+
+        .entry-header {
+          position: relative;
+          flex-basis: 50%;
+        }
+
+        .featured-image-frame {
+          flex: 1 1 50%;
+        }
+      }
+    }
+  }
+}
+
+// ----- MAIN CONTENT AREA ----- //
+
+// POST META - own slide
+
+.photo-book {
+  .entry-meta {
+    .meta-section {
+      line-height: $b-lineHeight-header;
+
+      &:not(:last-of-type) {
+        padding-bottom: $b-space-4;
+        margin-bottom: $b-space-4;
+        border-bottom: 1px solid $lightGrey350;
+      }
+    }
+    .post-date {
+      .post-meta {
+        display: block;
+        font-family: $b-mono-fontFamily;
+
+        &:not(:last-of-type) {
+          padding-bottom: $b-space-3;
+          margin-bottom: $b-space-3;
+          border-bottom: 1px dotted $lightGrey350;
+        }
+      }
+    }
+
+    .contributor-block {
+      .contributor-byline {
+        display: flex;
+        align-items: center;
+        gap: $b-space-2;
+        margin-bottom: $b-space-2;
+
+        .contributor-thumbnail {
+          flex: 0 0 $authorImgSize;
+          border-radius: 50%;
+          overflow: hidden;
+          width: $authorImgSize;
+          height: $authorImgSize;
+          background-color: $grey1;
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+
+        .contributor-name {
+          flex: 1 0 auto;
+          font-size: $b-fontSize-l;
+        }
+      }
+
+      .contributor-bio {
+        font-size: $b-fontSize-s;
+        font-family: $b-sans-fontFamily;
+        line-height: $b-lineHeight;
+        color: $grey5;
+
+        a {
+          color: $blue350;
+        }
+      }
+    }
+  }
+
+	// SxS layout
+	.sxs {
+		display: flex;
+		flex-direction: column;
+		gap: 0;
+
+		& > * {
+			flex: 0 0 auto;
+		}
+
+		.author-photo {
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+
+		.author-bio {
+			padding: $b-space-5;
+
+			.text-col {
+				max-width: 30em;
+				margin: 0 auto;
+			}
+		}
+
+		@media screen and (min-width: $g-m) {
+			flex-direction: row;
+
+			& > * {
+					flex: 1 1 50%;
+			}
+
+			.author-bio {
+				padding: $b-space-6;
+
+				.text-col {
+					margin: 0;
+				}
+			}
+		}
+	}
+}
+
+// ----- POST CONTENT ----- //
+
+.photo-book {
+  .pages-track {
+    .book-page {
+      position: relative;
+
+      .page-bg {
+        height: 100vh;
+        position: sticky;
+        z-index: 1;
+        top: 0;
+        background-color: $black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .page-heading {
+          text-align: center;
+          transition: opacity 1000ms ease-in-out;
+
+          // h2
+          .heading-main {
+            font-size: $b-fontSize-xxl;
+            font-family: $b-serif-fontFamily;
+            margin-bottom: 0;
+          }
+
+          .photo-meta {
+            display: block;
+            font-size: $b-fontSize;
+            text-transform: uppercase;
+            font-weight: bold;
+            letter-spacing: 2px;
+            line-height: $b-lineHeight-header;
+          }
+
+          .heading-main + .photo-meta {
+            margin-top: $b-space-3;
+          }
+
+          @media (min-width: $g-m) {
+            .heading-main {
+              font-size: $b-fontSize-hxl;
+            }
+
+            .photo-meta {
+              font-size: $b-fontSize-l;
+            }
+          }
+        }
+      }
+
+      &.theme-dark {
+        background-color: $black;
+        color: $white;
+
+        .page-bg {
+          background-color: $black;
+        }
+      }
+
+      &.theme-green {
+        background-color: $green;
+        color: $white;
+
+        .page-bg {
+          background-color: $green;
+        }
+      }
+
+      // ensure text has bag overlay to improve readability
+      &.bg-image-page {
+        .page-heading,
+        p {
+          padding: $b-space-2;
+          border-radius: $b-borderRad-2;
+          background: $overlayBgBlack;
+        }
+
+        &.theme-green {
+          .page-heading,
+          p {
+            background: $overlayBgGreen;
+          }
+        }
+      }
+
+      &.flex-page {
+        .page-content {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+
+      .page-bg.has-image {
+        .bg-image-screen {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100vh;
+          background-color: $black;
+          z-index: 1;
+          overflow: hidden;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          img {
+            width: 100%;
+            height: auto;
+            min-height: 100%;
+            object-fit: cover;
+          }
+
+          &.fit-portrait {
+            img {
+              height: 100%;
+              width: auto;
+              object-fit: contain;
+            }
+          }
+        }
+
+        .page-heading {
+          position: relative;
+          z-index: 2;
+					margin: 0 $b-space-2;
+        }
+      }
+
+      .page-content {
+        position: relative;
+        z-index: 2;
+        min-height: 100vh;
+
+        .content-heading {
+          font-size: $b-fontSize-xxl;
+          font-family: $b-serif-fontFamily;
+          text-align: center;
+
+          @media (min-width: $g-m) {
+            font-size: $b-fontSize-h1;
+          }
+        }
+
+        .first-paragraph {
+					&.ts-l {
+						font-size: 1em;
+					}
+
+					&:first-letter {
+						color: $white;
+						float: left;
+						font-size: 3.6em;
+						font-family: $b-fontFamily;
+						line-height: 0.64;
+						padding-top: 15px;
+						padding-right: 15px;
+						padding-bottom: 10px;
+					}
+
+					@media (min-width: $g-m) {
+						&.ts-l {
+							font-size: 1.1em;
+						}
+
+						&:first-letter {
+							font-size: 5em;
+						}
+					}
+        }
+
+        &.flex-height {
+          min-height: 0;
+        }
+      }
+
+      // waypoints fx
+      &.page-content-scrolling-down {
+        .page-bg {
+          .page-heading {
+            opacity: 0;
+          }
+        }
+      }
+
+      // Text + image inline
+      .sxs-page {
+        display: flex;
+        gap: $b-space-6;
+        justify-content: center;
+        align-items: flex-start;
+
+        .image-frame-inline {
+          flex: 0 0 45%;
+          overflow: hidden;
+          border-radius: $b-borderRad-3;
+
+          img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+          }
+        }
+      }
+
+      // Photo Book type styles
+      .page-subheading {
+        font-size: $b-fontSize-h2;
+        color: $gold1;
+        text-transform: uppercase;
+        margin-bottom: $b-space-2;
+      }
+
+      &.theme-green {
+        .page-subheading {
+          color: $white;
+        }
+
+				a {
+					color: $yellowGreen;
+				}
+      }
+    }
+  }
+}
+
+// ----- POST NAVIGATION AREA ----- //
+
+// COUNTDOWN
+.countdown-block {
+  font-family: $b-sans-fontFamily;
+  font-size: $b-fontSize-h1;
+  color: $white;
+}
+
+// actions
+
+.orgs-list {
+  width: 100%;
+
+  .org-item {
+    display: flex;
+		flex-direction: column;
+    gap: $b-space-2;
+    margin: 0 0 $b-space-5;
+    font-size: $b-fontSize-l;
+    align-items: flex-start;
+    line-height: $b-lineHeight-header;
+
+    a {
+      color: $yellowGreen;
+    }
+
+    dt {
+      margin: 0;
+      font-weight: bold;
+      flex: 1;
+    }
+
+    dd {
+      margin: 0;
+      flex: 1;
+    }
+  }
+
+	@media screen and (min-width: $g-m) {
+		.org-item {
+			flex-direction: row;
+			gap: $b-space-4;
+
+			dt {
+					flex: 0 0 10em;
+				}
+
+			dd {
+				flex: 1 1 auto;
+			}
+		}
+	}
+}
+
+// Prev / Next nav
+
+.photo-book {
+  .post-content-footer {
+    border-top: 1px solid $lightGrey350;
+
+    .link-subtle {
+      color: $darkGold;
+    }
+  }
+}

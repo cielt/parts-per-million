@@ -14,7 +14,7 @@
         "#search-toggle-btn, #close-search-btn, .search-overlay"
       ),
       $searchForm = $(".search-form"),
-      $heroEl, // main marquee el for Waypoint settings
+      $heroEl = $("body"), // main marquee el for Waypoint settings
       $marqueeMain = $(".marquee-main"),
       headerWaypoint,
       $scrollDownArrow = $marqueeMain.find(".scroll-to-content-btn"),
@@ -75,7 +75,7 @@
         break;
     }
 
-    if ($body.hasClass("header-waypoint")) {
+    if ($body.hasClass("header-waypoint") && bodyLayout !== "ppm-photo-book") {
       headerWaypoint = new Waypoint({
         element: $heroEl,
         handler: function (direction) {
@@ -89,6 +89,25 @@
           var heroElHeight = this.element.outerHeight();
           return -(heroElHeight - 1);
         },
+      });
+    }
+
+    // Photo Book scroll fx
+    if (bodyLayout === "ppm-photo-book") {
+      // to each "page", add waypoint for content scroll
+      $(".book-page").each(function () {
+        var $this = $(this);
+        new Waypoint({
+          element: $this.children(".page-content"),
+          handler: function (direction) {
+            if (direction && direction === "down") {
+              $this.addClass("page-content-scrolling-down");
+            } else {
+              $this.removeClass("page-content-scrolling-down");
+            }
+          },
+          offset: "75%",
+        });
       });
     }
 

@@ -174,6 +174,43 @@ function register_story()
   flush_rewrite_rules();
 }
 
+/* PHOTO BOOK custom post type */
+
+add_action("init", "register_photobook", 2); // Set priority to avoid plugin conflicts
+function register_photobook()
+{
+  // A unique name for our function
+  $labels = [
+    // Used in the WordPress admin
+    "name" => _x("Photo Books", "post type general name"),
+    "singular_name" => _x("Photo Book", "post type singular name"),
+    "add_new" => _x("Add New", "Photo Book"),
+    "add_new_item" => __("Add New Photo Book"),
+    "edit_item" => __("Edit Photo Book"),
+    "new_item" => __("New Photo Book"),
+    "view_item" => __("View Photo Book"),
+    "search_items" => __("Search Photo Books"),
+    "not_found" => __("Nothing found"),
+    "not_found_in_trash" => __("Nothing found in Trash"),
+  ];
+  $args = [
+    "labels" => $labels, // Set above
+    "public" => true, // Make it publicly accessible
+    "rewrite" => ["slug" => "photo-books"],
+    "hierarchical" => false, // No parents and children here
+    "menu_position" => 6, // Appear right below "Stories"
+    "has_archive" => true, // Activate the archive
+    "supports" => ["title", "editor", "thumbnail"],
+  ];
+
+  register_post_type("photo-book", $args); // Create the post type, use options above
+
+  register_taxonomy_for_object_type("category", "photo-book");
+  register_taxonomy_for_object_type("post_tag", "photo-book");
+
+  flush_rewrite_rules();
+}
+
 /**
  * Enqueue scripts and styles.
  */
@@ -203,12 +240,18 @@ add_action("wp_enqueue_scripts", "ppm_styles");
 
 function parts_per_million_scripts()
 {
-  // wp_enqueue_script( 'parts-per-million-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
   wp_enqueue_script(
     "jquery-waypoints",
     get_template_directory_uri() . "/js/lib/jquery.waypoints.min.js",
     ["jquery-core"],
     "2018",
+    false
+  );
+  wp_enqueue_script(
+    "climate-clock",
+    get_template_directory_uri() . "/js/lib/widget-v2.js",
+    [],
+    "2023",
     false
   );
   wp_enqueue_script(
