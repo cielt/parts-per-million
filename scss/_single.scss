@@ -122,6 +122,8 @@ $authorImgSize: 60px;
 
       .entry-title {
         font-size: $b-fontSize-h1;
+				max-width: 1200px;
+				margin: 0 auto;
       }
 
       .subheading {
